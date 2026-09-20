@@ -1,21 +1,38 @@
 {
  "alerts": {},
  "fx": {
-  "t": 1789900477.4313865,
+  "t": 1789902190.3049397,
   "table": {
    "EUR": 0.8726,
    "GBP": 0.74939,
    "KRW": 1388.1,
+   "NZD": 1.7511,
    "USD": 1.0
   }
  },
  "health": {
+  "galore": {
+   "fails": 0,
+   "notified": false
+  },
+  "hedonism": {
+   "fails": 0,
+   "notified": false
+  },
+  "innout": {
+   "fails": 0,
+   "notified": false
+  },
   "twe": {
    "fails": 2,
    "last_error": "HTTP 403: https://www.thewhiskyexchange.com/b/40/springbank-single-malt-scotch-whisky?pg=1",
    "notified": false
   },
   "whiskybase": {
+   "fails": 0,
+   "notified": false
+  },
+  "wio": {
    "fails": 0,
    "notified": false
   }
