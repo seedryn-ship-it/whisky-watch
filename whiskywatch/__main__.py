@@ -96,7 +96,9 @@ def cmd_diagnose(args) -> int:
                     watched.append((c, a))
             with_price = [c for c, _ in watched if c.price is not None]
             print(f"  후보 {len(cands)}건 / 관심 상품 {len(watched)}건 / 가격 파싱 {len(with_price)}건")
-            if not cands:
+            if not cands and shop.allow_empty:
+                print("  -> 지금은 판매 중인 상품이 없습니다 (이 샵은 allow_empty 설정이라 정상으로 봅니다).")
+            elif not cands:
                 print("  -> 파싱 0건: listing_urls(또는 search_url) 주소가 맞는지, selectors/preset 지정이 필요한지 확인하세요.")
                 bad += 1
             for c, a in watched[:5]:

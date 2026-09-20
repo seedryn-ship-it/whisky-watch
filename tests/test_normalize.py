@@ -58,3 +58,15 @@ def test_parse_volume():
     assert parse_volume_ml("0.7l") == 700
     assert parse_volume_ml("1l") == 1000
     assert parse_volume_ml("46% no volume") is None
+
+
+def test_cask_strength_batches_are_split_by_abv():
+    wl = ["springbank"]
+    a = analyze("Springbank 12 Year Old Cask Strength 56.2% (2024 Release)", watchlist=wl)
+    b = analyze("Springbank 12 Year Old Cask Strength 57.2% (2024 Release)", watchlist=wl)
+    c = analyze("Springbank 12 Year Old Cask Strength 56.4% (2024 Release)", watchlist=wl)
+    assert a.key != b.key and a.family_key != b.family_key  # 다른 배치는 서로의 기준가가 되지 않는다
+    assert a.key == c.key  # 표기 오차 수준(56.2 vs 56.4)은 같은 상품
+    assert "a56" in a.key and "a56" in a.family_key
+    lb = analyze("Springbank 10 Year Old Local Barley 55.2% 2025", watchlist=wl)
+    assert "a55" not in lb.key  # 도수를 안 적는 샵과도 비교되도록 Local Barley 는 연도로만 구분

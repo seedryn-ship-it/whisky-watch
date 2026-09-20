@@ -10,6 +10,9 @@ from urllib.parse import urlparse
 import requests
 
 
+MAX_CRAWL_DELAY = 60.0  # 초. 이보다 긴 Crawl-delay 를 요구하는 샵은 요청하지 않는다
+
+
 class FetchError(Exception):
     pass
 
@@ -74,12 +77,31 @@ class RequestsFetcher:
         rp = self._robots[root]
         return True if rp is None else rp.can_fetch(self._ua, url)
 
+    def _wait_seconds(self, url: str) -> float:
+        """요청 간 대기. robots.txt 의 Crawl-delay 가 있으면 그 값을 지킨다(너무 길면 그 샵은 수집하지 않고 오류로 알림)."""
+        wait = random.uniform(*self.delay)
+        if self.respect_robots:
+            p = urlparse(url)
+            rp = self._robots.get(f"{p.scheme}://{p.netloc}")
+            if rp is not None:
+                try:
+                    cd = rp.crawl_delay(self._ua)
+                except Exception:
+                    cd = None
+                if cd:
+                    if float(cd) > MAX_CRAWL_DELAY:
+                        raise FetchError(
+                            f"robots.txt 가 요청 간격 {float(cd):.0f}초(Crawl-delay)를 요구해 30분 주기 모니터링과 맞지 않아 이 샵은 건너뜁니다: {url}"
+                        )
+                    wait = max(wait, float(cd))
+        return wait
+
     def get(self, url: str) -> str:
         if not self._allowed(url):
             raise FetchError(f"robots.txt 가 접근을 허용하지 않음: {url}")
         last: Exception | None = None
         for attempt in range(self.retries + 1):
-            time.sleep(random.uniform(*self.delay))
+            time.sleep(self._wait_seconds(url))
             try:
                 r = self.session.get(url, timeout=self.timeout)
             except requests.RequestException as e:

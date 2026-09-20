@@ -11,6 +11,7 @@ import re
 from dataclasses import dataclass
 from urllib.parse import urljoin
 
+import soupsieve
 from bs4 import BeautifulSoup, Tag
 
 CURRENCY_SYMBOLS = {"£": "GBP", "€": "EUR", "$": "USD"}
@@ -224,6 +225,14 @@ CARD_PRESETS: dict[str, dict[str, str]] = {
         "link": "a.product-name",
         "price": ".product-price",
     },
+    # WooCommerce + WoodMart 테마 (Nickolls & Perks 에서 실제 마크업 확인). 세금 제외 가격(hub-duty-vat-price)을 우선 사용
+    "woodmart": {
+        "card": "div.wd-product",
+        "title": ".wd-entities-title a, .hub-format-abv",
+        "link": ".wd-entities-title a",
+        "price": "span.hub-duty-vat-price .amount",  # 없으면(세금 제외 표기 없는 상품) 카드 안 첫 가격으로 대체
+        "sold_out": ".outofstock",
+    },
     # Lightspeed eCom (Whiskybase Shop 에서 실제 마크업 확인)
     "lightspeed": {
         "card": "div.product-block",
@@ -263,13 +272,33 @@ def _card_price(card: Tag, price_sel: str | None, default_cur: str | None):
             if amt and to_number(amt) is not None:
                 return to_number(amt), default_cur
         for el in els:
-            found = find_prices(el.get_text(" ", strip=True))
+            # "€435,<span>00</span>" 처럼 소수부가 별도 태그이면 텍스트가 "€435, 00" 이 되므로 붙여 준다
+            found = find_prices(re.sub(r"(\d)([.,])\s+(\d{2})(?!\d)", r"\1\2\3", el.get_text(" ", strip=True)))
             if found:
                 return found[0]
     prices = find_prices(_clean_price_text(card))
     if prices:
         return prices[0]
     return None, default_cur
+
+
+def _card_sold_out(card: Tag, sold_out_sel: str | None, in_stock_sel: str | None = None) -> bool:
+    """품절 판정. sold_out 선택자(카드 자신 또는 내부 요소와 일치, 예: '.outofstock')가 있으면 우선, 없으면 카드 문구로 판단.
+    품절 상품에 '품절' 글자가 없고 CSS 클래스만 다는 샵(WooCommerce 등)이 있어서 필요하다.
+    in_stock 선택자: 재고가 있을 때만 카드 안에 있는 요소(예: 장바구니 버튼). 없으면 품절로 본다."""
+    if in_stock_sel:
+        try:
+            if card.select_one(in_stock_sel) is None:
+                return True
+        except Exception:
+            pass
+    if sold_out_sel:
+        try:
+            if soupsieve.match(sold_out_sel, card) or card.select_one(sold_out_sel) is not None:
+                return True
+        except Exception:
+            pass
+    return bool(_SOLD_OUT.search(card.get_text(" ", strip=True)))
 
 
 def parse_cards(
@@ -299,7 +328,7 @@ def parse_cards(
                     urljoin(base_url, a["href"]),
                     price,
                     cur or default_currency,
-                    False if _SOLD_OUT.search(card.get_text(" ", strip=True)) else None,
+                    False if _card_sold_out(card, sel.get("sold_out"), sel.get("in_stock")) else None,
                     "selector",
                 )
             )

@@ -83,13 +83,17 @@ https://...
 
 ## 알아 둘 한계
 
-- **샵 사이트는 수시로 개편됩니다.** 파서, 세금 계산, 알림, 저장 로직은 69개 테스트를 통과했고, 샵의 실제 화면 구조(TWE 브랜드 페이지, Whiskybase Shop)를 확인해 설정했지만,
+- **샵 사이트는 수시로 개편됩니다.** 파서, 세금 계산, 알림, 저장 로직은 90개 테스트를 통과했고, 각 샵의 실제 화면 구조를 확인해 설정했지만,
   실제 GitHub 러너에서의 수집은 4단계의 `setup-check` 로 반드시 확인하세요.
 - **샵별 수집 방식**: TWE 는 robots.txt 가 검색 주소를 막아서 증류소 브랜드 목록 페이지(`listing_urls`)를 읽습니다. Whiskybase Shop 은 Lightspeed 브랜드 페이지,
   Shopify 기반 샵은 `type: shopify` 로, 세금·배송이 가격에 이미 포함된 샵은 `all_in: true` 로 추가할 수 있습니다(한글 상품명 자동 변환 지원, config.yaml 하단 예시 참고).
   TWE 는 GitHub 서버 IP 에서 403 으로 막힐 수 있습니다(setup-check 로 확인).
   Master of Malt 는 Vercel 보안 검사가 봇을 막아 기본 비활성(`enabled: false`)입니다.
   파서는 JSON-LD → 셀렉터 프리셋 → 범용 휴리스틱 순으로 시도하고, 한 샵이 실패해도 나머지는 계속 돌며, 연속 실패하면 텔레그램으로 알립니다.
+- **수집하는 샵(12곳 중 활성 10곳)**: Whisky International Online, Hedonism Wines, Inn-Out Shop, Whisky Galore, Nickolls & Perks, Whiskybase Shop, Cadenhead's, Dunkeld Whisky Box, Whiskyfass, Rare Vintage Whisky.
+  TWE·Master of Malt 는 서버 IP 차단으로 꺼 둠. 전부 한국 배송 가능 여부와 배송비를 확인하세요(WIO 만 공식 요금표 값).
+- **넣지 못한 샵(사유)**: whiskyshop.com·Lochfyne(접속 시 Cloudflare 봇 확인 화면 - 우회하지 않음), BBR(목록이 자바스크립트로만 그려짐), Robert Graham(같은 이유),
+  Gauntleys(지금 스프링뱅크 계열 재고 없음), Must Have Malts(robots.txt 가 요청 간격 600초를 요구), Dekanta(일본 위스키 중심).
 - **실시간이 아니라 준실시간**입니다. GitHub 예약 실행은 지연될 수 있고 기본 간격은 30분입니다. 한정 물량이 몇 분 만에 소진되는 상품에는 부족할 수 있습니다.
 - **배송비는 추정치**입니다. 실제 배송비는 장바구니에서 한국 주소로 확인해 `ship_base`/`ship_extra` 를 고쳐야 정확합니다. 샵 간 비교와 소액면세 판정에 영향이 있습니다.
 - **VAT 제외·관세 20% 는 가정**입니다. 샵이 수출 시 실제로 VAT/영국 주세를 어떻게 처리하는지는 첫 실제 구매 때 체크아웃 금액과 비교해 보정하세요.
@@ -112,5 +116,5 @@ whiskywatch/
   notify.py      텔레그램 / 콘솔
 config.yaml      키워드, 샵, 임계값, 세율
 data/            history.jsonl, state.json (Actions 가 자동 커밋)
-tests/           pytest (77개)
+tests/           pytest (90개)
 ```

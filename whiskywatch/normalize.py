@@ -21,6 +21,14 @@ DEFAULT_RARE_WORDS = [
 _EDITION_TOKENS = [
     ("local-barley", r"\blocal\s+barley\b"),
     ("cask-strength", r"\bcask\s+strength\b|\bcs\b"),
+    # 같은 증류소·숙성 표기라도 가격대가 다른 스페셜 에디션은 표준 제품의 기준가에 섞이지 않게 구분한다
+    ("100-proof", r"\b100\s*proof\b"),
+    ("heavily-peated", r"\bheavily\s+peated\b"),
+    ("open-day", r"\bopen\s+day\b"),
+    ("society", r"\bsociety\b"),
+    ("single-cask", r"\bsingle\s+cask\b"),
+    ("hand-filled", r"\bhand[- ]filled\b"),
+    ("private-cask", r"\bprivate\s+cask\b"),
     ("sherry", r"\bsherry\b|\boloroso\b|\bpedro\b"),
     ("port", r"\bport\b"),
     ("rum", r"\brum\b"),
@@ -33,9 +41,9 @@ _EDITION_TOKENS = [
 ]
 
 _VOL_RE = re.compile(r"(\d+(?:[.,]\d+)?)\s*(cl|ml|l|ltr|liter|litre)\b")
-_ABV_RE = re.compile(r"(\d{2}(?:[.,]\d)?)\s*(?:%|vol|abv)")
+_ABV_RE = re.compile(r"(\d{2}(?:[.,]\d{1,2})?)\s*(?:%|vol|abv)")
 _AGE_RE = re.compile(
-    r"\b(\d{1,2})\s*[- ]?\s*(?:years?|yrs?|yo|y\.o\.?|jahre|jahr|ans|anni)\b(?:[- ]?old)?"
+    r"\b(\d{1,2})\s*[- ]?\s*(?:years?|yrs?|yo|y\.o\.?|y|jahre|jahr|ans|anni)\b(?:[- ]?old)?"
 )
 _YEAR_RE = re.compile(r"\b(19[4-9]\d|20[0-3]\d)\b")
 _BATCH_RE = re.compile(r"\bbatch\s*(?:no\.?\s*)?(\d{1,3})\b")
@@ -125,13 +133,21 @@ class Analysis:
             parts.append(f"y{self.year}")
         if self.batch:
             parts.append(f"b{self.batch}")
+        parts.extend(self._abv_part())
         parts.append(f"{self.volume_ml}ml")
         return "|".join(parts)
 
+    def _abv_part(self) -> list[str]:
+        """캐스크 스트렝스는 배치마다 도수와 가격이 달라서(예: 56.2% 와 57.2%) 도수(정수로 반올림)까지 구분한다.
+        Local Barley 등은 연도로 이미 구분되므로 도수를 키에 넣지 않는다(샵마다 도수 표기가 달라 비교가 끊기는 것을 피함)."""
+        if "cask-strength" in self.tokens and self.abv and self.abv >= 50:
+            return [f"a{round(self.abv)}"]
+        return []
+
     @property
     def family_key(self) -> str:
-        """연도/배치를 뺀 키. 세밀한 키의 이력이 부족할 때 폴백."""
-        parts = [self.distillery, str(self.age or "nas"), *sorted(self.tokens), f"{self.volume_ml}ml"]
+        """연도/배치를 뺀 키. 세밀한 키의 이력이 부족할 때 폴백. (고도수 상품은 도수로 구분)"""
+        parts = [self.distillery, str(self.age or "nas"), *sorted(self.tokens), *self._abv_part(), f"{self.volume_ml}ml"]
         return "|".join(parts)
 
     @property

@@ -188,6 +188,112 @@ shops:
     ship_base: 120          # 추정치 (샵이 무게·크기에 따라 따로 청구)
     ship_extra: 30
 
+  # ── Nickolls & Perks (영국, WooCommerce) ──
+  # 상품 카드에 'VAT 제외 가격(excl. VAT)'이 따로 표시되어 그 가격을 씁니다(수출 시 영국 VAT 제외 가정 -> strip_vat: 0).
+  # robots.txt 에 Crawl-delay 10초가 있어 프로그램이 요청 사이를 10초 이상 띄웁니다(한 회차 약 1분).
+  # !! 배송 안내 페이지에 한국이 명시되어 있지 않습니다('Rest of the World' 만 표기). 장바구니에서 한국 배송 가능 여부와 배송비를 확인하세요.
+  # !! 신제품은 '가구당 최대 1병' 제한이 있는 경우가 많습니다. ship_base/ship_extra 는 추정치입니다.
+  - id: nickolls
+    name: Nickolls & Perks (UK)
+    currency: GBP
+    preset: woodmart
+    listing_urls:
+      - url: "https://nickollsandperks.com/producer/springbank/page/{page}/"
+        pages: 3
+      - "https://nickollsandperks.com/producer/kilkerran/"
+      - "https://nickollsandperks.com/producer/longrow/"
+    strip_vat: 0
+    ship_base: 45
+    ship_extra: 10
+
+  # ── 아래 4곳은 '접속은 되지만 구조를 사람이 봐야 함' 그룹에서 실제 페이지 구조/robots.txt 를 확인해 추가한 샵입니다 ──
+  # !! 4곳 모두 한국 배송 가능 여부·배송비를 확인하지 못했습니다. 배송비(ship_base/ship_extra)는 추정치이니
+  #    관심 있는 상품이 알림으로 오면 장바구니에서 한국 주소로 실제 배송비를 꼭 확인하세요.
+
+  # Cadenhead's (캠벨타운 독립병입사, WooCommerce). robots.txt 에 제한 없음.
+  # 지금은 스프링뱅크/헤이즐번/킬커런 페이지가 비어 있을 때가 많아서 allow_empty(0건이어도 정상)로 둡니다. Longrow 전용 페이지는 없음.
+  # 영국 VAT 는 수출 시 빠지는지 확인 전이라 0(세금 안 뺌)으로 둡니다.
+  - id: cadenhead
+    name: Cadenhead's (UK)
+    currency: GBP
+    allow_empty: true
+    listing_urls:
+      - url: "https://cadenhead.shop/distillery/springbank/page/{page}/"
+        pages: 3
+      - "https://cadenhead.shop/distillery/hazelburn-springbank-distillery/"
+      - "https://cadenhead.shop/distillery/kilkerran/"
+    selectors:
+      card: "div.product.type-product"
+      link: "a.mainLink"
+      title: "h2.woocommerce-loop-product__title"
+      price: "p.price .amount"
+      sold_out: ".outofstock"
+    strip_vat: 0
+    ship_base: 46
+    ship_extra: 8
+
+  # Dunkeld Whisky Box (스코틀랜드 소규모 샵, ePages). 브랜드 목록은 자바스크립트로 그려져서 못 읽고,
+  # 검색 페이지(/search?q=)는 서버에서 그려주고 robots.txt 도 허용해서 그걸 씁니다. 파는 종류가 적어(스프링뱅크 계열 5~7종) 기준가 표본이 천천히 쌓입니다.
+  - id: dunkeld
+    name: Dunkeld Whisky Box (UK)
+    currency: GBP
+    listing_urls:
+      - "https://www.dunkeldwhiskybox.co.uk/search?q=springbank"
+      - "https://www.dunkeldwhiskybox.co.uk/search?q=hazelburn"
+    selectors:
+      card: "div.product-item"
+      link: "a.product-item-link"
+      title: "h2.product-item-title"
+      price: "h3.product-item-price-new span[aria-hidden]"
+      sold_out: 'link[itemprop="availability"][href*="OutOfStock"]'
+    strip_vat: 0
+    ship_base: 45
+    ship_extra: 10
+
+  # Whiskyfass (독일, JTL-Shop). 상품명에 용량이 없어서 '0,70 l / 55,5% vol.' 이 적힌 부분을 제목에 이어 붙입니다(용량 500ml 는 자동 제외).
+  # 표시가는 독일 VAT 19% 포함가로 보이나(수출 시 빠질 수 있음) 확인 전이라 0 으로 둡니다: 계산가가 실제보다 높게 나올 뿐 가짜 알림은 없습니다.
+  - id: whiskyfass
+    name: Whiskyfass (Germany)
+    currency: EUR
+    listing_urls:
+      - "https://whiskyfass.de/springbank?af=50"
+      - "https://whiskyfass.de/hazelburn?af=50"
+      - "https://whiskyfass.de/longrow?af=50"
+      - "https://whiskyfass.de/kilkerran?af=50"
+    selectors:
+      card: "form.form-basket"
+      link: ".productbox-head a"
+      title: ".productbox-title .title, .base_price .value"
+      price: "div.price.productbox-price"
+    strip_vat: 0
+    ship_base: 45
+    ship_extra: 12
+
+  # Rare Vintage Whisky (네덜란드, ePages). 목록 페이지가 20~100개씩 끊겨 있어서 페이지 번호가 붙는 주소를 씁니다(스프링뱅크 카테고리는 약 200건).
+  # 품절 상품에 자리표시 가격(예: 20유로)이 찍혀 있어서 skip_sold_out_history 로 품절 상품 가격은 기준가에 반영하지 않습니다.
+  # 한 회차에 요청이 13번 정도 나갑니다.
+  - id: rvw
+    name: Rare Vintage Whisky (NL)
+    currency: EUR
+    skip_sold_out_history: true
+    listing_urls:
+      - url: "https://rarevintagewhisky.nl/website/index.php?ProductCategory=32013969&Index={page}"
+        pages: 3
+      - url: "https://rarevintagewhisky.nl/website/index.php?ProductCategory=32014554&Index={page}"
+        pages: 4
+      - url: "https://rarevintagewhisky.nl/website/index.php?ProductCategory=32406429&Index={page}"
+        pages: 3
+      - url: "https://rarevintagewhisky.nl/website/index.php?ProductCategory=32014578&Index={page}"
+        pages: 3
+    selectors:
+      card: "div.ps-product-info"
+      link: "a"
+      price: ".ps-current-price"
+      in_stock: ".add-to-cart"
+    strip_vat: 0
+    ship_base: 45
+    ship_extra: 12
+
   # Shopify 기반 샵을 추가하는 예 (전체 카탈로그 JSON 을 받아 키워드로 걸러냅니다)
   # - id: example
   #   name: Example Whisky Shop

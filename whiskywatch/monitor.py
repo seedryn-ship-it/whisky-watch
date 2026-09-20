@@ -250,7 +250,7 @@ def run_once(
         try:
             fetcher = fetchers.get(shop.fetch)
             cands = collect_shop(shop, cfg, fetcher)
-            if not cands:
+            if not cands and not shop.allow_empty:
                 raise FetchError("응답은 왔지만 상품을 하나도 파싱하지 못함 (마크업 변경/차단 가능성)")
         except (BlockedError, FetchError) as e:
             health["fails"] += 1
@@ -288,6 +288,9 @@ def run_once(
                 pct = (obs.per_bottle_krw / base.median_krw - 1) * 100
                 if pct <= -cfg.alert.discount_pct:
                     found.append((pct, obs, base))
+
+            if shop.skip_sold_out_history and obs.in_stock is False:
+                continue  # 품절 상품에 엉뚱한 자리표시 가격을 보여주는 샵: 기준가(중앙값)가 오염되지 않게 기록하지 않음
 
             row = {
                 "t": int(now), "shop": shop.id, "url": cand.url, "title": a.title,
