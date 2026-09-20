@@ -79,6 +79,23 @@ def test_diagnose_reports_parsed_products(env, capsys):
     assert "key=springbank|10|local-barley|y2026|700ml" in out
 
 
+def test_diagnose_skips_disabled_shops_and_does_not_fail(env, capsys):
+    cfg, _ = env
+    cfg.write_text(
+        cfg.read_text(encoding="utf-8").replace("shops:\n", """shops:
+  - id: off
+    name: Off Shop
+    currency: GBP
+    enabled: false
+    search_url: "http://127.0.0.1:9/search?q={q}"
+""", 1),
+        encoding="utf-8",
+    )
+    assert cli.main(["--config", str(cfg), "diagnose"]) == 0
+    out = capsys.readouterr().out
+    assert "Off Shop" in out and "건너뜀" in out and "수집 실패" not in out
+
+
 def test_run_dry_run_prints_preview_and_writes_nothing(env, capsys):
     cfg, _ = env
     assert cli.main(["--config", str(cfg), "run", "--dry-run"]) == 0

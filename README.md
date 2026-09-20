@@ -40,6 +40,8 @@ GitHub Actions 에서 돌아가므로 PC를 켜 둘 필요가 없습니다.
 5. 파싱이 0건인 샵은 `config.yaml` 의 `listing_urls`(브랜드 목록 페이지)나 `selectors` 를 고치고 4번을 반복합니다.
 6. 이후 `whisky-watch` 워크플로가 30분마다 자동 실행됩니다(수동 실행 시 dry_run 옵션 있음).
 
+새 샵 후보를 찾을 때: Actions 탭 → `probe-shops` → Run workflow. 후보 샵들이 GitHub 러너에서 접속되는지, 어떤 플랫폼인지, 스프링뱅크 상품이 잡히는지 표로 보여 줍니다(`python -m whiskywatch probe`).
+
 로컬에서 확인하려면:
 
 ```bash
@@ -81,10 +83,11 @@ https://...
 
 ## 알아 둘 한계
 
-- **샵 사이트는 수시로 개편됩니다.** 파서, 세금 계산, 알림, 저장 로직은 69개 테스트를 통과했고, 샵 4곳의 실제 화면 구조(TWE 브랜드 페이지, Whiskybase Shop, Winemoa `products.json`)를 확인해 설정했지만,
+- **샵 사이트는 수시로 개편됩니다.** 파서, 세금 계산, 알림, 저장 로직은 69개 테스트를 통과했고, 샵의 실제 화면 구조(TWE 브랜드 페이지, Whiskybase Shop)를 확인해 설정했지만,
   실제 GitHub 러너에서의 수집은 4단계의 `setup-check` 로 반드시 확인하세요.
 - **샵별 수집 방식**: TWE 는 robots.txt 가 검색 주소를 막아서 증류소 브랜드 목록 페이지(`listing_urls`)를 읽습니다. Whiskybase Shop 은 Lightspeed 브랜드 페이지,
-  Winemoa 는 Shopify `products.json` 입니다. Winemoa 는 한글 상품명(스프링뱅크 등)을 자동 변환하며, 관세·주세·교육세·부가세 포함가(`all_in: true`)라 세금을 다시 더하지 않습니다.
+  Shopify 기반 샵은 `type: shopify` 로, 세금·배송이 가격에 이미 포함된 샵은 `all_in: true` 로 추가할 수 있습니다(한글 상품명 자동 변환 지원, config.yaml 하단 예시 참고).
+  TWE 는 GitHub 서버 IP 에서 403 으로 막힐 수 있습니다(setup-check 로 확인).
   Master of Malt 는 Vercel 보안 검사가 봇을 막아 기본 비활성(`enabled: false`)입니다.
   파서는 JSON-LD → 셀렉터 프리셋 → 범용 휴리스틱 순으로 시도하고, 한 샵이 실패해도 나머지는 계속 돌며, 연속 실패하면 텔레그램으로 알립니다.
 - **실시간이 아니라 준실시간**입니다. GitHub 예약 실행은 지연될 수 있고 기본 간격은 30분입니다. 한정 물량이 몇 분 만에 소진되는 상품에는 부족할 수 있습니다.
@@ -109,5 +112,5 @@ whiskywatch/
   notify.py      텔레그램 / 콘솔
 config.yaml      키워드, 샵, 임계값, 세율
 data/            history.jsonl, state.json (Actions 가 자동 커밋)
-tests/           pytest (69개)
+tests/           pytest (77개)
 ```

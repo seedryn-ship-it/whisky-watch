@@ -142,10 +142,9 @@ def test_shopify_listing_from_products_json():
 def test_shipped_config_is_consistent():
     cfg = load_config(ROOT / "config.yaml")
     by_id = {s.id: s for s in cfg.shops}
-    assert {"twe", "whiskybase", "winemoa"} <= set(by_id)
+    assert {"twe", "whiskybase"} <= set(by_id) and "winemoa" not in by_id
     for s in cfg.shops:
         assert s.listing_urls or s.search_url, s.id
-    assert by_id["winemoa"].all_in and by_id["winemoa"].type == "shopify"
     assert by_id["twe"].selectors["card"] == "li.product-grid__item"
     # 검색 페이지를 robots.txt 로 막은 샵은 검색 URL 을 쓰지 않는다
     for sid in ("twe", "mom"):

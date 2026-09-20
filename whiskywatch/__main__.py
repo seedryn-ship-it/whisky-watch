@@ -18,6 +18,7 @@ from .fetchers import BlockedError, FetchError, FetcherPool
 from .fx import FxError, get_rates
 from .monitor import collect_shop, run_once
 from .normalize import analyze
+from .probe import DEFAULT_CANDIDATES, Prober, format_line
 from .notify import ConsoleNotifier, TelegramNotifier, won
 from .store import History, State
 from .tax import compute_landed_cost
@@ -68,7 +69,12 @@ def cmd_diagnose(args) -> int:
         for shop in cfg.shops:
             if args.shop and shop.id != args.shop:
                 continue
-            print(f"\n== {shop.name} ({shop.id}) {'' if shop.enabled else '[비활성]'} ==")
+            if not shop.enabled and not args.shop:
+                print(f"\n== {shop.name} ({shop.id}) [비활성 - 건너뜀] ==")
+                continue
+            if args.fetch:
+                shop.fetch = args.fetch
+            print(f"\n== {shop.name} ({shop.id}) {'' if shop.enabled else '[비활성]'} [fetch={shop.fetch}] ==")
             try:
                 cands = collect_shop(shop, cfg, pool.get(shop.fetch), terms=[term])
             except BlockedError as e:
@@ -99,6 +105,23 @@ def cmd_diagnose(args) -> int:
     finally:
         pool.close()
     return 1 if bad else 0
+
+
+def cmd_probe(args) -> int:
+    cfg = load_config(args.config)
+    domains = [d.strip() for d in args.domains.split(",") if d.strip()] if args.domains else DEFAULT_CANDIDATES
+    pr = Prober(cfg.http.user_agent, cfg.http.timeout, (cfg.http.delay_min, cfg.http.delay_max))
+    results = []
+    for d in domains:
+        r = pr.probe(d)
+        results.append(r)
+        print(format_line(r), flush=True)
+    print("\n==== 요약 ====")
+    for label, title in (("가능", "바로 추가 가능"), ("확인", "Shopify 이지만 추가 확인 필요"), ("수동", "접속은 되지만 사람이 구조를 봐야 함"),
+                         ("차단", "이 서버 IP 에서는 차단됨"), ("실패", "접속 실패")):
+        names = [r["domain"] for r in results if r["verdict"] == label]
+        print(f"{title} ({len(names)}): {', '.join(names) if names else '-'}")
+    return 0
 
 
 def cmd_tax(args) -> int:
@@ -152,7 +175,12 @@ def main(argv: list[str] | None = None) -> int:
     d = sub.add_parser("diagnose")
     d.add_argument("--shop")
     d.add_argument("--term")
+    d.add_argument("--fetch", choices=["requests", "playwright"], help="config 의 fetch 설정을 이번 진단에만 바꿔서 시도")
     d.set_defaults(fn=cmd_diagnose)
+
+    pb = sub.add_parser("probe", help="후보 샵들이 이 환경에서 접속/수집 가능한지 점검")
+    pb.add_argument("--domains", help="쉼표로 구분한 도메인 (기본: 내장 후보 목록)")
+    pb.set_defaults(fn=cmd_probe)
 
     t = sub.add_parser("tax")
     t.add_argument("--price", type=float, required=True, help="샵 표시가(샵 통화)")
