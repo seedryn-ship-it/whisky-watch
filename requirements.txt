@@ -1,0 +1,6 @@
+requests>=2.31
+beautifulsoup4>=4.12
+lxml>=5.0
+PyYAML>=6.0
+# 선택: Cloudflare 등으로 requests가 차단될 때만 필요 (config.yaml의 fetch: playwright)
+# playwright>=1.44

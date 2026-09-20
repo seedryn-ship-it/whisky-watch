@@ -1,0 +1,5 @@
+{"products":[
+ {"title":"Springbank 12 Year Old Cask Strength Batch 24 70cl 55.6%","handle":"springbank-12-cs-b24","variants":[{"price":"109.00","available":true}]},
+ {"title":"Hazelburn 8 Year Old 70cl","handle":"hazelburn-8","variants":[{"price":"88.00","available":false}]},
+ {"title":"Laphroaig 10 Year Old 70cl","handle":"laphroaig-10","variants":[{"price":"42.00","available":true}]}
+]}

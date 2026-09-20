@@ -1,0 +1,150 @@
+# whisky-watch 설정 파일
+# 변경 후 `python -m whiskywatch diagnose` 로 수집이 되는지, `python -m whiskywatch run --dry-run` 으로 알림 모양을 확인하세요.
+
+# ─────────────────────────────────────────────────────────────
+# 1) 감시할 키워드
+#    - 키워드의 모든 단어가 상품명에 들어 있으면 감시 대상입니다 (대소문자/악센트 무시).
+#    - 각 키워드는 샵 검색어로도 쓰입니다. 검색 결과가 많은 샵에서는 구체적인 키워드를 추가하면 누락이 줄어듭니다.
+#    - 원하는 제품은 여기에 한 줄 추가하면 끝입니다.
+# ─────────────────────────────────────────────────────────────
+watchlist:
+  - springbank
+  - springbank local barley
+  - hazelburn
+  - longrow
+  - kilkerran
+  # 고숙성 / 희귀 라인업 (검색 누락 방지용 세부 키워드)
+  - springbank 15
+  - springbank 18
+  - springbank 21
+  - springbank 25
+  - springbank 30
+  - springbank cask strength
+  - springbank vintage
+  - springbank private
+  - hazelburn cask strength
+  # 대체 증류소 예시 (필요하면 주석 해제)
+  # - clynelish 14
+
+# 이 단어가 들어간 상품(미니어처, 잔, 세트 등)은 무시
+# exclude_words: [miniature, sample, glass, "5cl"]   # 지정하면 기본 목록을 통째로 대체합니다
+
+# 허용 용량(ml). 상품명에서 용량을 못 읽으면 700ml 로 가정하고 알림에 '(추정)'을 표시합니다.
+allowed_volumes_ml: [700, 750, 1000]
+
+# 알림 문구의 [고숙성/희귀] 태그 기준: 숙성 18년 이상, 빈티지 2005년 이하, 또는 아래 단어 포함
+# rare_words: [private, society, "single cask", rundlets]
+
+# ─────────────────────────────────────────────────────────────
+# 2) 알림 조건
+# ─────────────────────────────────────────────────────────────
+alert:
+  # 기준가(중앙값)보다 이 비율(%) 이상 싸면 알림.
+  # 0 으로 두면 '중앙값보다 조금이라도 싸면' 알림이라 하루에도 여러 번 울릴 수 있어 기본은 5% 입니다.
+  discount_pct: 5
+  # 기준가 계산에 필요한 최소 표본 수 (같은 상품의 '샵·일' 단위 최저 도착가 개수)
+  min_samples: 6
+  baseline_days: 180        # 기준가 계산에 쓰는 최근 기간
+  realert_hours: 48         # 같은 상품 재알림 최소 간격
+  realert_drop_pct: 2       # 마지막 알림가보다 이만큼 더 싸지면 간격과 무관하게 재알림
+  fail_alert_after: 12      # 같은 샵이 연속 N회 실패하면 1회 점검 알림
+  max_alerts_per_run: 15
+
+# 이력이 쌓이기 전(또는 이력이 적은 희귀 제품)에는 직접 기준가(도착가, 원)를 지정할 수 있습니다.
+# 이력 표본이 충분하면 이력 중앙값이 우선합니다.
+seed_prices: []
+#  - match: "springbank 10 local barley"
+#    krw: 450000
+#  - match: "hazelburn 12"
+#    krw: 320000
+
+# ─────────────────────────────────────────────────────────────
+# 3) 한국 세금 / 환율
+# ─────────────────────────────────────────────────────────────
+tax:
+  # 관세율 20% 는 FTA 원산지증명서(C/O)가 없을 때의 기본값(보수적).
+  # 스코틀랜드산 위스키에 한-영 FTA 를 적용받을 수 있다면 0 으로 바꾸세요.
+  tariff_rate: 0.20
+  liquor_tax_rate: 0.72
+  education_tax_rate: 0.30
+  vat_rate: 0.10
+  exemption_usd: 150        # 소액면세: 1L 이하 1병, 물품가 150달러 이하 -> 관세·부가세 면제 (주세·교육세는 부과)
+
+assume_bottles: 1           # 1회 주문 병수 가정. 2병 이상이면 소액면세가 적용되지 않고 배송비는 병수로 나눠 계산
+fx_card_markup_pct: 0.0     # 카드 해외결제 수수료 등을 가산하고 싶을 때 (예: 1.5)
+price_sanity: [25, 30000]   # 샵 통화 기준, 이 범위 밖 가격은 파싱 오류로 보고 무시
+
+# ─────────────────────────────────────────────────────────────
+# 4) 감시할 샵
+#    strip_vat  : 표시가에 포함된 현지 VAT 비율. 한국 수출 시 면세이므로 제외해서 계산합니다.
+#    ship_base / ship_extra : 한국행 배송비 '추정치' (1병 기본 / 추가 1병당, 샵 통화).
+#                 !! 아래 값은 예시 추정치입니다. 실제 장바구니에서 한국 주소로 확인한 금액으로 고쳐 주세요.
+#    search_url : {q} 검색어, {page} 페이지 번호 자리표시자
+#    fetch      : requests(기본) | playwright (Cloudflare 등으로 차단될 때)
+#    !! search_url / preset 은 실제 사이트에서 검증되지 않은 초기값입니다.
+#       처음 한 번 `python -m whiskywatch diagnose` 로 확인하고 필요하면 고쳐 주세요.
+# ─────────────────────────────────────────────────────────────
+shops:
+  - id: twe
+    name: The Whisky Exchange
+    currency: GBP
+    search_url: "https://www.thewhiskyexchange.com/search?q={q}"
+    strip_vat: 0.20
+    ship_base: 30
+    ship_extra: 6
+    max_pages: 1
+
+  - id: mom
+    name: Master of Malt
+    currency: GBP
+    search_url: "https://www.masterofmalt.com/search/?q={q}"
+    strip_vat: 0.20
+    ship_base: 25
+    ship_extra: 6
+    max_pages: 1
+    follow_product_pages: true
+
+  - id: whiskybase
+    name: Whiskybase Shop
+    currency: EUR
+    search_url: "https://shop.whiskybase.com/us/catalogsearch/result/?q={q}"
+    preset: magento
+    strip_vat: 0.21
+    ship_base: 35
+    ship_extra: 8
+
+  - id: winemoa
+    name: Winemoa
+    currency: EUR
+    search_url: "https://www.winemoa.de/search?search={q}"
+    preset: shopware
+    strip_vat: 0.19
+    ship_base: 35
+    ship_extra: 8
+
+  # Shopify 기반 샵을 추가하는 예 (전체 카탈로그 JSON 을 받아 키워드로 걸러냅니다)
+  # - id: example
+  #   name: Example Whisky Shop
+  #   type: shopify
+  #   currency: EUR
+  #   search_url: "https://example-shop.com/products.json?limit=250&page={page}"
+  #   max_pages: 4
+  #   strip_vat: 0.19
+  #   ship_base: 30
+  #   ship_extra: 8
+
+# ─────────────────────────────────────────────────────────────
+# 5) 저장 / HTTP
+# ─────────────────────────────────────────────────────────────
+storage:
+  history_path: data/history.jsonl
+  state_path: data/state.json
+  heartbeat_hours: 6        # 가격 변동이 없어도 이 간격으로 1건 기록 (git 커밋 최소화)
+  change_pct: 0.5
+  retention_days: 365
+
+http:
+  timeout: 25
+  delay_min: 1.5            # 요청 사이 무작위 대기(초): 사이트에 부담을 주지 않기 위함
+  delay_max: 3.5
+  respect_robots: true      # robots.txt 가 허용하지 않는 경로는 요청하지 않음
