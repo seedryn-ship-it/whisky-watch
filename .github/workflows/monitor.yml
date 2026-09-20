@@ -1,0 +1,30 @@
+{
+  "name": "whisky-watch",
+  "on": {
+    "schedule": [{"cron": "*/30 * * * *"}],
+    "workflow_dispatch": {"inputs": {"dry_run": {"description": "알림/저장 없이 결과만 로그에 출력", "type": "boolean", "default": false}}}
+  },
+  "concurrency": {"group": "whisky-watch", "cancel-in-progress": false},
+  "permissions": {"contents": "write"},
+  "jobs": {
+    "monitor": {
+      "runs-on": "ubuntu-latest",
+      "timeout-minutes": 15,
+      "steps": [
+        {"uses": "actions/checkout@v4"},
+        {"uses": "actions/setup-python@v5", "with": {"python-version": "3.12", "cache": "pip"}},
+        {"run": "pip install -r requirements.txt"},
+        {
+          "name": "Run monitor",
+          "env": {"TELEGRAM_BOT_TOKEN": "${{ secrets.TELEGRAM_BOT_TOKEN }}", "TELEGRAM_CHAT_ID": "${{ secrets.TELEGRAM_CHAT_ID }}"},
+          "run": "if [ \"${{ inputs.dry_run }}\" = \"true\" ]; then\n  python -m whiskywatch run --dry-run\nelse\n  python -m whiskywatch run\nfi\n"
+        },
+        {
+          "name": "Commit price history",
+          "if": "always() && inputs.dry_run != true",
+          "run": "git config user.name \"whisky-watch[bot]\"\ngit config user.email \"actions@users.noreply.github.com\"\nmkdir -p data\ngit add data\nif git diff --cached --quiet; then\n  echo \"변경 없음\"\n  exit 0\nfi\ngit commit -m \"data: update price history [skip ci]\"\ngit pull --rebase --autostash\ngit push\n"
+        }
+      ]
+    }
+  }
+}
