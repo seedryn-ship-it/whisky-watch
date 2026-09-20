@@ -1,7 +1,68 @@
 {
- "alerts": {},
+ "alerts": {
+  "dunkeld|https://www.dunkeldwhiskybox.co.uk/p/longrow-peated": {
+   "landed": 262657,
+   "t": 1789904058
+  },
+  "innout|https://inn-out-shop.com/products/springbank-10y-2025-o-dose-0-7l-46-vol-whisky": {
+   "landed": 321595,
+   "t": 1789904058
+  },
+  "innout|https://inn-out-shop.com/products/springbank-30-2026-whisky": {
+   "landed": 6464728,
+   "t": 1789904058
+  },
+  "rvw|https://rarevintagewhisky.nl/Longrow-2000-Gaja-Barolo-55.8": {
+   "landed": 1402503,
+   "t": 1789904058
+  },
+  "rvw|https://rarevintagewhisky.nl/Springbank-10Y-Oranje-Box": {
+   "landed": 425752,
+   "t": 1789904058
+  },
+  "rvw|https://rarevintagewhisky.nl/Springbank-12Y-1991-Bourbon-58.5": {
+   "landed": 1361851,
+   "t": 1789904058
+  },
+  "rvw|https://rarevintagewhisky.nl/Springbank-18Y-2017-46.0": {
+   "landed": 1300872,
+   "t": 1789904058
+  },
+  "rvw|https://rarevintagewhisky.nl/Springbank-18Y-2019-46.0": {
+   "landed": 1300872,
+   "t": 1789904058
+  },
+  "rvw|https://rarevintagewhisky.nl/Springbank-30Y-2025-46.0": {
+   "landed": 6077514,
+   "t": 1789904058
+  },
+  "whiskybase|https://shop.whiskybase.com/us/longrow-peated-161970662.html": {
+   "landed": 202027,
+   "t": 1789904058
+  },
+  "whiskybase|https://shop.whiskybase.com/us/springbank-21-year-old-145875376.html": {
+   "landed": 1805331,
+   "t": 1789904058
+  },
+  "whiskybase|https://shop.whiskybase.com/us/springbank-21-year-old-whb-whiskybrokercouk.html": {
+   "landed": 1973315,
+   "t": 1789904058
+  },
+  "whiskyfass|https://whiskyfass.de/longrow-peated-single-malt-whisky-07l": {
+   "landed": 225200,
+   "t": 1789904058
+  },
+  "wio|https://whiskyinternationalonline.com/products/springbank-10-year-old-whisky-46": {
+   "landed": 374930,
+   "t": 1789904058
+  },
+  "wio|https://whiskyinternationalonline.com/products/springbank-21-year-old-single-malt-whisky-2026-release-46": {
+   "landed": 2167518,
+   "t": 1789904058
+  }
+ },
  "fx": {
-  "t": 1789902190.3049397,
+  "t": 1789904058.2853825,
   "table": {
    "EUR": 0.8726,
    "GBP": 0.74939,
@@ -11,6 +72,14 @@
   }
  },
  "health": {
+  "cadenhead": {
+   "fails": 0,
+   "notified": false
+  },
+  "dunkeld": {
+   "fails": 0,
+   "notified": false
+  },
   "galore": {
    "fails": 0,
    "notified": false
@@ -23,12 +92,25 @@
    "fails": 0,
    "notified": false
   },
+  "nickolls": {
+   "fails": 1,
+   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "notified": false
+  },
+  "rvw": {
+   "fails": 0,
+   "notified": false
+  },
   "twe": {
    "fails": 2,
    "last_error": "HTTP 403: https://www.thewhiskyexchange.com/b/40/springbank-single-malt-scotch-whisky?pg=1",
    "notified": false
   },
   "whiskybase": {
+   "fails": 0,
+   "notified": false
+  },
+  "whiskyfass": {
    "fails": 0,
    "notified": false
   },
