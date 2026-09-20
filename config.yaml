@@ -217,6 +217,7 @@ shops:
     name: Cadenhead's (UK)
     currency: GBP
     allow_empty: true
+    add_tokens: [independent]   # Cadenhead's 병은 전부 독립병입(IB)이라 공식 병과 기준가를 섞지 않는다
     listing_urls:
       - url: "https://cadenhead.shop/distillery/springbank/page/{page}/"
         pages: 3

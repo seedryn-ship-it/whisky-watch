@@ -366,3 +366,19 @@ def test_shipped_config_lists_the_four_manual_group_shops():
         assert by[sid].enabled and by[sid].selectors.get("card") and by[sid].listing_urls, sid
         assert by[sid].strip_vat == 0 and by[sid].ship_base > 0  # 확인 전 세금은 빼지 않고(보수적) 배송비는 추정치를 둔다
     assert "/search?q=" in by["dunkeld"].listing_urls[0]
+
+
+def test_independent_bottlings_get_their_own_baseline_key():
+    ob = _an("Springbank 25 Jahre - Campbeltown Single Malt Scotch Whisky Inhalt: 0,70 l 46,0% vol.")
+    ib = _an("Springbank 25 Jahre - Director's Special - Single Malts of Scotland - Campbeltown Inhalt: 0,70 l 55,5% vol.")
+    assert ob.key == "springbank|25|700ml" and ib.key == "springbank|25|independent|700ml"
+    assert _an("Springbank 35 Jahre - 1989/2024 - Signatory Vintage - Symington's Choice 0,70 l").key.startswith("springbank|35|independent")
+    assert "independent" in _an("Springbank 31 Jahre - 1991/2022 - Hunter Laing - Old & Rare 0,70 l").tokens
+
+
+def test_cadenhead_shop_marks_every_bottle_as_independent():
+    s, c = _parse("cadenhead", "cadenhead_listing.html", "https://cadenhead.shop/distillery/springbank/")
+    assert s.add_tokens == ["independent"]
+    cfg = Config(watchlist=WL, shops=[s])
+    obs = evaluate(s, c[0], cfg, RATES)
+    assert "independent" in obs.analysis.tokens and obs.analysis.key == "springbank|12|independent|y2011|700ml"

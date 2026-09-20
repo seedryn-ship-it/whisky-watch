@@ -18,6 +18,14 @@ DEFAULT_RARE_WORDS = [
     "distillery exclusive", "vintage", "cask no", "hogshead", "butt", "1st fill",
 ]
 
+_INDEPENDENT_RE = (
+    r"\b(?:signatory|hunter\s+laing|cadenhead|single\s+malts\s+of\s+scotland|gordon\s*(?:&|and)\s*macphail|"
+    r"douglas\s+laing|duncan\s+taylor|samaroli|wilson\s*(?:&|and)\s*morgan|berry\s+bros|whisky\s+agency|maltbarn|"
+    r"elixir\s+distillers|kingsbury|exclusive\s+malts|old\s*(?:&|and)\s*rare|old\s+malt\s+cask|thompson\s+bros|"
+    r"dram\s+mor|blackadder|chieftain|adelphi|carn\s+mor|murray\s+mcdavid|the\s+maltman|director'?s\s+special|"
+    r"whisky-?fassor|independent\s+bottl)"
+)
+
 _EDITION_TOKENS = [
     ("local-barley", r"\blocal\s+barley\b"),
     ("cask-strength", r"\bcask\s+strength\b|\bcs\b"),
@@ -29,6 +37,8 @@ _EDITION_TOKENS = [
     ("single-cask", r"\bsingle\s+cask\b"),
     ("hand-filled", r"\bhand[- ]filled\b"),
     ("private-cask", r"\bprivate\s+cask\b"),
+    # 독립병입사(IB) 병입은 같은 증류소·숙성이어도 공식 병(OB)과 가격대가 달라서 따로 비교한다
+    ("independent", _INDEPENDENT_RE),
     ("sherry", r"\bsherry\b|\boloroso\b|\bpedro\b"),
     ("port", r"\bport\b"),
     ("rum", r"\brum\b"),

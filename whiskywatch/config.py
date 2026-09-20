@@ -32,6 +32,7 @@ class ShopConfig:
     preset: str | None = None  # magento | shopware
     selectors: dict[str, str] = field(default_factory=dict)
     note: str = ""
+    add_tokens: list = field(default_factory=list)  # 이 샵의 모든 상품에 붙일 비교 토큰. 예: 독립병입사 전문 샵이면 [independent]
     skip_sold_out_history: bool = False  # 품절 상품의 가격은 기준가 계산용 기록에 남기지 않음
     allow_empty: bool = False  # 목록이 정상적으로 열리는데 상품이 0건이어도 오류로 보지 않음 (예: 재고가 자주 비는 Cadenhead)
 

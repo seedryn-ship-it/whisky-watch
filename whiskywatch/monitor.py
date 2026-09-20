@@ -137,6 +137,8 @@ def evaluate(
     )
     if a is None:
         return None
+    if shop.add_tokens:
+        a.tokens = sorted(set(a.tokens) | set(shop.add_tokens))
     currency = (cand.currency or shop.currency).upper()
     if currency not in rates:
         return None
