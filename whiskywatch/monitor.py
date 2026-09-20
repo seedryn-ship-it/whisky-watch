@@ -117,6 +117,23 @@ def collect_shop(
     return cands
 
 
+# ------------------------------------------------------------------ 목표가(price_caps)
+
+def match_cap(a, caps: list[dict]) -> dict | None:
+    """상품이 사용자가 정한 목표가 규칙(증류소·숙성·에디션 토큰이 정확히 같음)에 해당하면 그 규칙을 돌려준다.
+    tokens 를 생략하면 '에디션 표시가 전혀 없는 일반 제품'만 해당한다(Local Barley·Cask Strength·독립병입 등은 제외)."""
+    for c in caps or []:
+        if str(c.get("distillery", "")).lower() != a.distillery.lower():
+            continue
+        if c.get("age") is not None and int(c["age"]) != (a.age or 0):
+            continue
+        if set(map(str, c.get("tokens") or [])) != set(a.tokens):
+            continue
+        if c.get("max_krw"):
+            return c
+    return None
+
+
 # ------------------------------------------------------------------ evaluate
 
 def evaluate(
@@ -183,6 +200,8 @@ def format_alert(obs: Observation, base: Baseline, pct: float, rates: dict[str, 
     stock_txt = "재고 있음" if obs.in_stock else "재고 미확인"
     if base.source == "history":
         base_txt = f"기준(이력 중앙값, 표본 {base.samples}건)"
+    elif base.source == "cap":
+        base_txt = f"내가 정한 목표가({base.key})"
     else:
         base_txt = "기준(직접 입력한 시드 가격)"
     cur = obs.currency
@@ -212,7 +231,9 @@ def format_alert(obs: Observation, base: Baseline, pct: float, rates: dict[str, 
         f"<b>{esc(a.title)}</b>{esc(tag_txt)}\n"
         f"{esc(shop.name)} · {stock_txt} · {vol}{abv}\n\n"
         f"도착가(추정) <b>{won(obs.per_bottle_krw)}</b>\n"
-        f"{base_txt} {won(base.median_krw)} 대비 <b>{pct:+.1f}%</b>\n\n"
+        + (f"{base_txt} {won(base.median_krw)} 이하 조건 충족 (<b>{pct:+.1f}%</b>)\n\n" if base.source == "cap"
+           else f"{base_txt} {won(base.median_krw)} 대비 <b>{pct:+.1f}%</b>\n\n")
+        +
         f"{esc(item_line)}\n{esc(ship_line)}\n{esc(tax_line)}\n\n"
         f"{esc(obs.cand.url)}"
     )
@@ -276,19 +297,25 @@ def run_once(
                 continue
             summary.observations += 1
             a = obs.analysis
-            base = lookup_baseline(
-                index,
-                [a.key, a.family_key],
-                cfg.alert.min_samples,
-                cfg.seed_prices,
-                fold(a.title),
-                term_matches,
-            )
+            cap = match_cap(a, cfg.price_caps)
+            if cap:
+                # 목표가가 있는 상품: 이력이 없어도 바로 판단한다(도착가가 목표가 이하이면 알림)
+                base = Baseline(int(cap["max_krw"]), 0, str(cap.get("label") or "목표가"), "cap")
+            else:
+                base = lookup_baseline(
+                    index,
+                    [a.key, a.family_key],
+                    cfg.alert.min_samples,
+                    cfg.seed_prices,
+                    fold(a.title),
+                    term_matches,
+                )
             if base is None:
                 summary.no_baseline += 1
             elif obs.in_stock is not False:
                 pct = (obs.per_bottle_krw / base.median_krw - 1) * 100
-                if pct <= -cfg.alert.discount_pct:
+                need = 0.0 if base.source == "cap" else cfg.alert.discount_pct
+                if pct <= -need:
                     found.append((pct, obs, base))
 
             if shop.skip_sold_out_history and obs.in_stock is False:

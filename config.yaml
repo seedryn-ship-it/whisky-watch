@@ -60,6 +60,18 @@ seed_prices: []
 #  - match: "hazelburn 12"
 #    krw: 320000
 
+# 내가 정한 '목표가'(도착가 = 상품가 + 한국 세금 + 배송비, 원). 아래 규칙에 맞는 상품은 이력이 없어도 바로,
+# 도착가가 목표가 이하이면 알림을 보냅니다(이 상품들은 '이력 중앙값 대비 5%' 규칙 대신 이 가격만 봅니다).
+# 규칙에 안 걸리는 상품(Local Barley, 독립병입, 그 밖의 증류소 등)은 기존처럼 이력 중앙값 기준입니다.
+# tokens 를 비워 두면 '에디션 표시가 없는 일반 제품'만 해당합니다. Local Barley·Cask Strength·100 Proof·독립병입 등은 제외됩니다.
+# 도착가에는 환율·배송비 추정이 들어가므로 실제 결제 금액과 몇 % 다를 수 있습니다.
+price_caps:
+  - {label: "스프링뱅크 10년", distillery: springbank, age: 10, tokens: [], max_krw: 250000}
+  - {label: "스프링뱅크 15년", distillery: springbank, age: 15, tokens: [], max_krw: 350000}
+  - {label: "스프링뱅크 12년 캐스크 스트렝스", distillery: springbank, age: 12, tokens: [cask-strength], max_krw: 350000}
+  - {label: "스프링뱅크 18년", distillery: springbank, age: 18, tokens: [], max_krw: 700000}
+  - {label: "스프링뱅크 21년", distillery: springbank, age: 21, tokens: [], max_krw: 1000000}
+
 # ─────────────────────────────────────────────────────────────
 # 3) 한국 세금 / 환율
 # ─────────────────────────────────────────────────────────────

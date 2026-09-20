@@ -95,6 +95,9 @@ class Config:
     storage: StorageConfig = field(default_factory=StorageConfig)
     http: HttpConfig = field(default_factory=HttpConfig)
     seed_prices: list[dict[str, Any]] = field(default_factory=list)  # [{match: "...", krw: 450000}]
+    # 직접 정한 '목표가(도착가 상한)'. 규칙에 맞는 상품은 이력 중앙값 대신 이 가격 이하일 때 알림.
+    # [{label: "...", distillery: springbank, age: 10, tokens: [], max_krw: 250000}]
+    price_caps: list[dict[str, Any]] = field(default_factory=list)
 
 
 def _build(cls, data: dict | None):
@@ -118,7 +121,7 @@ def load_config(path: str | Path) -> Config:
     )
     for key in (
         "exclude_words", "allowed_volumes_ml", "distilleries", "rare_words",
-        "assume_bottles", "fx_card_markup_pct", "seed_prices",
+        "assume_bottles", "fx_card_markup_pct", "seed_prices", "price_caps",
     ):
         if key in raw and raw[key] is not None:
             setattr(cfg, key, raw[key])

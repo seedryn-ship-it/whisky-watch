@@ -382,3 +382,67 @@ def test_cadenhead_shop_marks_every_bottle_as_independent():
     cfg = Config(watchlist=WL, shops=[s])
     obs = evaluate(s, c[0], cfg, RATES)
     assert "independent" in obs.analysis.tokens and obs.analysis.key == "springbank|12|independent|y2011|700ml"
+
+
+# ---------------------------------------------------------------- 목표가(price_caps)
+
+
+def test_shipped_price_caps_match_only_plain_standard_bottles():
+    from whiskywatch.monitor import match_cap
+
+    caps = load_config(ROOT / "config.yaml").price_caps
+    assert {c["max_krw"] for c in caps} == {250000, 350000, 700000, 1000000}
+
+    def cap(title):
+        a = _an(title)
+        c = match_cap(a, caps) if a else None
+        return c["max_krw"] if c else None
+
+    assert cap("Springbank 10 Year Old 70cl 46%") == 250000
+    assert cap("Springbank 15 Year Old 70cl 46%") == 350000
+    assert cap("Springbank 12 Year Old Cask Strength Batch 25 70cl 56.2%") == 350000
+    assert cap("Springbank 18 Year Old 70cl 46%") == 700000
+    assert cap("Springbank 21 Year Old 70cl 46%") == 1000000
+    # 로컬발리·100프루프·독립병입·다른 증류소·다른 숙성은 목표가 규칙에 안 걸린다(기존 이력 기준 유지)
+    assert cap("Springbank 10 Year Old Local Barley 70cl 55%") is None
+    assert cap("Springbank 10Y 100 Proof 2006 57.0%") is None
+    assert cap("Springbank 12 Jahre - 55,5 % - Cask Strength Edition 2025 Signatory 0,70 l") is None
+    assert cap("Springbank 25 Year Old 70cl") is None and cap("Hazelburn 10 Year Old 70cl 46%") is None
+    assert cap("Springbank 12 Year Old 70cl 46%") is None  # 일반 12년(캐스크 스트렝스 아님)은 목표가 없음
+
+
+_CAP_HTML = '<html><body><div class="c"><a href="/p/1">{title}</a><span class="p">£{price}</span></div></body></html>'
+
+
+def _cap_run(price, cap_krw, title="Springbank 15 Year Old 70cl 46%", stock_html=""):
+    import tempfile
+
+    shop = ShopConfig(id="t", name="T", currency="GBP", listing_urls=["https://t.example/list"],
+                      selectors={"card": "div.c", "price": ".p"}, ship_base=0)
+    caps = [{"label": "스프링뱅크 15년", "distillery": "springbank", "age": 15, "tokens": [], "max_krw": cap_krw}]
+    cfg = Config(watchlist=WL, shops=[shop], price_caps=caps)
+    f = MapFetcher({"https://t.example/list": _CAP_HTML.format(title=title, price=price) + stock_html})
+    d = Path(tempfile.mkdtemp())
+    sent = []
+
+    class N:
+        def send(self, t):
+            sent.append(t)
+            return True
+
+    s = run_once(cfg, History(d / "h.jsonl"), State(d / "s.json"), N(), _Pool(f), rates=RATES)
+    return s, sent
+
+
+def test_price_cap_alerts_immediately_without_history_when_at_or_below_target():
+    s, sent = _cap_run("100.00", 400_000)  # £100 -> 도착가 약 35만원(소액면세 + 주세/교육세)
+    alerts = [m for m in sent if "도착가(추정)" in m]  # (첫 실행 안내 메시지는 제외)
+    assert s.alerts_sent == 1 and len(alerts) == 1
+    assert "내가 정한 목표가(스프링뱅크 15년)" in alerts[0] and "₩400,000 이하 조건 충족" in alerts[0]
+
+
+def test_price_cap_does_not_alert_when_above_target_or_out_of_stock():
+    s, sent = _cap_run("100.00", 300_000)
+    assert s.alerts_sent == 0 and not [m for m in sent if "도착가(추정)" in m]
+    s, sent = _cap_run("100.00", 400_000, title="Springbank 15 Year Old 70cl 46% Sold out")
+    assert s.alerts_sent == 0  # 품절은 알림 없음
