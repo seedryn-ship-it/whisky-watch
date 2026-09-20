@@ -112,7 +112,7 @@ shops:
     name: Master of Malt
     currency: GBP
     enabled: false
-    note: "Vercel 보안 검사(JS 확인 페이지)가 봇을 막습니다. 켜려면 fetch: playwright 를 시도하세요. 증류소 페이지 자체는 robots.txt 가 허용합니다."
+    note: "Vercel 보안 검사(JS 확인 페이지)가 봇을 막습니다. 아래 주소도 아직 확인되지 않은 추정값입니다. 켜기 전에 브라우저에서 실제 증류소 페이지 주소를 확인하세요."
     listing_urls:
       - "https://www.masterofmalt.com/distilleries/springbank-whisky/"
     strip_vat: 0.20
@@ -132,23 +132,11 @@ shops:
     ship_base: 35
     ship_extra: 8
 
-  # Winemoa: 한국 직배송 전문. 표시가에 관세·부가세·교육세·주세가 전부 포함(all_in)이라고 안내하는 샵입니다.
-  # 전체 상품 목록(products.json, robots.txt 허용)을 받아 위 watchlist 로 걸러냅니다. 제목이 한글이어도 인식합니다.
-  - id: winemoa
-    name: Winemoa
-    currency: EUR
-    type: shopify
-    all_in: true
-    listing_urls:
-      - url: "https://winemoa.de/products.json?limit=250&page={page}"
-        pages: 4
-    ship_base: 0
-    ship_extra: 0
-
   # Shopify 기반 샵을 추가하는 예 (전체 카탈로그 JSON 을 받아 키워드로 걸러냅니다)
   # - id: example
   #   name: Example Whisky Shop
   #   type: shopify
+  #   all_in: false       # 세금·배송이 가격에 이미 포함된 한국 직배송 샵이면 true
   #   currency: EUR
   #   listing_urls:
   #     - url: "https://example-shop.com/products.json?limit=250&page={page}"
