@@ -1,7 +1,7 @@
 {
  "alerts": {},
  "fx": {
-  "t": 1789899457.663981,
+  "t": 1789900477.4313865,
   "table": {
    "EUR": 0.8726,
    "GBP": 0.74939,
@@ -11,7 +11,7 @@
  },
  "health": {
   "twe": {
-   "fails": 1,
+   "fails": 2,
    "last_error": "HTTP 403: https://www.thewhiskyexchange.com/b/40/springbank-single-malt-scotch-whisky?pg=1",
    "notified": false
   },
