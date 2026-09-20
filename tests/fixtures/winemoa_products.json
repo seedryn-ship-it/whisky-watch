@@ -1,0 +1,12 @@
+{"products":[
+{"title":"스프링뱅크 10년 로컬 발리 55.2%vol. 2025년 릴리즈 700ml","handle":"sb10-lb-2025","vendor":"springbank","variants":[{"price":"590.00","available":true}]},
+{"title":"스프링뱅크 15년 46%vol. 700ml 관세 부가세 교육세 주세 전체 포함","handle":"sb15","vendor":"springbank","variants":[{"price":"315.00","available":true}]},
+{"title":"스프링뱅크 10년 46%vol. 700ml","handle":"sb10","vendor":"springbank","variants":[{"price":"185.00","available":false}]},
+{"title":"헤이즐번 10년 46%vol 700ml","handle":"hz10","vendor":"springbank","variants":[{"price":"195.00","available":true}]},
+{"title":"킬커란 12년 46%vol. 700ml","handle":"kk12","vendor":"springbank","variants":[{"price":"115.00","available":true}]},
+{"title":"스프링뱅크 롱로우 100 프루프 2025년 릴리즈 57.1%vol. 700ml","handle":"lr100","vendor":"springbank","variants":[{"price":"265.00","available":true}]},
+{"title":"[2026년9월 위스키 추첨쿠폰] 스프링뱅크 10년 피노,로컬발리등 추첨 쿠폰","handle":"coupon","vendor":"winemoa","variants":[{"price":"100.00","available":false}]},
+{"title":"노스 스타 캠벨타운 컨넥션 2015/2025 스프링뱅크+글렌스코샤 블렌디드 몰트 위스키 50.7%vol. 700ml","handle":"ns","vendor":"springbank","variants":[{"price":"135.00","available":true}]},
+{"title":"킬커란 8년 CS 쉐리 캐스크 57.4%vol. 700ml + 글렌스코시아 캠벨타운 하버 46%vol. 700ml","handle":"bundle","vendor":"springbank","variants":[{"price":"265.00","available":true}]},
+{"title":"부커스 2026-01E 배치 61.9%vol. 700ml","handle":"bookers","vendor":"etc","variants":[{"price":"155.00","available":true}]}
+]}

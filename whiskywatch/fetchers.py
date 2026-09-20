@@ -20,7 +20,7 @@ class BlockedError(FetchError):
 
 _BLOCK_MARKERS = (
     "cf-chl", "just a moment", "captcha", "access denied", "attention required",
-    "px-captcha", "are you a robot", "unusual traffic",
+    "px-captcha", "are you a robot", "unusual traffic", "security checkpoint", "vercel security",
 )
 
 

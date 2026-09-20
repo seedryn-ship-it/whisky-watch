@@ -4,7 +4,9 @@
 # ─────────────────────────────────────────────────────────────
 # 1) 감시할 키워드
 #    - 키워드의 모든 단어가 상품명에 들어 있으면 감시 대상입니다 (대소문자/악센트 무시).
-#    - 각 키워드는 샵 검색어로도 쓰입니다. 검색 결과가 많은 샵에서는 구체적인 키워드를 추가하면 누락이 줄어듭니다.
+#    - 한글 상품명(스프링뱅크, 헤이즐번, 로컬 발리, 15년 ...)도 자동으로 영문으로 바꿔서 비교합니다.
+#    - 이 목록은 '걸러내는 기준'입니다. 샵의 브랜드/목록 페이지를 통째로 읽은 뒤 여기에 맞는 상품만 남깁니다.
+#      (검색창을 쓰는 샵 - search_url 지정 - 에서만 키워드가 검색어로도 쓰입니다.)
 #    - 원하는 제품은 여기에 한 줄 추가하면 끝입니다.
 # ─────────────────────────────────────────────────────────────
 watchlist:
@@ -76,59 +78,81 @@ price_sanity: [25, 30000]   # 샵 통화 기준, 이 범위 밖 가격은 파싱
 
 # ─────────────────────────────────────────────────────────────
 # 4) 감시할 샵
-#    strip_vat  : 표시가에 포함된 현지 VAT 비율. 한국 수출 시 면세이므로 제외해서 계산합니다.
+#    listing_urls : 브랜드/증류소 '목록 페이지' 주소들. {page} 가 있으면 1, 2, 3... 으로 바꿔 넘겨 읽습니다.
+#                   글자만 쓰거나 {url: ..., pages: N} 으로 쓸 수 있습니다.
+#                   TWE·Master of Malt 는 robots.txt 가 '검색' 주소를 막아 두어서, 허용된 브랜드 페이지를 씁니다.
+#    search_url   : 검색창 주소({q} 검색어, {page} 페이지). robots.txt 가 허용하는 샵에서만 사용.
+#    strip_vat    : 표시가에 포함된 현지 VAT 비율. 한국 수출 시 면세이므로 제외해서 계산합니다.
 #    ship_base / ship_extra : 한국행 배송비 '추정치' (1병 기본 / 추가 1병당, 샵 통화).
-#                 !! 아래 값은 예시 추정치입니다. 실제 장바구니에서 한국 주소로 확인한 금액으로 고쳐 주세요.
-#    search_url : {q} 검색어, {page} 페이지 번호 자리표시자
-#    fetch      : requests(기본) | playwright (Cloudflare 등으로 차단될 때)
-#    !! search_url / preset 은 실제 사이트에서 검증되지 않은 초기값입니다.
-#       처음 한 번 `python -m whiskywatch diagnose` 로 확인하고 필요하면 고쳐 주세요.
+#                 !! 예시 추정치입니다. 실제 장바구니에서 한국 주소로 확인한 금액으로 고쳐 주세요.
+#    all_in       : true 면 관세·주세·교육세·부가세가 이미 가격에 들어 있는 샵(한국 직배송 전문) - 세금을 더하지 않습니다.
+#    fetch        : requests(기본) | playwright (JS 검사/차단이 있을 때)
 # ─────────────────────────────────────────────────────────────
 shops:
   - id: twe
     name: The Whisky Exchange
     currency: GBP
-    search_url: "https://www.thewhiskyexchange.com/search?q={q}"
+    listing_urls:
+      - url: "https://www.thewhiskyexchange.com/b/40/springbank-single-malt-scotch-whisky?pg={page}"
+        pages: 8
+      - "https://www.thewhiskyexchange.com/b/40/hazelburn-single-malt-scotch-whisky?pg={page}"
+      - "https://www.thewhiskyexchange.com/b/40/longrow-single-malt-scotch-whisky?pg={page}"
+      - "https://www.thewhiskyexchange.com/b/40/kilkerran-single-malt-scotch-whisky?pg={page}"
+    selectors:
+      card: "li.product-grid__item"
+      link: "a.product-card"
+      title: "p.product-card__name, p.product-card__meta"
+      price: "p.product-card__price"
     strip_vat: 0.20
     ship_base: 30
     ship_extra: 6
-    max_pages: 1
+    max_pages: 4
 
   - id: mom
     name: Master of Malt
     currency: GBP
-    search_url: "https://www.masterofmalt.com/search/?q={q}"
+    enabled: false
+    note: "Vercel 보안 검사(JS 확인 페이지)가 봇을 막습니다. 켜려면 fetch: playwright 를 시도하세요. 증류소 페이지 자체는 robots.txt 가 허용합니다."
+    listing_urls:
+      - "https://www.masterofmalt.com/distilleries/springbank-whisky/"
     strip_vat: 0.20
     ship_base: 25
     ship_extra: 6
-    max_pages: 1
-    follow_product_pages: true
 
   - id: whiskybase
     name: Whiskybase Shop
     currency: EUR
-    search_url: "https://shop.whiskybase.com/us/catalogsearch/result/?q={q}"
-    preset: magento
+    preset: lightspeed
+    listing_urls:
+      - "https://shop.whiskybase.com/us/brands/springbank/"
+      - "https://shop.whiskybase.com/us/brands/hazelburn/"
+      - "https://shop.whiskybase.com/us/brands/longrow/"
+      - "https://shop.whiskybase.com/us/brands/kilkerran/"
     strip_vat: 0.21
     ship_base: 35
     ship_extra: 8
 
+  # Winemoa: 한국 직배송 전문. 표시가에 관세·부가세·교육세·주세가 전부 포함(all_in)이라고 안내하는 샵입니다.
+  # 전체 상품 목록(products.json, robots.txt 허용)을 받아 위 watchlist 로 걸러냅니다. 제목이 한글이어도 인식합니다.
   - id: winemoa
     name: Winemoa
     currency: EUR
-    search_url: "https://www.winemoa.de/search?search={q}"
-    preset: shopware
-    strip_vat: 0.19
-    ship_base: 35
-    ship_extra: 8
+    type: shopify
+    all_in: true
+    listing_urls:
+      - url: "https://winemoa.de/products.json?limit=250&page={page}"
+        pages: 4
+    ship_base: 0
+    ship_extra: 0
 
   # Shopify 기반 샵을 추가하는 예 (전체 카탈로그 JSON 을 받아 키워드로 걸러냅니다)
   # - id: example
   #   name: Example Whisky Shop
   #   type: shopify
   #   currency: EUR
-  #   search_url: "https://example-shop.com/products.json?limit=250&page={page}"
-  #   max_pages: 4
+  #   listing_urls:
+  #     - url: "https://example-shop.com/products.json?limit=250&page={page}"
+  #       pages: 4
   #   strip_vat: 0.19
   #   ship_base: 30
   #   ship_extra: 8

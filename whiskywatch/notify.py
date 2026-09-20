@@ -23,6 +23,7 @@ class TelegramNotifier:
         self.token = token
         self.chat_id = chat_id
         self._post = http_post or (lambda url, payload: requests.post(url, json=payload, timeout=20))
+        self.last_error = ""  # 실패 사유 (토큰은 포함되지 않음)
 
     @classmethod
     def from_env(cls) -> "TelegramNotifier":
@@ -46,9 +47,16 @@ class TelegramNotifier:
                         "disable_web_page_preview": True,
                     },
                 )
-                ok = ok and r.status_code == 200
-            except requests.RequestException:
+                if r.status_code != 200:
+                    ok = False
+                    try:
+                        desc = r.json().get("description", "")
+                    except Exception:
+                        desc = ""
+                    self.last_error = f"HTTP {r.status_code} {desc}".strip()
+            except requests.RequestException as e:
                 ok = False
+                self.last_error = f"연결 오류: {type(e).__name__}"
         return ok
 
 

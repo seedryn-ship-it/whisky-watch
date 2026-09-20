@@ -6,11 +6,12 @@ import re
 import unicodedata
 from dataclasses import dataclass, field
 
-DEFAULT_DISTILLERIES = ["springbank", "hazelburn", "longrow", "kilkerran"]
+DEFAULT_DISTILLERIES = ["hazelburn", "longrow", "kilkerran", "springbank"]  # 자매 증류소 우선
 DEFAULT_EXCLUDE = [
     "miniature", "miniatures", "sample", "samples", "tasting set", "gift set", "glass",
     "glasses", "glencairn", "tumbler", "book", "poster", "t-shirt", "hoodie", "cap",
     "mini", "dram", "drams", "5cl", "3cl", "2cl", "1cl", "10cl", "20cl", "35cl",
+    "blended", "coupon", "lottery",  # 블렌디드 몰트, 추첨 쿠폰(한국어는 아래 별칭으로 변환됨)
 ]
 DEFAULT_RARE_WORDS = [
     "private", "society", "single cask", "rundlets", "kilderkin", "kilderkins", "cage",
@@ -40,11 +41,35 @@ _YEAR_RE = re.compile(r"\b(19[4-9]\d|20[0-3]\d)\b")
 _BATCH_RE = re.compile(r"\bbatch\s*(?:no\.?\s*)?(\d{1,3})\b")
 
 
+# 한국어 샵(예: Winemoa)의 상품명을 영어 키워드로 바꿔 같은 규칙으로 분석하기 위한 별칭
+KOREAN_ALIASES = {
+    "스프링뱅크": "springbank", "스프링 뱅크": "springbank",
+    "헤이즐번": "hazelburn", "헤이즐 번": "hazelburn",
+    "롱로우": "longrow",
+    "킬커란": "kilkerran", "키커런": "kilkerran", "킬커런": "kilkerran", "키르케란": "kilkerran",
+    "로컬 발리": "local barley", "로컬발리": "local barley",
+    "캐스크 스트랭스": "cask strength", "캐스크 스트렝스": "cask strength", "캐스크스트렝스": "cask strength",
+    "캐스크스트랭스": "cask strength",
+    "쉐리": "sherry", "셰리": "sherry",
+    "올로로소": "oloroso", "올로로쏘": "oloroso", "오로로소": "oloroso",
+    "빈티지": "vintage", "릴리즈": "release", "릴리스": "release", "배치": "batch", "프루프": "proof",
+    "피티드": "peated", "블렌디드": "blended", "쿠폰": "coupon", "추첨": "lottery",
+    "미니어처": "miniature", "샘플": "sample",
+}
+_KO_ALIAS_RE = re.compile("|".join(re.escape(k) for k in sorted(KOREAN_ALIASES, key=len, reverse=True)))
+
+
 def fold(text: str) -> str:
-    """소문자화 + 악센트 제거 + 공백 정리."""
+    """소문자화 + 악센트 제거 + 한국어 별칭 영어화 + 공백 정리."""
     text = unicodedata.normalize("NFKD", text)
     text = "".join(c for c in text if not unicodedata.combining(c))
-    return re.sub(r"\s+", " ", text.lower()).strip()
+    text = text.lower()
+    # NFKD 는 한글을 자모로 분해하므로 별칭 치환 전에 다시 합친다
+    text = unicodedata.normalize("NFC", text)
+    text = _KO_ALIAS_RE.sub(lambda m: f" {KOREAN_ALIASES[m.group(0)]} ", text)
+    text = re.sub(r"(\d{4})\s*년", r"\1 ", text)  # 2025년 -> 2025
+    text = re.sub(r"(?<!\d)(\d{1,2})\s*년", r"\1 year old ", text)  # 15년 -> 15 year old
+    return re.sub(r"\s+", " ", text).strip()
 
 
 def parse_volume_ml(folded: str) -> int | None:
@@ -138,6 +163,8 @@ def analyze(
     folded = fold(title)
     matched = next((t for t in watchlist if term_matches(folded, t)), None)
     if not matched:
+        return None
+    if re.search(r"\s\+\s", title):  # "A + B" 묶음 상품은 단품 가격과 비교할 수 없음
         return None
     exclude = DEFAULT_EXCLUDE if exclude_words is None else exclude_words
     if any(_has_word(folded, w) for w in exclude):

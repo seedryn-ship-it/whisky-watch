@@ -18,7 +18,9 @@ class ShopConfig:
     id: str
     name: str
     currency: str
-    search_url: str  # {q}, {page} 자리표시자 사용 (shopify 타입은 products.json URL)
+    search_url: str = ""  # {q}, {page} 자리표시자. robots.txt 가 검색을 막는 샵은 listing_urls 를 쓴다
+    listing_urls: list = field(default_factory=list)  # 브랜드/증류소 목록 페이지. 문자열 또는 {url, pages}
+    all_in: bool = False  # 관세·주세·교육세·부가세·배송이 표시가에 이미 포함된 샵(예: Winemoa)
     type: str = "html"  # html | shopify
     enabled: bool = True
     fetch: str = "requests"  # requests | playwright
@@ -33,7 +35,11 @@ class ShopConfig:
 
     @property
     def base_url(self) -> str:
-        p = urlparse(self.search_url)
+        first = self.search_url
+        if not first and self.listing_urls:
+            entry = self.listing_urls[0]
+            first = entry["url"] if isinstance(entry, dict) else str(entry)
+        p = urlparse(first)
         return f"{p.scheme}://{p.netloc}"
 
 

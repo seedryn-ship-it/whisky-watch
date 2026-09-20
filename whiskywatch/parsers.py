@@ -224,6 +224,13 @@ CARD_PRESETS: dict[str, dict[str, str]] = {
         "link": "a.product-name",
         "price": ".product-price",
     },
+    # Lightspeed eCom (Whiskybase Shop 에서 실제 마크업 확인)
+    "lightspeed": {
+        "card": "div.product-block",
+        "title": "h4 a.title",
+        "link": "h4 a.title",
+        "price": "div.product-block-price",
+    },
 }
 
 
@@ -278,13 +285,17 @@ def parse_cards(
     if sel.get("card"):
         for card in soup.select(sel["card"]):
             a = card.select_one(sel.get("link", "a")) or card.find("a", href=True)
-            t = card.select_one(sel.get("title", "a")) or a
-            if not a or not t or not a.get("href"):
+            if not a or not a.get("href"):
+                continue
+            # title 은 쉼표로 여러 요소를 지정할 수 있다 (예: 이름 + "70cl / 46%") -> 공백으로 이어 붙임
+            parts = [e.get_text(" ", strip=True) for e in card.select(sel["title"])] if sel.get("title") else []
+            title = " ".join(p for p in parts if p) or a.get_text(" ", strip=True)
+            if not title:
                 continue
             price, cur = _card_price(card, sel.get("price"), default_currency)
             out.append(
                 Candidate(
-                    t.get_text(" ", strip=True),
+                    title,
                     urljoin(base_url, a["href"]),
                     price,
                     cur or default_currency,

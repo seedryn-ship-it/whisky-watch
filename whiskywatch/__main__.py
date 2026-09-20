@@ -91,7 +91,7 @@ def cmd_diagnose(args) -> int:
             with_price = [c for c, _ in watched if c.price is not None]
             print(f"  후보 {len(cands)}건 / 관심 상품 {len(watched)}건 / 가격 파싱 {len(with_price)}건")
             if not cands:
-                print("  -> 파싱 0건: search_url 이 맞는지, 또는 selectors/preset 지정이 필요한지 확인하세요.")
+                print("  -> 파싱 0건: listing_urls(또는 search_url) 주소가 맞는지, selectors/preset 지정이 필요한지 확인하세요.")
                 bad += 1
             for c, a in watched[:5]:
                 price = f"{c.currency or shop.currency} {c.price:,.2f}" if c.price is not None else "가격 없음"
@@ -123,8 +123,20 @@ def cmd_tax(args) -> int:
 
 
 def cmd_test_telegram(args) -> int:
-    ok = TelegramNotifier.from_env().send("<b>whisky-watch</b>\n텔레그램 연결 테스트입니다.")
-    print("전송 성공" if ok else "전송 실패 (토큰/채팅 ID 를 확인하세요)")
+    n = TelegramNotifier.from_env()
+    ok = n.send("<b>whisky-watch</b>\n텔레그램 연결 테스트입니다.")
+    if ok:
+        print("전송 성공")
+    else:
+        print(f"전송 실패: {n.last_error}")
+        hint = {
+            "401": "토큰이 틀렸습니다 (BotFather 가 준 값을 그대로, 앞뒤 공백 없이).",
+            "404": "토큰 형식이 틀렸습니다 ('bot' 글자를 붙이지 않은 123456:ABC... 형태여야 합니다).",
+            "400": "채팅 ID 가 틀렸거나, 봇에게 먼저 아무 메시지도 보내지 않았습니다.",
+            "403": "봇이 차단되었거나 채팅에 참여하지 않았습니다.",
+        }.get(n.last_error.split(" ")[1] if n.last_error.startswith("HTTP ") else "", "")
+        if hint:
+            print("  ->", hint)
     return 0 if ok else 1
 
 

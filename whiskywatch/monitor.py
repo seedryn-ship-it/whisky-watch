@@ -13,7 +13,7 @@ from .fx import FxError, get_rates
 from .normalize import Analysis, analyze, fold, term_matches
 from .notify import esc, won
 from .store import Baseline, History, State, lookup_baseline
-from .tax import LandedCost, compute_landed_cost
+from .tax import LandedCost, all_in_cost, compute_landed_cost
 
 
 @dataclass
@@ -43,32 +43,55 @@ class RunSummary:
 
 # ------------------------------------------------------------------ collect
 
+def _targets(shop: ShopConfig, cfg: Config, terms: list[str] | None) -> list[tuple[str, int]]:
+    """(URL 템플릿, 최대 페이지) 목록. 목록 페이지가 지정되면 그것을, 아니면 검색 URL 을 키워드별로 쓴다."""
+    targets: list[tuple[str, int]] = []
+    for entry in shop.listing_urls:
+        if isinstance(entry, dict):
+            targets.append((str(entry["url"]), int(entry.get("pages", 1))))
+        else:
+            targets.append((str(entry), shop.max_pages))
+    if not targets and shop.search_url:
+        for term in terms or cfg.watchlist:
+            targets.append((shop.search_url.replace("{q}", quote_plus(term)), shop.max_pages))
+    return targets
+
+
 def collect_shop(
     shop: ShopConfig,
     cfg: Config,
     fetcher,
     terms: list[str] | None = None,
 ) -> list[parsers.Candidate]:
-    """샵 하나에서 후보(상품명/URL/가격) 수집. 실패 시 FetchError 계열 예외."""
+    """샵 하나에서 후보(상품명/URL/가격) 수집. 전부 실패했을 때만 예외를 던진다(일부 실패는 허용)."""
     cands: list[parsers.Candidate] = []
-    if shop.type == "shopify":
-        for page in range(1, shop.max_pages + 1):
-            text = fetcher.get(shop.search_url.format(page=page))
-            got = parsers.parse_shopify_products(text, shop.base_url, shop.currency)
-            cands += got
-            if not got:
-                break
-    else:
-        for term in terms or cfg.watchlist:
-            for page in range(1, shop.max_pages + 1):
-                url = shop.search_url.format(q=quote_plus(term), page=page)
-                html = fetcher.get(url)
+    seen: set[str] = set()
+    first_error: FetchError | None = None
+
+    for template, pages in _targets(shop, cfg, terms):
+        paged = "{page}" in template
+        for page in range(1, (pages if paged else 1) + 1):
+            url = template.replace("{page}", str(page))
+            try:
+                body = fetcher.get(url)
+            except FetchError as e:
+                if page == 1 and first_error is None:
+                    first_error = e
+                break  # 이 목록은 여기까지 (2쪽 이후의 404 등은 '끝'으로 간주)
+            if shop.type == "shopify":
+                got = parsers.parse_shopify_products(body, shop.base_url, shop.currency)
+            else:
                 got = parsers.parse_listing(
-                    html, url, currency=shop.currency, selectors=shop.selectors or None, preset=shop.preset
+                    body, url, currency=shop.currency, selectors=shop.selectors or None, preset=shop.preset
                 )
-                cands += got
-                if not got:
-                    break
+            new = [c for c in got if c.url not in seen]
+            seen.update(c.url for c in new)
+            cands += new
+            if not new:
+                break  # 더 새로운 상품이 없으면 다음 페이지를 보지 않음
+
+    if not cands and first_error is not None:
+        raise first_error
 
     uniq: dict[str, parsers.Candidate] = {}
     for c in cands:
@@ -122,12 +145,15 @@ def evaluate(
         return None
 
     qty = max(1, int(cfg.assume_bottles))
-    price_ex_vat = cand.price / (1 + shop.strip_vat)
+    price_ex_vat = cand.price if shop.all_in else cand.price / (1 + shop.strip_vat)
     ship_native = shop.ship_base + shop.ship_extra * (qty - 1)
     markup = 1 + cfg.fx_card_markup_pct / 100
     item_krw = price_ex_vat * qty * rates[currency] * markup
     ship_krw = ship_native * rates[shop.currency] * markup
-    lc = compute_landed_cost(item_krw, ship_krw, rates["USD"], volume_ml=a.volume_ml, qty=qty, cfg=cfg.tax)
+    if shop.all_in:  # 세금·통관 포함가: 세금을 다시 더하지 않는다
+        lc = all_in_cost(item_krw, ship_krw)
+    else:
+        lc = compute_landed_cost(item_krw, ship_krw, rates["USD"], volume_ml=a.volume_ml, qty=qty, cfg=cfg.tax)
     return Observation(
         shop=shop,
         cand=cand,
@@ -159,10 +185,16 @@ def format_alert(obs: Observation, base: Baseline, pct: float, rates: dict[str, 
         base_txt = "기준(직접 입력한 시드 가격)"
     cur = obs.currency
     item_line = f"상품 {cur} {obs.price_native_ex_vat:,.2f} -> {won(lc.item_krw / obs.qty)}"
-    if shop.strip_vat:
+    if shop.all_in:
+        item_line += " (샵 표기: 관세·주세·교육세·부가세 포함가)"
+    elif shop.strip_vat:
         item_line += f" (VAT {shop.strip_vat * 100:.0f}% 제외 가정)"
     ship_line = f"배송(추정) {shop.currency} {obs.ship_native / obs.qty:,.2f} -> {won(lc.shipping_krw / obs.qty)}"
-    if lc.exempt:
+    if shop.all_in:
+        tax_line = "세금: 별도 없음 (샵 표기 포함가 기준, 결제 화면에서 최종 확인)"
+        if not lc.shipping_krw:
+            ship_line = "배송: 별도 추정 없음"
+    elif lc.exempt:
         tax_line = (
             f"세금 {won(lc.tax_krw)} = 주세 {won(lc.liquor_tax_krw)} + 교육세 {won(lc.education_tax_krw)} "
             f"(소액면세: 관세·부가세 면제)"

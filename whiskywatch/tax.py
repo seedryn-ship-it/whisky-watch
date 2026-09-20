@@ -91,3 +91,13 @@ def compute_landed_cost(
         total_krw=total,
         exempt=exempt,
     )
+
+
+def all_in_cost(item_krw: float, shipping_krw: float = 0.0) -> LandedCost:
+    """관세·주세·교육세·부가세가 이미 가격에 포함돼 판매되는 샵(예: Winemoa)용. 세금을 더하지 않는다."""
+    item_i, ship_i = round(item_krw), round(shipping_krw)
+    return LandedCost(
+        item_krw=item_i, shipping_krw=ship_i, customs_value_krw=item_i,
+        duty_krw=0, liquor_tax_krw=0, education_tax_krw=0, vat_krw=0,
+        total_krw=item_i + ship_i, exempt=False,
+    )

@@ -37,7 +37,7 @@ GitHub Actions 에서 돌아가므로 PC를 켜 둘 필요가 없습니다.
 3. **Secrets**: 저장소 Settings → Secrets and variables → Actions 에 `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` 등록.
 4. **점검 실행**: Actions 탭 → `setup-check` → Run workflow. 텔레그램 테스트 메시지가 오는지, 샵별로 상품이 몇 건 파싱되는지 로그를 봅니다.
    샵은 접속 IP 를 가려 받기도 해서 반드시 **GitHub 러너에서** 확인해야 합니다.
-5. `search_url` 이 틀렸거나 파싱이 0건인 샵은 `config.yaml` 을 고치고 4번을 반복합니다.
+5. 파싱이 0건인 샵은 `config.yaml` 의 `listing_urls`(브랜드 목록 페이지)나 `selectors` 를 고치고 4번을 반복합니다.
 6. 이후 `whisky-watch` 워크플로가 30분마다 자동 실행됩니다(수동 실행 시 dry_run 옵션 있음).
 
 로컬에서 확인하려면:
@@ -81,8 +81,11 @@ https://...
 
 ## 알아 둘 한계
 
-- **이 코드는 실제 샵 사이트를 대상으로 검증되지 않았습니다.** 파서, 세금 계산, 알림, 저장 로직은 로컬 가짜 서버와 픽스처로 59개 테스트를 통과했지만,
-  `config.yaml` 의 4개 샵 `search_url`/`preset` 은 초기값입니다. 5단계의 `setup-check` 로 반드시 확인하세요.
+- **샵 사이트는 수시로 개편됩니다.** 파서, 세금 계산, 알림, 저장 로직은 69개 테스트를 통과했고, 샵 4곳의 실제 화면 구조(TWE 브랜드 페이지, Whiskybase Shop, Winemoa `products.json`)를 확인해 설정했지만,
+  실제 GitHub 러너에서의 수집은 4단계의 `setup-check` 로 반드시 확인하세요.
+- **샵별 수집 방식**: TWE 는 robots.txt 가 검색 주소를 막아서 증류소 브랜드 목록 페이지(`listing_urls`)를 읽습니다. Whiskybase Shop 은 Lightspeed 브랜드 페이지,
+  Winemoa 는 Shopify `products.json` 입니다. Winemoa 는 한글 상품명(스프링뱅크 등)을 자동 변환하며, 관세·주세·교육세·부가세 포함가(`all_in: true`)라 세금을 다시 더하지 않습니다.
+  Master of Malt 는 Vercel 보안 검사가 봇을 막아 기본 비활성(`enabled: false`)입니다.
   파서는 JSON-LD → 셀렉터 프리셋 → 범용 휴리스틱 순으로 시도하고, 한 샵이 실패해도 나머지는 계속 돌며, 연속 실패하면 텔레그램으로 알립니다.
 - **실시간이 아니라 준실시간**입니다. GitHub 예약 실행은 지연될 수 있고 기본 간격은 30분입니다. 한정 물량이 몇 분 만에 소진되는 상품에는 부족할 수 있습니다.
 - **배송비는 추정치**입니다. 실제 배송비는 장바구니에서 한국 주소로 확인해 `ship_base`/`ship_extra` 를 고쳐야 정확합니다. 샵 간 비교와 소액면세 판정에 영향이 있습니다.
@@ -106,5 +109,5 @@ whiskywatch/
   notify.py      텔레그램 / 콘솔
 config.yaml      키워드, 샵, 임계값, 세율
 data/            history.jsonl, state.json (Actions 가 자동 커밋)
-tests/           pytest (59개)
+tests/           pytest (69개)
 ```
