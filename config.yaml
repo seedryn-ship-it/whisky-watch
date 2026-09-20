@@ -92,6 +92,8 @@ shops:
   - id: twe
     name: The Whisky Exchange
     currency: GBP
+    enabled: false
+    note: "GitHub 서버 IP 에서 HTTP 403 으로 차단됨. 집 PC 실행 또는 fetch: playwright 로 해결되면 enabled: true 로 바꾸세요."
     listing_urls:
       - url: "https://www.thewhiskyexchange.com/b/40/springbank-single-malt-scotch-whisky?pg={page}"
         pages: 8
@@ -131,6 +133,60 @@ shops:
     strip_vat: 0.21
     ship_base: 35
     ship_extra: 8
+
+  # ── Shopify 기반 샵 4곳 (점검 결과 GitHub 러너에서 수집 가능, 스프링뱅크 컬렉션 확인됨) ──
+  # !! 아래 strip_vat 은 '모르면 0(세금 안 뺌)'으로 둔 보수적 값입니다. 가격이 실제보다 비싸게 계산될 뿐 가짜 알림은 나지 않습니다.
+  #    실제 상품 페이지와 diagnose 로그의 가격을 비교해서 목록 JSON 가격에 VAT 가 포함돼 있으면 0.20(영국) / 0.19(독일) 로 바꾸세요.
+  # !! ship_base / ship_extra 는 배송비 추정치입니다. WIO 만 공식 요금표(Zone 9a) 값이고 나머지는 추정입니다.
+  # !! 한국 배송 가능 여부는 WIO(가능, 공식 확인)·Hedonism(국가 선택에 있음)·Whisky Galore(가능)만 확인됐고,
+  #    inn-out-shop 은 'DHL 전세계 배송'이라고만 되어 있어 장바구니에서 한국 주소로 확인이 필요합니다.
+  #    (Still Spirit 은 한국이 배송 국가 목록에 없어서 제외했습니다.)
+  - id: wio
+    name: Whisky International Online (UK)
+    currency: GBP
+    type: shopify
+    listing_urls:
+      - url: "https://whiskyinternationalonline.com/collections/springbank-whisky/products.json?limit=250&page={page}"
+        pages: 3
+    strip_vat: 0            # 결제 시 영국 VAT 가 빠진다고 안내함. JSON 가격이 VAT 포함이면 0.20 으로
+    ship_base: 37.95        # Zone 9a(한국) 공식 요금
+    ship_extra: 10
+
+  - id: hedonism
+    name: Hedonism Wines (UK)
+    currency: GBP
+    type: shopify
+    listing_urls:
+      - url: "https://hedonism.co.uk/collections/springbank-whisky/products.json?limit=250&page={page}"
+        pages: 3
+    strip_vat: 0
+    ship_base: 45           # 추정치
+    ship_extra: 10
+
+  - id: innout
+    name: Inn-Out Shop (Germany)
+    currency: EUR
+    type: shopify
+    listing_urls:
+      - url: "https://inn-out-shop.com/collections/springbank/products.json?limit=250&page={page}"
+        pages: 3
+    strip_vat: 0            # 독일 VAT 19% 는 비유럽 수출 시 빠질 수 있으나 확인 전까지 보수적으로 0
+    ship_base: 45           # 추정치 (DHL 국제)
+    ship_extra: 12
+
+  - id: galore
+    name: Whisky Galore (New Zealand)
+    currency: NZD
+    type: shopify
+    listing_urls:
+      - url: "https://www.whiskygalore.co.nz/collections/springbank/products.json?limit=250&page={page}"
+        pages: 2
+      - "https://www.whiskygalore.co.nz/collections/longrow/products.json?limit=250"
+      - "https://www.whiskygalore.co.nz/collections/hazelburn/products.json?limit=250"
+      - "https://www.whiskygalore.co.nz/collections/kilkerran/products.json?limit=250"
+    strip_vat: 0            # 해외 운임은 GST 면제라고 안내. 상품 GST(15%) 제외 여부는 미확인
+    ship_base: 120          # 추정치 (샵이 무게·크기에 따라 따로 청구)
+    ship_extra: 30
 
   # Shopify 기반 샵을 추가하는 예 (전체 카탈로그 JSON 을 받아 키워드로 걸러냅니다)
   # - id: example
