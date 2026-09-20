@@ -12,6 +12,18 @@
    "landed": 6464728,
    "t": 1789904058
   },
+  "innout|https://inn-out-shop.com/products/springbank-local-barley-10y-2025-whisky": {
+   "landed": 1577592,
+   "t": 1789905831
+  },
+  "rvw|https://rarevintagewhisky.nl/Longrow-10Y-1994-46.0": {
+   "landed": 975655,
+   "t": 1789905831
+  },
+  "rvw|https://rarevintagewhisky.nl/Longrow-18Y-2014-46.0": {
+   "landed": 1300872,
+   "t": 1789905831
+  },
   "rvw|https://rarevintagewhisky.nl/Longrow-2000-Gaja-Barolo-55.8": {
    "landed": 1402503,
    "t": 1789904058
@@ -24,6 +36,10 @@
    "landed": 1361851,
    "t": 1789904058
   },
+  "rvw|https://rarevintagewhisky.nl/Springbank-12Y-2000-Calvados-52.7": {
+   "landed": 1727721,
+   "t": 1789905831
+  },
   "rvw|https://rarevintagewhisky.nl/Springbank-18Y-2017-46.0": {
    "landed": 1300872,
    "t": 1789904058
@@ -32,6 +48,14 @@
    "landed": 1300872,
    "t": 1789904058
   },
+  "rvw|https://rarevintagewhisky.nl/Springbank-25Y-2006-46.0": {
+   "landed": 6666971,
+   "t": 1789905831
+  },
+  "rvw|https://rarevintagewhisky.nl/Springbank-25Y-2018 46.0": {
+   "landed": 5447405,
+   "t": 1789905831
+  },
   "rvw|https://rarevintagewhisky.nl/Springbank-30Y-2025-46.0": {
    "landed": 6077514,
    "t": 1789904058
@@ -39,6 +63,10 @@
   "whiskybase|https://shop.whiskybase.com/us/longrow-peated-161970662.html": {
    "landed": 202027,
    "t": 1789904058
+  },
+  "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-120587715.html": {
+   "landed": 2410075,
+   "t": 1789905831
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-21-year-old-145875376.html": {
    "landed": 1805331,
@@ -52,6 +80,10 @@
    "landed": 225200,
    "t": 1789904058
   },
+  "whiskyfass|https://whiskyfass.de/springbank-25-jahre-campbeltown-single-malt-scotch-whisky": {
+   "landed": 6235570,
+   "t": 1789905831
+  },
   "wio|https://whiskyinternationalonline.com/products/springbank-10-year-old-whisky-46": {
    "landed": 374930,
    "t": 1789904058
@@ -59,10 +91,18 @@
   "wio|https://whiskyinternationalonline.com/products/springbank-21-year-old-single-malt-whisky-2026-release-46": {
    "landed": 2167518,
    "t": 1789904058
+  },
+  "wio|https://whiskyinternationalonline.com/products/springbank-25-year-old-whisky-2023-release-bottled-dec-2022-46": {
+   "landed": 5859731,
+   "t": 1789905831
+  },
+  "wio|https://whiskyinternationalonline.com/products/springbank-tasting-kit-june-2025": {
+   "landed": 392862,
+   "t": 1789905831
   }
  },
  "fx": {
-  "t": 1789904058.2853825,
+  "t": 1789905831.8553948,
   "table": {
    "EUR": 0.8726,
    "GBP": 0.74939,
@@ -93,7 +133,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
+   "fails": 2,
    "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
