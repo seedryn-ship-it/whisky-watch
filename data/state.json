@@ -4,6 +4,10 @@
    "landed": 262657,
    "t": 1789904058
   },
+  "galore|https://www.whiskygalore.co.nz/products/longrow-100-proof-57-1": {
+   "landed": 294631,
+   "t": 1789968989
+  },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-2023-release": {
    "landed": 7573772,
    "t": 1789951266
@@ -124,6 +128,10 @@
    "landed": 237518,
    "t": 1789951266
   },
+  "whiskyfass|https://whiskyfass.de/longrow-100-proof-batch-no-2-peated-campbeltown-single-malt-scotch-whisky": {
+   "landed": 302193,
+   "t": 1789968989
+  },
   "whiskyfass|https://whiskyfass.de/longrow-peated-single-malt-whisky-07l": {
    "landed": 225200,
    "t": 1789904058
@@ -158,7 +166,7 @@
   }
  },
  "fx": {
-  "t": 1789967029.8650606,
+  "t": 1789968989.0462966,
   "table": {
    "EUR": 0.8726,
    "GBP": 0.74939,
@@ -189,13 +197,12 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
+   "fails": 2,
    "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
   "rvw": {
-   "fails": 1,
-   "last_error": "요청 실패: https://rarevintagewhisky.nl/website/index.php?ProductCategory=32013969&Index=1 (('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))",
+   "fails": 0,
    "notified": false
   },
   "twe": {
