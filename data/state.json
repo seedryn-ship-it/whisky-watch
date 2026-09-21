@@ -102,7 +102,7 @@
   }
  },
  "fx": {
-  "t": 1789947200.2466671,
+  "t": 1789949062.0834408,
   "table": {
    "EUR": 0.8726,
    "GBP": 0.74939,
@@ -133,7 +133,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 2,
+   "fails": 3,
    "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
