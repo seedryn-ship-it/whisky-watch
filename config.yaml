@@ -66,11 +66,11 @@ seed_prices: []
 # tokens 를 비워 두면 '에디션 표시가 없는 일반 제품'만 해당합니다. Local Barley·Cask Strength·100 Proof·독립병입 등은 제외됩니다.
 # 도착가에는 환율·배송비 추정이 들어가므로 실제 결제 금액과 몇 % 다를 수 있습니다.
 price_caps:
-  - {label: "스프링뱅크 10년", distillery: springbank, age: 10, tokens: [], max_krw: 300000}
-  - {label: "스프링뱅크 15년", distillery: springbank, age: 15, tokens: [], max_krw: 400000}
-  - {label: "스프링뱅크 12년 캐스크 스트렝스", distillery: springbank, age: 12, tokens: [cask-strength], max_krw: 400000}
-  - {label: "스프링뱅크 18년", distillery: springbank, age: 18, tokens: [], max_krw: 800000}
-  - {label: "스프링뱅크 21년", distillery: springbank, age: 21, tokens: [], max_krw: 1200000}
+  - {label: "스프링뱅크 10년", distillery: springbank, age: 10, tokens: [], max_krw: 350000}
+  - {label: "스프링뱅크 15년", distillery: springbank, age: 15, tokens: [], max_krw: 600000}
+  - {label: "스프링뱅크 12년 캐스크 스트렝스", distillery: springbank, age: 12, tokens: [cask-strength], max_krw: 600000}
+  - {label: "스프링뱅크 18년", distillery: springbank, age: 18, tokens: [], max_krw: 1000000}
+  - {label: "스프링뱅크 21년", distillery: springbank, age: 21, tokens: [], max_krw: 1500000}
 
 # ─────────────────────────────────────────────────────────────
 # 3) 한국 세금 / 환율
