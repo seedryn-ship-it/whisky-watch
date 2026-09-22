@@ -145,9 +145,18 @@ class PlaywrightFetcher:
             from playwright.sync_api import sync_playwright
         except ImportError as e:  # pragma: no cover
             raise FetchError("playwright 가 설치되어 있지 않습니다 (pip install playwright)") from e
-        self._pw = sync_playwright().start()
-        self._browser = self._pw.chromium.launch(headless=True)
-        self._ctx = self._browser.new_context(user_agent=self._ua, locale="en-GB")
+        # 브라우저 실행 파일이 없거나(설치 누락) 컨텍스트 생성이 실패해도, 이 샵 하나만
+        # FetchError 로 건너뛰고 나머지 샵은 계속 진행되도록 넓게 잡아 변환한다.
+        # (그대로 두면 Playwright 의 원시 Error 가 위로 새어나가 diagnose/run 전체가 죽는다.)
+        try:
+            self._pw = sync_playwright().start()
+            self._browser = self._pw.chromium.launch(headless=True)
+            self._ctx = self._browser.new_context(user_agent=self._ua, locale="en-GB")
+        except Exception as e:
+            self.close()
+            raise FetchError(
+                f"playwright 브라우저 실행 실패 (설치가 안 됐을 수 있음: playwright install --with-deps chromium): {e}"
+            ) from e
 
     def get(self, url: str) -> str:
         self._start()

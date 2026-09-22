@@ -451,20 +451,10 @@ def test_price_cap_does_not_alert_when_above_target_or_out_of_stock():
 # ---------------------------------------------------------------- 블로그에서 찾은 신규 9곳
 
 
-def test_whiskyshopit_discount_price_and_out_of_stock_flag():
-    s, c = _parse("whiskyshopit", "whiskyshopit_listing.html", "https://whiskyshop.it/it/brand/90/springbank")
-    assert len(c) == 3
-    by = {x.title: x for x in c}
-    assert by["SPRINGBANK - 5 Years Old - 100° Proof"].price == 69.0  # 할인가(취소선 아님) 사용
-    assert by["SPRINGBANK - Campbeltown Loch"].price == 44.0
-    assert by["LONGROW - Peated"].in_stock is False  # .out_of_stock 클래스
-
-
-def test_passionforwhisky_listing_prices_and_titles():
-    s, c = _parse("passionforwhisky", "passionforwhisky_listing.html", "https://www.passionforwhisky.com/en/whisky/.../")
-    assert [x.price for x in c] == [169.95, 63.95, 59.95]
-    a = _an(c[1].title)
-    assert a.age == 5 and "100-proof" in a.tokens
+# whiskyshopit / passionforwhisky (PrestaShop 두 곳)는 GitHub 러너에서 requests 로 0건이 나오고
+# fetch: playwright 로 바꿔도 브라우저 실행 자체가 실패해 진단이 죽는 문제가 계속돼 config.yaml 목록에서
+# 뺐습니다. 파서 동작 자체(parse_listing의 selectors 처리)는 아래 whiskysite/htfw 등 다른 셀렉터
+# 기반 테스트로 계속 커버되므로, 존재하지 않는 샵을 참조하던 두 테스트는 제거했습니다.
 
 
 def test_whiskysite_and_zeewijck_reuse_lightspeed_preset():
@@ -487,11 +477,11 @@ def test_htfw_card_is_its_own_anchor_and_title_falls_back_to_full_text():
 def test_shipped_config_lists_the_blog_sourced_shops():
     by = {s.id: s for s in load_config(ROOT / "config.yaml").shops}
     for sid, cur in [("rombo", "DKK"), ("reallygoodwhisky", "GBP"), ("thewhiskybarrel", "GBP"),
-                     ("whiskyparis", "EUR"), ("whiskyshopit", "EUR"), ("whiskysite", "EUR"),
-                     ("htfw", "GBP"), ("passionforwhisky", "EUR"), ("zeewijck", "EUR")]:
+                     ("whiskyparis", "EUR"), ("whiskysite", "EUR"),
+                     ("htfw", "GBP"), ("zeewijck", "EUR")]:
         assert by[sid].enabled and by[sid].currency == cur, sid
         assert by[sid].listing_urls, sid
     assert by["rombo"].type == "shopify" and by["reallygoodwhisky"].type == "shopify"
     assert "다중통화" in by["reallygoodwhisky"].note and "다중통화" in by["thewhiskybarrel"].note
-    # GitHub 러너(requests)에서 0건으로 나온 PrestaShop 두 곳은 playwright 로 전환
-    assert by["whiskyshopit"].fetch == "playwright" and by["passionforwhisky"].fetch == "playwright"
+    # 봇 차단 문제가 계속됐던 PrestaShop 두 곳(whiskyshopit, passionforwhisky)은 목록에서 뺐습니다.
+    assert "whiskyshopit" not in by and "passionforwhisky" not in by

@@ -371,26 +371,9 @@ shops:
     ship_base: 45
     ship_extra: 10
 
-  # Whisky Shop Italia (이탈리아, PrestaShop). 검색 주소는 robots.txt 가 막아서 브랜드 페이지를 씁니다.
-  # !! GitHub 러너(requests)로는 상품이 0건으로 나와(사람 브라우저로는 정상 표시) fetch: playwright 로 바꿨습니다.
-  #    이 샵과 passionforwhisky 때문에 워크플로에서 playwright 설치가 켜져 있어야 합니다.
-  - id: whiskyshopit
-    name: Whisky Shop Italia
-    currency: EUR
-    fetch: playwright
-    note: "requests 로는 상품이 0건으로 나와 fetch: playwright 로 전환함 (PrestaShop 쪽의 봇 차단으로 추정)"
-    listing_urls:
-      - "https://whiskyshop.it/it/brand/90/springbank"
-      - "https://whiskyshop.it/it/brand/108/longrow"
-      - "https://whiskyshop.it/it/brand/131/kilkerran"
-    selectors:
-      card: "article.product-miniature"
-      link: "h3.product-title a"
-      price: "span.price"
-      sold_out: ".out_of_stock"
-    strip_vat: 0
-    ship_base: 45
-    ship_extra: 10
+  # Whisky Shop Italia (이탈리아, PrestaShop) -- 제외함.
+  # GitHub 러너에서 requests 로는 상품이 0건, playwright 로 바꿔도 브라우저 실행 자체가 실패해서
+  # (Executable doesn't exist) 진단이 죽는 문제가 계속돼 목록에서 뺐습니다.
 
   # Whiskysite.nl (네덜란드, Lightspeed - Whiskybase Shop과 같은 플랫폼이라 같은 preset 을 씁니다).
   - id: whiskysite
@@ -419,23 +402,7 @@ shops:
     ship_base: 30
     ship_extra: 6
 
-  # Passion for Whisky (네덜란드, PrestaShop). 증류소별 카테고리 페이지 + 페이지네이션.
-  # !! 위 whiskyshopit 과 같은 이유(GitHub 러너에서 0건)로 fetch: playwright 로 바꿨습니다.
-  - id: passionforwhisky
-    name: Passion for Whisky (NL)
-    currency: EUR
-    fetch: playwright
-    note: "requests 로는 상품이 0건으로 나와 fetch: playwright 로 전환함 (PrestaShop 쪽의 봇 차단으로 추정)"
-    listing_urls:
-      - url: "https://www.passionforwhisky.com/en/whisky/scotch-whisky/single-malt-whisky/campbeltown/springbank-whisky-distillery/?page={page}"
-        pages: 2
-    selectors:
-      card: "article.product-miniature"
-      link: "h2.product-miniature__title a"
-      price: "span.price"
-    strip_vat: 0
-    ship_base: 40
-    ship_extra: 10
+  # Passion for Whisky (네덜란드, PrestaShop) -- 제외함. whiskyshopit 과 같은 이유로 뺐습니다.
 
   # Zeewijck (네덜란드, Lightspeed). Whiskysite.nl 과 같은 플랫폼.
   - id: zeewijck

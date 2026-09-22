@@ -2,5 +2,6 @@ requests>=2.31
 beautifulsoup4>=4.12
 lxml>=5.0
 PyYAML>=6.0
-# config.yaml에서 fetch: playwright 로 설정한 샵(Whisky Shop Italia, Passion for Whisky)이 있어서 필요
-playwright>=1.44
+# Whisky Shop Italia / Passion for Whisky 는 봇 차단 문제로 목록에서 뺐습니다 (playwright 불필요).
+# 나중에 fetch: playwright 샵을 다시 추가하면 아래 줄 주석을 해제하세요.
+# playwright>=1.44
