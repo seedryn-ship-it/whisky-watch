@@ -226,12 +226,12 @@
   }
  },
  "fx": {
-  "t": 1790049817.638229,
+  "t": 1790051784.412696,
   "table": {
-   "EUR": 0.87032,
-   "GBP": 0.74656,
-   "KRW": 1372.18,
-   "NZD": 1.7437,
+   "EUR": 0.87176,
+   "GBP": 0.747749,
+   "KRW": 1375.642214,
+   "NZD": 1.749682,
    "USD": 1.0
   }
  },
@@ -257,7 +257,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
   "rvw": {
