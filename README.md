@@ -83,17 +83,20 @@ https://...
 
 ## 알아 둘 한계
 
-- **샵 사이트는 수시로 개편됩니다.** 파서, 세금 계산, 알림, 저장 로직은 95개 테스트를 통과했고, 각 샵의 실제 화면 구조를 확인해 설정했지만,
+- **샵 사이트는 수시로 개편됩니다.** 파서, 세금 계산, 알림, 저장 로직은 100개 테스트를 통과했고, 각 샵의 실제 화면 구조를 확인해 설정했지만,
   실제 GitHub 러너에서의 수집은 4단계의 `setup-check` 로 반드시 확인하세요.
 - **샵별 수집 방식**: TWE 는 robots.txt 가 검색 주소를 막아서 증류소 브랜드 목록 페이지(`listing_urls`)를 읽습니다. Whiskybase Shop 은 Lightspeed 브랜드 페이지,
   Shopify 기반 샵은 `type: shopify` 로, 세금·배송이 가격에 이미 포함된 샵은 `all_in: true` 로 추가할 수 있습니다(한글 상품명 자동 변환 지원, config.yaml 하단 예시 참고).
   TWE 는 GitHub 서버 IP 에서 403 으로 막힐 수 있습니다(setup-check 로 확인).
   Master of Malt 는 Vercel 보안 검사가 봇을 막아 기본 비활성(`enabled: false`)입니다.
   파서는 JSON-LD → 셀렉터 프리셋 → 범용 휴리스틱 순으로 시도하고, 한 샵이 실패해도 나머지는 계속 돌며, 연속 실패하면 텔레그램으로 알립니다.
-- **수집하는 샵(12곳 중 활성 10곳)**: Whisky International Online, Hedonism Wines, Inn-Out Shop, Whisky Galore, Nickolls & Perks, Whiskybase Shop, Cadenhead's, Dunkeld Whisky Box, Whiskyfass, Rare Vintage Whisky.
-  TWE·Master of Malt 는 서버 IP 차단으로 꺼 둠. 전부 한국 배송 가능 여부와 배송비를 확인하세요(WIO 만 공식 요금표 값).
-- **넣지 못한 샵(사유)**: whiskyshop.com·Lochfyne(접속 시 Cloudflare 봇 확인 화면 - 우회하지 않음), BBR(목록이 자바스크립트로만 그려짐), Robert Graham(같은 이유),
-  Gauntleys(지금 스프링뱅크 계열 재고 없음), Must Have Malts(robots.txt 가 요청 간격 600초를 요구), Dekanta(일본 위스키 중심).
+- **수집하는 샵(21곳 중 활성 19곳)**: Whisky International Online, Hedonism Wines, Inn-Out Shop, Whisky Galore, Nickolls & Perks, Whiskybase Shop, Cadenhead's, Dunkeld Whisky Box, Whiskyfass, Rare Vintage Whisky, Rombo, Really Good Whisky Co, The Whisky Barrel, Whisky Paris, Whisky Shop Italia, Whiskysite.nl, Hard To Find Whisky, Passion for Whisky, Zeewijck.
+  TWE·Master of Malt 는 서버 IP/봇 차단으로 꺼 둠. 전부 한국 배송 가능 여부와 배송비를 확인하세요(WIO 만 공식 요금표 값).
+- **넣지 못한 샵(사유)**: whiskyshop.com·Lochfyne·The Whisky World·irishdrinkshop·Celtic Whiskey Shop·Royal Mile Whiskies(전부 접속 시 Cloudflare/봇 확인 화면), BBR·Robert Graham(목록이 자바스크립트로만 그려짐),
+  Gauntleys·The Single Malt Shop(지금 스프링뱅크 계열 재고 없음), Must Have Malts·Vitatra(robots.txt 가 요청 간격을 각각 600초·180초로 요구), Jardin Vouvrillon(브랜드 필터 주소가 403으로 차단),
+  Whisky Fix(상품명이 서버에서 '...'으로 잘려서 나와 숙성/에디션 구분이 어려움), Dekanta(일본 위스키 중심).
+- **다중통화(Shopify Markets) 주의**: Really Good Whisky Co·The Whisky Barrel 은 접속하는 나라에 따라 화면 통화가 자동으로 바뀝니다(한국에서 보면 원화로 나옴). GitHub 서버는 외국에 있어
+  다른 통화로 보일 수 있어 GBP 로 가정해 뒀습니다. 처음 setup-check 결과에서 가격이 이상하면(예: 10년이 몇만 파운드) 바로 확인해 주세요.
 - **목표가(`price_caps`)**: config.yaml 에 스프링뱅크 10년 25만·15년 35만·12년CS 35만·18년 70만·21년 100만원(도착가 기준)을 지정해 두었습니다. 일반 제품(Local Barley·독립병입·100 Proof 등 제외)이 이 가격 이하가 되면 이력이 없어도 바로 알리고, 나머지 상품은 이력 중앙값 기준입니다.
 - **독립병입(IB) 구분**: Signatory·Hunter Laing·Cadenhead's 등 독립병입사 병은 공식 병과 가격대가 달라서 기준가를 따로 냅니다(상품명에 병입사가 안 적히는 Cadenhead's 샵은 `add_tokens: [independent]`).
 - **실시간이 아니라 준실시간**입니다. GitHub 예약 실행은 지연될 수 있고 기본 간격은 30분입니다. 한정 물량이 몇 분 만에 소진되는 상품에는 부족할 수 있습니다.
@@ -118,5 +121,5 @@ whiskywatch/
   notify.py      텔레그램 / 콘솔
 config.yaml      키워드, 샵, 임계값, 세율
 data/            history.jsonl, state.json (Actions 가 자동 커밋)
-tests/           pytest (95개)
+tests/           pytest (100개)
 ```

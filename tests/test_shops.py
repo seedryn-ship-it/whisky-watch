@@ -446,3 +446,50 @@ def test_price_cap_does_not_alert_when_above_target_or_out_of_stock():
     assert s.alerts_sent == 0 and not [m for m in sent if "도착가(추정)" in m]
     s, sent = _cap_run("100.00", 400_000, title="Springbank 15 Year Old 70cl 46% Sold out")
     assert s.alerts_sent == 0  # 품절은 알림 없음
+
+
+# ---------------------------------------------------------------- 블로그에서 찾은 신규 9곳
+
+
+def test_whiskyshopit_discount_price_and_out_of_stock_flag():
+    s, c = _parse("whiskyshopit", "whiskyshopit_listing.html", "https://whiskyshop.it/it/brand/90/springbank")
+    assert len(c) == 3
+    by = {x.title: x for x in c}
+    assert by["SPRINGBANK - 5 Years Old - 100° Proof"].price == 69.0  # 할인가(취소선 아님) 사용
+    assert by["SPRINGBANK - Campbeltown Loch"].price == 44.0
+    assert by["LONGROW - Peated"].in_stock is False  # .out_of_stock 클래스
+
+
+def test_passionforwhisky_listing_prices_and_titles():
+    s, c = _parse("passionforwhisky", "passionforwhisky_listing.html", "https://www.passionforwhisky.com/en/whisky/.../")
+    assert [x.price for x in c] == [169.95, 63.95, 59.95]
+    a = _an(c[1].title)
+    assert a.age == 5 and "100-proof" in a.tokens
+
+
+def test_whiskysite_and_zeewijck_reuse_lightspeed_preset():
+    for sid in ("whiskysite", "zeewijck"):
+        s = _shop(sid)
+        assert s.preset == "lightspeed" and s.currency == "EUR"
+    s, c = _parse("whiskysite", "whiskysite_listing.html", "https://www.whiskysite.nl/en/search/springbank/")
+    assert [x.price for x in c] == [7.49, 1799.99, 65.99]  # "€1.799,99" 유럽식 천 단위
+
+
+def test_htfw_card_is_its_own_anchor_and_title_falls_back_to_full_text():
+    s, c = _parse("htfw", "htfw_listing.html", "https://www.htfw.com/brands/springbank")
+    assert len(c) == 3  # 카드 자체가 <a> 인데도 링크를 못 찾아 건너뛰지 않는다
+    assert c[0].url == "https://www.htfw.com/springbank-100-proof-campbeltown-single-malt-scotch-5-year-old-whisky"
+    assert c[0].price == 55.95  # data-price-amount
+    a = _an(c[0].title)
+    assert a and a.age == 5 and "100-proof" in a.tokens and a.volume_ml == 700 and a.abv == 57.1
+
+
+def test_shipped_config_lists_the_blog_sourced_shops():
+    by = {s.id: s for s in load_config(ROOT / "config.yaml").shops}
+    for sid, cur in [("rombo", "DKK"), ("reallygoodwhisky", "GBP"), ("thewhiskybarrel", "GBP"),
+                     ("whiskyparis", "EUR"), ("whiskyshopit", "EUR"), ("whiskysite", "EUR"),
+                     ("htfw", "GBP"), ("passionforwhisky", "EUR"), ("zeewijck", "EUR")]:
+        assert by[sid].enabled and by[sid].currency == cur, sid
+        assert by[sid].listing_urls, sid
+    assert by["rombo"].type == "shopify" and by["reallygoodwhisky"].type == "shopify"
+    assert "다중통화" in by["reallygoodwhisky"].note and "다중통화" in by["thewhiskybarrel"].note

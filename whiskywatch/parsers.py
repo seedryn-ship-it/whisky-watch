@@ -313,7 +313,12 @@ def parse_cards(
 
     if sel.get("card"):
         for card in soup.select(sel["card"]):
-            a = card.select_one(sel.get("link", "a")) or card.find("a", href=True)
+            # 카드 자체가 <a> 인 샵(예: htfw.com)이 있어서, 안에서 못 찾으면 카드 자신도 확인한다
+            a = (
+                card.select_one(sel.get("link", "a"))
+                or card.find("a", href=True)
+                or (card if card.name == "a" and card.get("href") else None)
+            )
             if not a or not a.get("href"):
                 continue
             # title 은 쉼표로 여러 요소를 지정할 수 있다 (예: 이름 + "70cl / 46%") -> 공백으로 이어 붙임
