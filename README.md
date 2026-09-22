@@ -63,7 +63,7 @@ python -m pytest tests                         # 테스트
 | 카드 해외결제 수수료 반영 | `fx_card_markup_pct` |
 | 2병 이상 주문 가정 | `assume_bottles` (소액면세 미적용, 배송비는 병당으로 나눔) |
 | 샵 추가 | `shops` 에 항목 추가. Shopify 샵은 `type: shopify` + `products.json` URL 이 가장 안정적 |
-| 봇 차단되는 샵 | 해당 샵에 `fetch: playwright` + 워크플로의 playwright 설치 줄 주석 해제 |
+| 봇 차단되는 샵 | 해당 샵에 `fetch: playwright` (지금 Whisky Shop Italia·Passion for Whisky 가 이 방식) |
 
 ## 알림 예시
 
@@ -95,6 +95,7 @@ https://...
 - **넣지 못한 샵(사유)**: whiskyshop.com·Lochfyne·The Whisky World·irishdrinkshop·Celtic Whiskey Shop·Royal Mile Whiskies(전부 접속 시 Cloudflare/봇 확인 화면), BBR·Robert Graham(목록이 자바스크립트로만 그려짐),
   Gauntleys·The Single Malt Shop(지금 스프링뱅크 계열 재고 없음), Must Have Malts·Vitatra(robots.txt 가 요청 간격을 각각 600초·180초로 요구), Jardin Vouvrillon(브랜드 필터 주소가 403으로 차단),
   Whisky Fix(상품명이 서버에서 '...'으로 잘려서 나와 숙성/에디션 구분이 어려움), Dekanta(일본 위스키 중심).
+- **Playwright 사용**: Whisky Shop Italia·Passion for Whisky(둘 다 PrestaShop) 는 GitHub 러너의 requests 요청에는 상품이 0건으로 나와(사람 브라우저로는 정상 표시) `fetch: playwright` 로 바꿨습니다. 그래서 워크플로에서 매 회차 Playwright(헤드리스 브라우저)를 설치합니다 - 1회 실행 시간이 조금 늘어납니다(대략 1~2분 추가).
 - **다중통화(Shopify Markets) 주의**: Really Good Whisky Co·The Whisky Barrel 은 접속하는 나라에 따라 화면 통화가 자동으로 바뀝니다(한국에서 보면 원화로 나옴). GitHub 서버는 외국에 있어
   다른 통화로 보일 수 있어 GBP 로 가정해 뒀습니다. 처음 setup-check 결과에서 가격이 이상하면(예: 10년이 몇만 파운드) 바로 확인해 주세요.
 - **목표가(`price_caps`)**: config.yaml 에 스프링뱅크 10년 25만·15년 35만·12년CS 35만·18년 70만·21년 100만원(도착가 기준)을 지정해 두었습니다. 일반 제품(Local Barley·독립병입·100 Proof 등 제외)이 이 가격 이하가 되면 이력이 없어도 바로 알리고, 나머지 상품은 이력 중앙값 기준입니다.

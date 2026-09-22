@@ -2,5 +2,5 @@ requests>=2.31
 beautifulsoup4>=4.12
 lxml>=5.0
 PyYAML>=6.0
-# 선택: Cloudflare 등으로 requests가 차단될 때만 필요 (config.yaml의 fetch: playwright)
-# playwright>=1.44
+# config.yaml에서 fetch: playwright 로 설정한 샵(Whisky Shop Italia, Passion for Whisky)이 있어서 필요
+playwright>=1.44

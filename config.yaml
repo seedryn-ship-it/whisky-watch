@@ -372,9 +372,13 @@ shops:
     ship_extra: 10
 
   # Whisky Shop Italia (이탈리아, PrestaShop). 검색 주소는 robots.txt 가 막아서 브랜드 페이지를 씁니다.
+  # !! GitHub 러너(requests)로는 상품이 0건으로 나와(사람 브라우저로는 정상 표시) fetch: playwright 로 바꿨습니다.
+  #    이 샵과 passionforwhisky 때문에 워크플로에서 playwright 설치가 켜져 있어야 합니다.
   - id: whiskyshopit
     name: Whisky Shop Italia
     currency: EUR
+    fetch: playwright
+    note: "requests 로는 상품이 0건으로 나와 fetch: playwright 로 전환함 (PrestaShop 쪽의 봇 차단으로 추정)"
     listing_urls:
       - "https://whiskyshop.it/it/brand/90/springbank"
       - "https://whiskyshop.it/it/brand/108/longrow"
@@ -416,9 +420,12 @@ shops:
     ship_extra: 6
 
   # Passion for Whisky (네덜란드, PrestaShop). 증류소별 카테고리 페이지 + 페이지네이션.
+  # !! 위 whiskyshopit 과 같은 이유(GitHub 러너에서 0건)로 fetch: playwright 로 바꿨습니다.
   - id: passionforwhisky
     name: Passion for Whisky (NL)
     currency: EUR
+    fetch: playwright
+    note: "requests 로는 상품이 0건으로 나와 fetch: playwright 로 전환함 (PrestaShop 쪽의 봇 차단으로 추정)"
     listing_urls:
       - url: "https://www.passionforwhisky.com/en/whisky/scotch-whisky/single-malt-whisky/campbeltown/springbank-whisky-distillery/?page={page}"
         pages: 2

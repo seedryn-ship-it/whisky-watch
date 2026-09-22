@@ -493,3 +493,5 @@ def test_shipped_config_lists_the_blog_sourced_shops():
         assert by[sid].listing_urls, sid
     assert by["rombo"].type == "shopify" and by["reallygoodwhisky"].type == "shopify"
     assert "다중통화" in by["reallygoodwhisky"].note and "다중통화" in by["thewhiskybarrel"].note
+    # GitHub 러너(requests)에서 0건으로 나온 PrestaShop 두 곳은 playwright 로 전환
+    assert by["whiskyshopit"].fetch == "playwright" and by["passionforwhisky"].fetch == "playwright"
