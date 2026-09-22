@@ -1,8 +1,8 @@
 {
  "alerts": {
   "dunkeld|https://www.dunkeldwhiskybox.co.uk/p/longrow-peated": {
-   "landed": 262657,
-   "t": 1789904058
+   "landed": 260628,
+   "t": 1790076978
   },
   "dunkeld|https://www.dunkeldwhiskybox.co.uk/p/springbank-100-proof-aged-5-years": {
    "landed": 264186,
@@ -33,16 +33,16 @@
    "t": 1790046200
   },
   "innout|https://inn-out-shop.com/products/springbank-10y-2025-o-dose-0-7l-46-vol-whisky": {
-   "landed": 321595,
-   "t": 1789904058
+   "landed": 318741,
+   "t": 1790076978
   },
   "innout|https://inn-out-shop.com/products/springbank-1994-vintage-neu-2026-0-7l-45-1-vol-campbeltown-whisky-limited-edition": {
    "landed": 6853647,
    "t": 1789951266
   },
   "innout|https://inn-out-shop.com/products/springbank-30-2026-whisky": {
-   "landed": 6464728,
-   "t": 1789904058
+   "landed": 6407326,
+   "t": 1790076978
   },
   "innout|https://inn-out-shop.com/products/springbank-local-barley-10y-2025-whisky": {
    "landed": 1577592,
@@ -105,8 +105,8 @@
    "t": 1790046200
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-12Y-1991-Bourbon-58.5": {
-   "landed": 1361851,
-   "t": 1789904058
+   "landed": 1349759,
+   "t": 1790076978
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-12Y-2000-Calvados-52.7": {
    "landed": 1727721,
@@ -141,8 +141,8 @@
    "t": 1789905831
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-30Y-2025-46.0": {
-   "landed": 6077514,
-   "t": 1789904058
+   "landed": 6023552,
+   "t": 1790076978
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-30Y-Chieftains-Choice-1972-IM-46.0": {
    "landed": 4411899,
@@ -157,8 +157,8 @@
    "t": 1789951266
   },
   "whiskybase|https://shop.whiskybase.com/us/longrow-peated-161970662.html": {
-   "landed": 202027,
-   "t": 1789904058
+   "landed": 200232,
+   "t": 1790076978
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-120587715.html": {
    "landed": 2410075,
@@ -189,8 +189,8 @@
    "t": 1789968989
   },
   "whiskyfass|https://whiskyfass.de/longrow-peated-single-malt-whisky-07l": {
-   "landed": 225200,
-   "t": 1789904058
+   "landed": 223202,
+   "t": 1790076978
   },
   "whiskyfass|https://whiskyfass.de/springbank-25-jahre-campbeltown-single-malt-scotch-whisky": {
    "landed": 6235570,
@@ -226,7 +226,7 @@
   }
  },
  "fx": {
-  "t": 1790075011.868432,
+  "t": 1790076978.7284367,
   "table": {
    "EUR": 0.87032,
    "GBP": 0.74656,
