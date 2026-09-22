@@ -53,12 +53,12 @@
    "t": 1790078648
   },
   "nickolls|https://nickollsandperks.com/p/kilkerran-12-year-old-103393181211/": {
-   "landed": 238738,
-   "t": 1789951266
+   "landed": 233576,
+   "t": 1790089414
   },
   "nickolls|https://nickollsandperks.com/p/kilkerran-heavily-peated-batch-12-105213291211/": {
-   "landed": 238738,
-   "t": 1789951266
+   "landed": 233576,
+   "t": 1790089414
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/longrow-peated-campbeltown-single-malt-whisky": {
    "landed": 249927,
@@ -232,6 +232,10 @@
    "landed": 1167497,
    "t": 1790085810
   },
+  "whiskysite|https://www.whiskysite.nl/en/kilkerran-12-years-old-070-ltr-46.html": {
+   "landed": 234958,
+   "t": 1790089414
+  },
   "whiskysite|https://www.whiskysite.nl/en/longrow-peated.html": {
    "landed": 204861,
    "t": 1790087913
@@ -290,7 +294,7 @@
   }
  },
  "fx": {
-  "t": 1790087913.4389668,
+  "t": 1790089414.9695532,
   "table": {
    "DKK": 6.5215,
    "EUR": 0.87237,
