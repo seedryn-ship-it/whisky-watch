@@ -310,7 +310,7 @@
   }
  },
  "fx": {
-  "t": 1790195735.9107172,
+  "t": 1790197419.6224322,
   "table": {
    "DKK": 6.5512,
    "EUR": 0.87635,
@@ -363,7 +363,8 @@
    "notified": false
   },
   "rvw": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "요청 실패: https://rarevintagewhisky.nl/website/index.php?ProductCategory=32013969&Index=1 (('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))",
    "notified": false
   },
   "thewhiskybarrel": {
