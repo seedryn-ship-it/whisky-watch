@@ -29,8 +29,8 @@
    "t": 1790085810
   },
   "hedonism|https://hedonism.co.uk/products/springbank-lateltin-lanz-ingold-100th-anniversary-1964": {
-   "landed": 29558568,
-   "t": 1790046200
+   "landed": 28963933,
+   "t": 1790159797
   },
   "htfw|https://www.htfw.com/springbank-100-proof-campbeltown-single-malt-scotch-5-year-old-whisky": {
    "landed": 250671,
@@ -310,7 +310,7 @@
   }
  },
  "fx": {
-  "t": 1790157804.268574,
+  "t": 1790159797.3924828,
   "table": {
    "DKK": 6.5215,
    "EUR": 0.87237,
@@ -346,8 +346,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
-   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "fails": 0,
    "notified": false
   },
   "passionforwhisky": {
