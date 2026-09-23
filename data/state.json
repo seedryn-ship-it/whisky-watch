@@ -36,6 +36,10 @@
    "landed": 250671,
    "t": 1790087913
   },
+  "htfw|https://www.htfw.com/springbank-limited-connoisseur-collection-single-cask-230-1991-31-year-old-whisky": {
+   "landed": 8474983,
+   "t": 1790136210
+  },
   "innout|https://inn-out-shop.com/products/springbank-10y-2025-o-dose-0-7l-46-vol-whisky": {
    "landed": 318741,
    "t": 1790076978
@@ -208,6 +212,10 @@
    "landed": 1973315,
    "t": 1789904058
   },
+  "whiskyfass|https://whiskyfass.de/hazelburn-10-jahre-batch-2025-campbeltown-single-malt-scotch-whisky": {
+   "landed": 280268,
+   "t": 1790136210
+  },
   "whiskyfass|https://whiskyfass.de/kilkerran-glengyle-12-years-07l": {
    "landed": 232114,
    "t": 1790085810
@@ -302,7 +310,7 @@
   }
  },
  "fx": {
-  "t": 1790134615.9987257,
+  "t": 1790136210.0964744,
   "table": {
    "DKK": 6.5215,
    "EUR": 0.87237,
