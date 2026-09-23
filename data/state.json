@@ -276,6 +276,14 @@
    "landed": 394437,
    "t": 1790087913
   },
+  "zeewijck|https://www.zeewijck.nl/nl/kilkerran-12yo-46.html": {
+   "landed": 250035,
+   "t": 1790132600
+  },
+  "zeewijck|https://www.zeewijck.nl/nl/kilkerran-8yo-bourbon-cask-577.html": {
+   "landed": 257560,
+   "t": 1790132600
+  },
   "zeewijck|https://www.zeewijck.nl/nl/longrow-21-years-old-46-copy.html": {
    "landed": 1704290,
    "t": 1790087913
@@ -294,7 +302,7 @@
   }
  },
  "fx": {
-  "t": 1790130969.6658072,
+  "t": 1790132600.0789824,
   "table": {
    "DKK": 6.5215,
    "EUR": 0.87237,
