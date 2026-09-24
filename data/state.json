@@ -354,7 +354,7 @@
   }
  },
  "fx": {
-  "t": 1790265813.401351,
+  "t": 1790267850.6973183,
   "table": {
    "DKK": 6.5766,
    "EUR": 0.87974,
@@ -366,7 +366,8 @@
  },
  "health": {
   "cadenhead": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "요청 실패: https://cadenhead.shop/distillery/springbank/page/1/ (HTTPSConnectionPool(host='cadenhead.shop', port=443): Max retries exceeded with url: /distillery/springbank/page/1/ (Caused by NameResolutionError(\"HTTPSConnection(host='cadenhead.shop', port=443): Failed to resolve 'cadenhead.shop' ([Errn",
    "notified": false
   },
   "dunkeld": {
