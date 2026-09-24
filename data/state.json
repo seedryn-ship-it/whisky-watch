@@ -300,6 +300,10 @@
    "landed": 8541276,
    "t": 1790087913
   },
+  "whiskysite|https://www.whiskysite.nl/en/springbank-5-years-old-100-proof-070-ltr-571.html": {
+   "landed": 220068,
+   "t": 1790264227
+  },
   "wio|https://whiskyinternationalonline.com/products/springbank-10-year-old-whisky-46": {
    "landed": 374930,
    "t": 1789904058
@@ -350,7 +354,7 @@
   }
  },
  "fx": {
-  "t": 1790262275.504792,
+  "t": 1790264227.4530232,
   "table": {
    "DKK": 6.5766,
    "EUR": 0.87974,
