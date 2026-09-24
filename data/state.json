@@ -81,12 +81,12 @@
    "t": 1790251465
   },
   "nickolls|https://nickollsandperks.com/p/kilkerran-12-year-old-103393181211/": {
-   "landed": 233576,
-   "t": 1790089414
+   "landed": 233187,
+   "t": 1790262275
   },
   "nickolls|https://nickollsandperks.com/p/kilkerran-heavily-peated-batch-12-105213291211/": {
-   "landed": 233576,
-   "t": 1790089414
+   "landed": 233187,
+   "t": 1790262275
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/hazelburn-10-year-old-single-malt-scotch-whisky": {
    "landed": 262899,
@@ -281,8 +281,8 @@
    "t": 1790258621
   },
   "whiskysite|https://www.whiskysite.nl/en/kilkerran-12-years-old-070-ltr-46.html": {
-   "landed": 234958,
-   "t": 1790089414
+   "landed": 235127,
+   "t": 1790262275
   },
   "whiskysite|https://www.whiskysite.nl/en/longrow-peated.html": {
    "landed": 205010,
@@ -350,7 +350,7 @@
   }
  },
  "fx": {
-  "t": 1790260728.638859,
+  "t": 1790262275.504792,
   "table": {
    "DKK": 6.5766,
    "EUR": 0.87974,
