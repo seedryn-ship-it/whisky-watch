@@ -354,7 +354,7 @@
   }
  },
  "fx": {
-  "t": 1790269399.9083395,
+  "t": 1790271280.6998444,
   "table": {
    "DKK": 6.5766,
    "EUR": 0.87974,
@@ -366,8 +366,7 @@
  },
  "health": {
   "cadenhead": {
-   "fails": 2,
-   "last_error": "요청 실패: https://cadenhead.shop/distillery/springbank/page/1/ (HTTPSConnectionPool(host='cadenhead.shop', port=443): Max retries exceeded with url: /distillery/springbank/page/1/ (Caused by NameResolutionError(\"HTTPSConnection(host='cadenhead.shop', port=443): Failed to resolve 'cadenhead.shop' ([Errn",
+   "fails": 0,
    "notified": false
   },
   "dunkeld": {
@@ -391,7 +390,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
+   "fails": 2,
    "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
