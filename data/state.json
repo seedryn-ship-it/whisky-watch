@@ -1,8 +1,8 @@
 {
  "alerts": {
   "dunkeld|https://www.dunkeldwhiskybox.co.uk/p/longrow-peated": {
-   "landed": 260628,
-   "t": 1790076978
+   "landed": 257039,
+   "t": 1790249782
   },
   "dunkeld|https://www.dunkeldwhiskybox.co.uk/p/springbank-100-proof-aged-5-years": {
    "landed": 264186,
@@ -73,8 +73,8 @@
    "t": 1790085810
   },
   "innout|https://inn-out-shop.com/products/springbank-30-2026-whisky": {
-   "landed": 6407326,
-   "t": 1790076978
+   "landed": 6331566,
+   "t": 1790249782
   },
   "innout|https://inn-out-shop.com/products/springbank-local-barley-10y-2025-whisky": {
    "landed": 1563585,
@@ -169,8 +169,8 @@
    "t": 1790219016
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-12Y-1991-Bourbon-58.5": {
-   "landed": 1349759,
-   "t": 1790076978
+   "landed": 1333799,
+   "t": 1790249782
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-12Y-2000-Calvados-52.7": {
    "landed": 1712381,
@@ -205,8 +205,8 @@
    "t": 1790078648
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-30Y-2025-46.0": {
-   "landed": 6023552,
-   "t": 1790076978
+   "landed": 5952330,
+   "t": 1790249782
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-30Y-Chieftains-Choice-1972-IM-46.0": {
    "landed": 4411899,
@@ -229,8 +229,8 @@
    "t": 1790201040
   },
   "whiskybase|https://shop.whiskybase.com/us/longrow-peated-161970662.html": {
-   "landed": 200232,
-   "t": 1790076978
+   "landed": 197866,
+   "t": 1790249782
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-120587715.html": {
    "landed": 2388674,
@@ -265,8 +265,8 @@
    "t": 1790085810
   },
   "whiskyfass|https://whiskyfass.de/longrow-peated-single-malt-whisky-07l": {
-   "landed": 223202,
-   "t": 1790076978
+   "landed": 220562,
+   "t": 1790249782
   },
   "whiskyfass|https://whiskyfass.de/springbank-25-jahre-campbeltown-single-malt-scotch-whisky": {
    "landed": 6180204,
@@ -350,7 +350,7 @@
   }
  },
  "fx": {
-  "t": 1790247806.2058723,
+  "t": 1790249782.6663556,
   "table": {
    "DKK": 6.5512,
    "EUR": 0.87635,
