@@ -13,8 +13,8 @@
    "t": 1790143458
   },
   "galore|https://www.whiskygalore.co.nz/products/springbank-signatory-symingtons-choice-1989-35-years-old-47-8": {
-   "landed": 8305555,
-   "t": 1790046200
+   "landed": 8201656,
+   "t": 1790219016
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-2021-release": {
    "landed": 9241540,
@@ -117,20 +117,20 @@
    "t": 1790087913
   },
   "rvw|https://rarevintagewhisky.nl/Hazelburn-11Y-Society-Bottling-2002-Bourbon-54.4": {
-   "landed": 966993,
-   "t": 1790046200
+   "landed": 955558,
+   "t": 1790219016
   },
   "rvw|https://rarevintagewhisky.nl/Hazelburn-12Y-2010-Oloroso-Cask-Matured": {
-   "landed": 886409,
-   "t": 1790046200
+   "landed": 875928,
+   "t": 1790219016
   },
   "rvw|https://rarevintagewhisky.nl/Hazelburn-13Y-2003-Oloroso-Cask-Matured": {
    "landed": 873995,
    "t": 1790085810
   },
   "rvw|https://rarevintagewhisky.nl/Hazelburn-8Y-Sauternes-Wood-2002-55.9": {
-   "landed": 1551216,
-   "t": 1790046200
+   "landed": 1532875,
+   "t": 1790219016
   },
   "rvw|https://rarevintagewhisky.nl/Longrow-10Y-1994-46.0": {
    "landed": 966993,
@@ -141,12 +141,12 @@
    "t": 1790085810
   },
   "rvw|https://rarevintagewhisky.nl/Longrow-13Y-Red-2020": {
-   "landed": 846118,
-   "t": 1790046200
+   "landed": 836113,
+   "t": 1790219016
   },
   "rvw|https://rarevintagewhisky.nl/Longrow-14Y-Oloroso-Sherry-57.8": {
-   "landed": 1047574,
-   "t": 1790046200
+   "landed": 1035187,
+   "t": 1790219016
   },
   "rvw|https://rarevintagewhisky.nl/Longrow-17Y-Single-Cask-49.4": {
    "landed": 1966488,
@@ -165,8 +165,8 @@
    "t": 1789904058
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-12Y-1989-Rum-54.6": {
-   "landed": 1349759,
-   "t": 1790046200
+   "landed": 1333799,
+   "t": 1790219016
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-12Y-1991-Bourbon-58.5": {
    "landed": 1349759,
@@ -177,8 +177,8 @@
    "t": 1790078648
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-12y-Green-2014": {
-   "landed": 1289323,
-   "t": 1790046200
+   "landed": 1274077,
+   "t": 1790219016
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-14Y-Bourbon-Wood": {
    "landed": 1867171,
@@ -213,8 +213,8 @@
    "t": 1790046200
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-9Y-Wood-Expressions-1996-58.0": {
-   "landed": 1692236,
-   "t": 1790046200
+   "landed": 1672228,
+   "t": 1790219016
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-Local-Barley-11Y-53.1-2017": {
    "landed": 1728127,
@@ -237,12 +237,12 @@
    "t": 1790078648
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-15-year-old-102522942.html": {
-   "landed": 1223224,
-   "t": 1790046200
+   "landed": 1208761,
+   "t": 1790219016
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-1965.html": {
-   "landed": 26113931,
-   "t": 1790046200
+   "landed": 25805160,
+   "t": 1790219016
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-21-year-old-145875376.html": {
    "landed": 1805331,
@@ -350,7 +350,7 @@
   }
  },
  "fx": {
-  "t": 1790217377.96472,
+  "t": 1790219016.2021708,
   "table": {
    "DKK": 6.5512,
    "EUR": 0.87635,
