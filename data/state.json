@@ -269,8 +269,8 @@
    "t": 1789904058
   },
   "whiskyfass|https://whiskyfass.de/hazelburn-10-jahre-batch-2025-campbeltown-single-malt-scotch-whisky": {
-   "landed": 280268,
-   "t": 1790136210
+   "landed": 280471,
+   "t": 1790309018
   },
   "whiskyfass|https://whiskyfass.de/kilkerran-glengyle-12-years-07l": {
    "landed": 232282,
@@ -374,7 +374,7 @@
   }
  },
  "fx": {
-  "t": 1790307409.1298096,
+  "t": 1790309018.650695,
   "table": {
    "DKK": 6.5766,
    "EUR": 0.87974,
@@ -410,8 +410,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 2,
-   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "fails": 0,
    "notified": false
   },
   "passionforwhisky": {
