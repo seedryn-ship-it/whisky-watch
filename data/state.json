@@ -93,8 +93,8 @@
    "t": 1790201040
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/longrow-peated-campbeltown-single-malt-whisky": {
-   "landed": 221910,
-   "t": 1790201040
+   "landed": 247653,
+   "t": 1790375741
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/springbank-35-year-old-1898-signatory-symington-s-choice-single-malt-70cl-47-8": {
    "landed": 7427187,
@@ -386,7 +386,7 @@
   }
  },
  "fx": {
-  "t": 1790373789.6771007,
+  "t": 1790375741.2298813,
   "table": {
    "DKK": 6.5557,
    "EUR": 0.87696,
@@ -422,8 +422,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 2,
-   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "fails": 0,
    "notified": false
   },
   "passionforwhisky": {
