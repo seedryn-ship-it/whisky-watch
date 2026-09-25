@@ -153,8 +153,8 @@
    "t": 1790219016
   },
   "rvw|https://rarevintagewhisky.nl/Longrow-17Y-Single-Cask-49.4": {
-   "landed": 1966488,
-   "t": 1790085810
+   "landed": 1954610,
+   "t": 1790345040
   },
   "rvw|https://rarevintagewhisky.nl/Longrow-18Y-2014-46.0": {
    "landed": 1274077,
@@ -281,8 +281,8 @@
    "t": 1790085810
   },
   "whiskyfass|https://whiskyfass.de/longrow-peated-single-malt-whisky-07l": {
-   "landed": 220562,
-   "t": 1790249782
+   "landed": 215755,
+   "t": 1790345040
   },
   "whiskyfass|https://whiskyfass.de/springbank-25-jahre-campbeltown-single-malt-scotch-whisky": {
    "landed": 6107129,
@@ -364,6 +364,10 @@
    "landed": 244163,
    "t": 1790260728
   },
+  "zeewijck|https://www.zeewijck.nl/nl/springbank-10yo-46.html": {
+   "landed": 248525,
+   "t": 1790345040
+  },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-5yo-100proof-571.html": {
    "landed": 233652,
    "t": 1790260728
@@ -374,13 +378,13 @@
   }
  },
  "fx": {
-  "t": 1790343441.3031201,
+  "t": 1790345040.446153,
   "table": {
-   "DKK": 6.5766,
-   "EUR": 0.87974,
-   "GBP": 0.75645,
-   "KRW": 1368.6,
-   "NZD": 1.7638,
+   "DKK": 6.5557,
+   "EUR": 0.87696,
+   "GBP": 0.75458,
+   "KRW": 1355.05,
+   "NZD": 1.7634,
    "USD": 1.0
   }
  },
