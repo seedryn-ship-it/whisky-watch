@@ -244,6 +244,10 @@
    "landed": 197866,
    "t": 1790249782
   },
+  "whiskybase|https://shop.whiskybase.com/us/longrow-peated-164419366.html": {
+   "landed": 196236,
+   "t": 1790350582
+  },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-120587715.html": {
    "landed": 2360432,
    "t": 1790251465
@@ -382,7 +386,7 @@
   }
  },
  "fx": {
-  "t": 1790348646.9460366,
+  "t": 1790350582.6057367,
   "table": {
    "DKK": 6.5557,
    "EUR": 0.87696,
