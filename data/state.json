@@ -1,8 +1,8 @@
 {
  "alerts": {
   "dunkeld|https://www.dunkeldwhiskybox.co.uk/p/longrow-peated": {
-   "landed": 257039,
-   "t": 1790249782
+   "landed": 254640,
+   "t": 1790426361
   },
   "dunkeld|https://www.dunkeldwhiskybox.co.uk/p/springbank-100-proof-aged-5-years": {
    "landed": 264186,
@@ -77,12 +77,12 @@
    "t": 1790258621
   },
   "innout|https://inn-out-shop.com/products/springbank-30-2026-whisky": {
-   "landed": 6331566,
-   "t": 1790249782
+   "landed": 6279430,
+   "t": 1790426361
   },
   "innout|https://inn-out-shop.com/products/springbank-local-barley-10y-2025-whisky": {
-   "landed": 1545096,
-   "t": 1790251465
+   "landed": 1532376,
+   "t": 1790426361
   },
   "nickolls|https://nickollsandperks.com/p/kilkerran-12-year-old-103393181211/": {
    "landed": 233187,
@@ -209,8 +209,8 @@
    "t": 1790258621
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-25Y-2006-46.0": {
-   "landed": 6529645,
-   "t": 1790251465
+   "landed": 6475878,
+   "t": 1790426361
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-25Y-2018 46.0": {
    "landed": 5335198,
@@ -248,6 +248,10 @@
    "landed": 1560300,
    "t": 1790424234
   },
+  "whiskybase|https://shop.whiskybase.com/us/hazelburn-10-year-old-164430393.html": {
+   "landed": 220959,
+   "t": 1790426361
+  },
   "whiskybase|https://shop.whiskybase.com/us/kilkerran-heavily-peated-163414813.html": {
    "landed": 196236,
    "t": 1790415311
@@ -261,8 +265,8 @@
    "t": 1790350582
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-120587715.html": {
-   "landed": 2360432,
-   "t": 1790251465
+   "landed": 2340996,
+   "t": 1790426361
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-164418628.html": {
    "landed": 214778,
@@ -305,8 +309,8 @@
    "t": 1790345040
   },
   "whiskyfass|https://whiskyfass.de/springbank-25-jahre-campbeltown-single-malt-scotch-whisky": {
-   "landed": 6107129,
-   "t": 1790251465
+   "landed": 6056842,
+   "t": 1790426361
   },
   "whiskyfass|https://whiskyfass.de/springbank-25-jahre-directors-special-single-malts-of-scotland-campbeltown-single-malt-scotch-whisky": {
    "landed": 5342714,
@@ -353,16 +357,16 @@
    "t": 1789904058
   },
   "wio|https://whiskyinternationalonline.com/products/springbank-25-year-old-whisky-2023-release-bottled-dec-2022-46": {
-   "landed": 5734386,
-   "t": 1790251465
+   "landed": 5680870,
+   "t": 1790426361
   },
   "wio|https://whiskyinternationalonline.com/products/springbank-local-barley-2022-11-year-old-55-1": {
    "landed": 1796467,
    "t": 1790085810
   },
   "wio|https://whiskyinternationalonline.com/products/springbank-tasting-kit-june-2025": {
-   "landed": 384458,
-   "t": 1790251465
+   "landed": 380869,
+   "t": 1790426361
   },
   "zeewijck|https://www.zeewijck.nl/nl/calvados-drouin-19yo-springbank-angels-504.html": {
    "landed": 394723,
@@ -398,7 +402,7 @@
   }
  },
  "fx": {
-  "t": 1790424234.4297323,
+  "t": 1790426361.9075127,
   "table": {
    "DKK": 6.5557,
    "EUR": 0.87696,
