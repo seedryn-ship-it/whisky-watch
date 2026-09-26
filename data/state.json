@@ -17,12 +17,12 @@
    "t": 1790393800
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-2021-release": {
-   "landed": 9241540,
-   "t": 1790201040
+   "landed": 9155292,
+   "t": 1790424234
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-2023-release": {
-   "landed": 6536247,
-   "t": 1790201040
+   "landed": 6475247,
+   "t": 1790424234
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-fresh-sherry-butt-starkicker-1996": {
    "landed": 5118748,
@@ -36,25 +36,29 @@
    "landed": 4794483,
    "t": 1790201040
   },
+  "hedonism|https://hedonism.co.uk/products/springbank-30-year-old-2024-release": {
+   "landed": 13056044,
+   "t": 1790424234
+  },
   "hedonism|https://hedonism.co.uk/products/springbank-35-year-old-millennium-1": {
    "landed": 34951086,
    "t": 1790201040
   },
   "hedonism|https://hedonism.co.uk/products/springbank-50-year-old-millennium": {
-   "landed": 69230483,
-   "t": 1790201040
+   "landed": 68584383,
+   "t": 1790424234
   },
   "hedonism|https://hedonism.co.uk/products/springbank-50-year-old-millennium-1": {
-   "landed": 69230483,
-   "t": 1790201040
+   "landed": 68584383,
+   "t": 1790424234
   },
   "hedonism|https://hedonism.co.uk/products/springbank-lateltin-lanz-ingold-100th-anniversary-1964": {
-   "landed": 25686386,
-   "t": 1790201040
+   "landed": 25446665,
+   "t": 1790424234
   },
   "hedonism|https://hedonism.co.uk/products/springbank-private-sherry-cask-341-1993": {
-   "landed": 10168010,
-   "t": 1790201040
+   "landed": 10073117,
+   "t": 1790424234
   },
   "htfw|https://www.htfw.com/springbank-100-proof-campbeltown-single-malt-scotch-5-year-old-whisky": {
    "landed": 250252,
@@ -89,16 +93,20 @@
    "t": 1790262275
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/hazelburn-10-year-old-single-malt-scotch-whisky": {
-   "landed": 262899,
-   "t": 1790201040
+   "landed": 260446,
+   "t": 1790424234
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/longrow-peated-campbeltown-single-malt-whisky": {
-   "landed": 247653,
-   "t": 1790375741
+   "landed": 219840,
+   "t": 1790424234
+  },
+  "reallygoodwhisky|https://reallygoodwhisky.com/products/springbank-22-years-old-smws-27-110-horse-harnesses-and-mescal-worms-1992-70cl": {
+   "landed": 4413219,
+   "t": 1790424234
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/springbank-35-year-old-1898-signatory-symington-s-choice-single-malt-70cl-47-8": {
-   "landed": 7427187,
-   "t": 1790201040
+   "landed": 7357872,
+   "t": 1790424234
   },
   "rombo|https://rombo.dk/products/longrow-21-year-october-2023": {
    "landed": 2018210,
@@ -173,8 +181,8 @@
    "t": 1790393800
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-12Y-1991-Bourbon-58.5": {
-   "landed": 1333799,
-   "t": 1790249782
+   "landed": 1322817,
+   "t": 1790424234
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-12Y-2000-Calvados-52.7": {
    "landed": 1692134,
@@ -209,8 +217,8 @@
    "t": 1790251465
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-30Y-2025-46.0": {
-   "landed": 5952330,
-   "t": 1790249782
+   "landed": 5903317,
+   "t": 1790424234
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-30Y-Chieftains-Choice-1972-IM-46.0": {
    "landed": 4411899,
@@ -233,12 +241,12 @@
    "t": 1790296896
   },
   "thewhiskybarrel|https://thewhiskybarrel.com/products/springbank-10-year-old-2007-local-barley-nov-2017": {
-   "landed": 2431984,
-   "t": 1790201040
+   "landed": 2409288,
+   "t": 1790424234
   },
   "thewhiskybarrel|https://thewhiskybarrel.com/products/springbank-13-year-old-1992-the-golden-cask-2005-281": {
-   "landed": 1575000,
-   "t": 1790201040
+   "landed": 1560300,
+   "t": 1790424234
   },
   "whiskybase|https://shop.whiskybase.com/us/kilkerran-heavily-peated-163414813.html": {
    "landed": 196236,
@@ -390,7 +398,7 @@
   }
  },
  "fx": {
-  "t": 1790422494.5098155,
+  "t": 1790424234.4297323,
   "table": {
    "DKK": 6.5557,
    "EUR": 0.87696,
