@@ -109,8 +109,8 @@
    "t": 1790424234
   },
   "rombo|https://rombo.dk/products/longrow-21-year-october-2023": {
-   "landed": 2018210,
-   "t": 1790260728
+   "landed": 2004597,
+   "t": 1790435035
   },
   "rombo|https://rombo.dk/products/longrow-peated-single-malt-whisky": {
    "landed": 283409,
@@ -121,8 +121,8 @@
    "t": 1790087913
   },
   "rombo|https://rombo.dk/products/springbank-30-years-februar-2026-single-malt-scotch-whisky": {
-   "landed": 6804477,
-   "t": 1790260728
+   "landed": 6758584,
+   "t": 1790435035
   },
   "rvw|https://rarevintagewhisky.nl/Hazelburn-11Y-Society-Bottling-2002-Bourbon-54.4": {
    "landed": 955558,
@@ -329,16 +329,16 @@
    "t": 1790262275
   },
   "whiskysite|https://www.whiskysite.nl/en/longrow-peated.html": {
-   "landed": 205010,
-   "t": 1790260728
+   "landed": 203623,
+   "t": 1790435035
   },
   "whiskysite|https://www.whiskysite.nl/en/springbank-30-years-old-1993-caskshare-070-ltr-494.html": {
    "landed": 7295166,
    "t": 1790260728
   },
   "whiskysite|https://www.whiskysite.nl/en/springbank-31-years-old-1992-douglas-laing-xop-070.html": {
-   "landed": 7295166,
-   "t": 1790260728
+   "landed": 7245836,
+   "t": 1790435035
   },
   "whiskysite|https://www.whiskysite.nl/en/springbank-35-years-old-1989-signatory-symingtons.html": {
    "landed": 8541276,
@@ -369,8 +369,8 @@
    "t": 1790426361
   },
   "zeewijck|https://www.zeewijck.nl/nl/calvados-drouin-19yo-springbank-angels-504.html": {
-   "landed": 394723,
-   "t": 1790260728
+   "landed": 392055,
+   "t": 1790435035
   },
   "zeewijck|https://www.zeewijck.nl/nl/kilkerran-12yo-46.html": {
    "landed": 250035,
@@ -381,28 +381,28 @@
    "t": 1790305409
   },
   "zeewijck|https://www.zeewijck.nl/nl/longrow-21-years-old-46-copy.html": {
-   "landed": 1705528,
-   "t": 1790260728
+   "landed": 1693996,
+   "t": 1790435035
   },
   "zeewijck|https://www.zeewijck.nl/nl/longrow-peated-46.html": {
-   "landed": 244163,
-   "t": 1790260728
+   "landed": 242512,
+   "t": 1790435035
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-10yo-46.html": {
    "landed": 248525,
    "t": 1790345040
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-5yo-100proof-571.html": {
-   "landed": 233652,
-   "t": 1790260728
+   "landed": 233508,
+   "t": 1790435035
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-campbeltown-loch-blend-46.html": {
-   "landed": 192962,
-   "t": 1790260728
+   "landed": 191657,
+   "t": 1790435035
   }
  },
  "fx": {
-  "t": 1790433333.7297199,
+  "t": 1790435035.7782326,
   "table": {
    "DKK": 6.5557,
    "EUR": 0.87696,
@@ -438,7 +438,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 2,
+   "fails": 3,
    "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
