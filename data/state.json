@@ -193,8 +193,8 @@
    "t": 1790219016
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-14Y-Bourbon-Wood": {
-   "landed": 1868527,
-   "t": 1790258621
+   "landed": 1855892,
+   "t": 1790433333
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-18Y-2017-46.0": {
    "landed": 1300872,
@@ -233,8 +233,8 @@
    "t": 1790393800
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-Local-Barley-11Y-53.1-2017": {
-   "landed": 1729381,
-   "t": 1790258621
+   "landed": 1717688,
+   "t": 1790433333
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-Vintage-Batch-1-2001-55.3": {
    "landed": 1470968,
@@ -297,8 +297,8 @@
    "t": 1790309018
   },
   "whiskyfass|https://whiskyfass.de/kilkerran-glengyle-12-years-07l": {
-   "landed": 232282,
-   "t": 1790258621
+   "landed": 230713,
+   "t": 1790433333
   },
   "whiskyfass|https://whiskyfass.de/longrow-100-proof-batch-no-2-peated-campbeltown-single-malt-scotch-whisky": {
    "landed": 295316,
@@ -321,8 +321,8 @@
    "t": 1790296896
   },
   "whiskyfass|https://whiskyfass.de/springbank-8-jahre-local-barley-campbeltown-single-malt-scotch-whisky": {
-   "landed": 1168345,
-   "t": 1790258621
+   "landed": 1160446,
+   "t": 1790433333
   },
   "whiskysite|https://www.whiskysite.nl/en/kilkerran-12-years-old-070-ltr-46.html": {
    "landed": 235127,
@@ -402,7 +402,7 @@
   }
  },
  "fx": {
-  "t": 1790431408.2066662,
+  "t": 1790433333.7297199,
   "table": {
    "DKK": 6.5557,
    "EUR": 0.87696,
@@ -438,7 +438,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
+   "fails": 2,
    "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
