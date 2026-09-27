@@ -362,7 +362,7 @@
   },
   "whiskybase|https://shop.whiskybase.com/us/longrow-peated-164419366.html": {
    "landed": 196236,
-   "t": 1790350582
+   "t": 1790523384
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-120587715.html": {
    "landed": 2340996,
@@ -510,7 +510,7 @@
   }
  },
  "fx": {
-  "t": 1790521406.587794,
+  "t": 1790523384.8026595,
   "table": {
    "DKK": 6.5557,
    "EUR": 0.87696,
@@ -538,7 +538,7 @@
    "notified": false
   },
   "htfw": {
-   "fails": 3,
+   "fails": 4,
    "last_error": "HTTP 403: https://www.htfw.com/brands/springbank",
    "notified": false
   },
@@ -547,7 +547,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
   "passionforwhisky": {
