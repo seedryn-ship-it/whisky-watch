@@ -446,7 +446,7 @@
   }
  },
  "fx": {
-  "t": 1790480247.5307493,
+  "t": 1790481796.5750594,
   "table": {
    "DKK": 6.5557,
    "EUR": 0.87696,
@@ -482,7 +482,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
+   "fails": 2,
    "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
