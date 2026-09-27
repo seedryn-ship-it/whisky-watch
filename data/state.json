@@ -446,7 +446,7 @@
   }
  },
  "fx": {
-  "t": 1790499797.4806678,
+  "t": 1790501768.4026759,
   "table": {
    "DKK": 6.5557,
    "EUR": 0.87696,
@@ -482,7 +482,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
   "passionforwhisky": {
@@ -499,7 +500,8 @@
    "notified": false
   },
   "rvw": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "요청 실패: https://rarevintagewhisky.nl/website/index.php?ProductCategory=32013969&Index=1 (('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))",
    "notified": false
   },
   "thewhiskybarrel": {
