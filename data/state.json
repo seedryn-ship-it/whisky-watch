@@ -20,6 +20,10 @@
    "landed": 1514410,
    "t": 1790508929
   },
+  "hedonism|https://hedonism.co.uk/products/hazelburn-21-year-old-private-sherry-cask-43-1999": {
+   "landed": 3235329,
+   "t": 1790510673
+  },
   "hedonism|https://hedonism.co.uk/products/springbank-10-year-old-local-barley-2017-release-2007": {
    "landed": 3510675,
    "t": 1790436988
@@ -79,6 +83,10 @@
   "hedonism|https://hedonism.co.uk/products/springbank-30-year-old-old-and-rare-hunter-laing-1993": {
    "landed": 13033099,
    "t": 1790436988
+  },
+  "hedonism|https://hedonism.co.uk/products/springbank-31-year-single-cask-old-xtra-old-particular-douglas-laing-1992": {
+   "landed": 5897019,
+   "t": 1790510673
   },
   "hedonism|https://hedonism.co.uk/products/springbank-35-year-old-millennium-1": {
    "landed": 34951086,
@@ -156,6 +164,14 @@
    "landed": 7357872,
    "t": 1790424234
   },
+  "rombo|https://rombo.dk/products/hazelburn-10-yo-whisky": {
+   "landed": 269777,
+   "t": 1790510673
+  },
+  "rombo|https://rombo.dk/products/kilkerran-12-years-old-single-malt-scotch-whisky": {
+   "landed": 221756,
+   "t": 1790510673
+  },
   "rombo|https://rombo.dk/products/longrow-21-year-october-2023": {
    "landed": 1635372,
    "t": 1790508929
@@ -165,8 +181,8 @@
    "t": 1790508929
   },
   "rombo|https://rombo.dk/products/springbank-100-proof-5-years-single-malt-scotch-whisky": {
-   "landed": 283409,
-   "t": 1790087913
+   "landed": 237763,
+   "t": 1790510673
   },
   "rombo|https://rombo.dk/products/springbank-30-years-februar-2026-single-malt-scotch-whisky": {
    "landed": 5438561,
@@ -408,6 +424,14 @@
    "landed": 1160446,
    "t": 1790433333
   },
+  "whiskyparis|https://whiskyparis.com/products/kilkerran-heavily-peated-batch-11-57-9-copie": {
+   "landed": 236546,
+   "t": 1790510673
+  },
+  "whiskyparis|https://whiskyparis.com/products/longrow-18-ans-46": {
+   "landed": 1457744,
+   "t": 1790510673
+  },
   "whiskysite|https://www.whiskysite.nl/en/kilkerran-12-years-old-070-ltr-46.html": {
    "landed": 233538,
    "t": 1790438626
@@ -486,7 +510,7 @@
   }
  },
  "fx": {
-  "t": 1790508929.298821,
+  "t": 1790510673.150074,
   "table": {
    "DKK": 6.5557,
    "EUR": 0.87696,
@@ -522,8 +546,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 2,
-   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "fails": 0,
    "notified": false
   },
   "passionforwhisky": {
