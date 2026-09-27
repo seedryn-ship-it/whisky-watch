@@ -155,6 +155,19 @@ def test_shipped_config_is_consistent():
         assert "/search" not in (by_id[sid].search_url or "")
 
 
+def test_shopify_shops_pin_currency_to_avoid_markets_localization():
+    # Shopify Markets(다중통화) 때문에 접속 IP 에 따라 products.json 가격이 자동으로 현지 통화로
+    # 바뀌는 샵이 실제로 있었다(한국 IP 로 열면 원화 숫자가 그대로 찍힘). 그래서 모든 Shopify 샵의
+    # listing_urls 에 &currency=<샵 통화> 를 강제로 붙여 항상 같은 통화로 고정한다.
+    cfg = load_config(ROOT / "config.yaml")
+    for s in cfg.shops:
+        if s.type != "shopify" or not s.enabled:
+            continue
+        for u in s.listing_urls:
+            url = u["url"] if isinstance(u, dict) else u
+            assert f"currency={s.currency}" in url, (s.id, url)
+
+
 # ---------------------------------------------------------------- Telegram 오류 사유
 
 

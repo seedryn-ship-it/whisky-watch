@@ -96,12 +96,16 @@ https://...
   Gauntleys·The Single Malt Shop(지금 스프링뱅크 계열 재고 없음), Must Have Malts·Vitatra(robots.txt 가 요청 간격을 각각 600초·180초로 요구), Jardin Vouvrillon(브랜드 필터 주소가 403으로 차단),
   Whisky Fix(상품명이 서버에서 '...'으로 잘려서 나와 숙성/에디션 구분이 어려움), Dekanta(일본 위스키 중심),
   Whisky Shop Italia·Passion for Whisky(둘 다 PrestaShop — GitHub 러너의 requests 요청에는 상품이 0건으로 나오고, `fetch: playwright` 로 바꿔도 브라우저 실행 자체가 실패해 진단이 죽는 문제가 계속돼 뺐습니다).
-- **다중통화(Shopify Markets) 주의**: Really Good Whisky Co·The Whisky Barrel 은 접속하는 나라에 따라 화면 통화가 자동으로 바뀝니다(한국에서 보면 원화로 나옴). GitHub 서버는 외국에 있어
-  다른 통화로 보일 수 있어 GBP 로 가정해 뒀습니다. 처음 setup-check 결과에서 가격이 이상하면(예: 10년이 몇만 파운드) 바로 확인해 주세요.
+- **다중통화(Shopify Markets) 문제, 확인 후 수정함**: Shopify 샵(WIO·Hedonism·Inn-Out·Whisky Galore·Rombo·Really Good Whisky Co·The Whisky Barrel·Whisky Paris)은 접속 국가에 따라
+  `products.json` 가격이 자동으로 그 나라 통화로 바뀝니다. 실제로 한국 IP 로 열어보니 Hedonism·Really Good Whisky Co·The Whisky Barrel·Rombo 에서 원화 숫자가 그대로 찍히는 걸 확인해서
+  (예: 5만원대 상품이 "51134"로 찍힘), 모든 Shopify 샵 URL 에 `&currency=<샵 통화>` 를 붙여 항상 같은 통화로 고정했습니다. GitHub 러너가 어느 나라로 인식되든 이제는 영향받지 않습니다.
+- **배송비, 실제 장바구니로 재확인함(2026-09)**: Really Good Whisky Co(1병 £46, 이후 2kg 구간마다 +£15 정도)·Hedonism(1병 £35 Express 기준)·The Whisky Barrel(1병 £25 Standard 기준)은
+  실제 장바구니에 담고 한국 배송지로 배송비를 조회해 확인한 값으로 `ship_base`/`ship_extra` 를 고쳤습니다. 나머지 샵은 아직 실제 장바구니로 재확인 전이라 추정치일 수 있으니, 알림이 오면
+  꼭 그 샵 장바구니에서 최종 배송비를 다시 확인하세요 — 일부 영국/유럽 샵은 DHL 등 특정 택배사를 쓰면 국제 배송비가 기본 £60~70대까지 올라가는 경우가 있습니다.
 - **목표가(`price_caps`)**: config.yaml 에 스프링뱅크 10년 25만·15년 35만·12년CS 35만·18년 70만·21년 100만원(도착가 기준)을 지정해 두었습니다. 일반 제품(Local Barley·독립병입·100 Proof 등 제외)이 이 가격 이하가 되면 이력이 없어도 바로 알리고, 나머지 상품은 이력 중앙값 기준입니다.
 - **독립병입(IB) 구분**: Signatory·Hunter Laing·Cadenhead's 등 독립병입사 병은 공식 병과 가격대가 달라서 기준가를 따로 냅니다(상품명에 병입사가 안 적히는 Cadenhead's 샵은 `add_tokens: [independent]`).
 - **실시간이 아니라 준실시간**입니다. GitHub 예약 실행은 지연될 수 있고 기본 간격은 30분입니다. 한정 물량이 몇 분 만에 소진되는 상품에는 부족할 수 있습니다.
-- **배송비는 추정치**입니다. 실제 배송비는 장바구니에서 한국 주소로 확인해 `ship_base`/`ship_extra` 를 고쳐야 정확합니다. 샵 간 비교와 소액면세 판정에 영향이 있습니다.
+- **배송비는 추정치입니다(위 항목에서 재확인한 3곳 제외)**. 실제 배송비는 장바구니에서 한국 주소로 확인해 `ship_base`/`ship_extra` 를 고쳐야 정확합니다. 샵 간 비교와 소액면세 판정에 영향이 있습니다.
 - **VAT 제외·관세 20% 는 가정**입니다. 샵이 수출 시 실제로 VAT/영국 주세를 어떻게 처리하는지는 첫 실제 구매 때 체크아웃 금액과 비교해 보정하세요.
 - 봇 차단(Cloudflare 등)이 있으면 requests 로는 수집되지 않을 수 있습니다. `robots.txt` 가 허용하지 않는 경로는 기본적으로 요청하지 않으며(`respect_robots`), 요청 사이에 무작위 대기를 둡니다. 각 샵의 이용약관도 확인하세요.
 - 통관 규정: 자가사용 인정은 1L 이하 1병 기준이며 재판매가 의심되면 통관이 보류될 수 있습니다. 세금 적용 시점은 주문일이 아니라 입항일(환율 포함)입니다.
