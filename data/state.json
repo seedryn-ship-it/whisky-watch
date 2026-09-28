@@ -141,8 +141,8 @@
    "t": 1790599464
   },
   "nickolls|https://nickollsandperks.com/p/kilkerran-12-year-old-103393181211/": {
-   "landed": 231452,
-   "t": 1790438626
+   "landed": 232134,
+   "t": 1790611554
   },
   "nickolls|https://nickollsandperks.com/p/kilkerran-heavily-peated-batch-12-105213291211/": {
    "landed": 231452,
@@ -433,8 +433,8 @@
    "t": 1790510673
   },
   "whiskysite|https://www.whiskysite.nl/en/kilkerran-12-years-old-070-ltr-46.html": {
-   "landed": 233538,
-   "t": 1790438626
+   "landed": 233521,
+   "t": 1790611554
   },
   "whiskysite|https://www.whiskysite.nl/en/longrow-peated.html": {
    "landed": 203608,
@@ -453,8 +453,8 @@
    "t": 1790087913
   },
   "whiskysite|https://www.whiskysite.nl/en/springbank-5-years-old-100-proof-070-ltr-571.html": {
-   "landed": 218581,
-   "t": 1790438626
+   "landed": 218564,
+   "t": 1790611554
   },
   "wio|https://whiskyinternationalonline.com/products/springbank-10-year-old-whisky-46": {
    "landed": 374930,
@@ -510,7 +510,7 @@
   }
  },
  "fx": {
-  "t": 1790609954.8783028,
+  "t": 1790611554.550804,
   "table": {
    "DKK": 6.5699,
    "EUR": 0.87889,
