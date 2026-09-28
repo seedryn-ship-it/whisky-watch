@@ -25,64 +25,64 @@
    "t": 1790510673
   },
   "hedonism|https://hedonism.co.uk/products/springbank-10-year-old-local-barley-2017-release-2007": {
-   "landed": 3510675,
-   "t": 1790436988
+   "landed": 3475004,
+   "t": 1790609954
   },
   "hedonism|https://hedonism.co.uk/products/springbank-10-year-old-local-barley-2020-release-2010": {
-   "landed": 4566175,
-   "t": 1790436988
+   "landed": 4533615,
+   "t": 1790609954
   },
   "hedonism|https://hedonism.co.uk/products/springbank-14-year-old-fresh-sherry-christmas-2019-release": {
-   "landed": 8466925,
-   "t": 1790436988
+   "landed": 8445870,
+   "t": 1790609954
   },
   "hedonism|https://hedonism.co.uk/products/springbank-16-year-old-local-barley-1999": {
-   "landed": 7549100,
-   "t": 1790436988
+   "landed": 7525340,
+   "t": 1790609954
   },
   "hedonism|https://hedonism.co.uk/products/springbank-20-year-old-ageing-monography-samaroli-1968": {
-   "landed": 31871433,
-   "t": 1790436988
+   "landed": 31919408,
+   "t": 1790609954
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-2020-release": {
-   "landed": 7526156,
-   "t": 1790436988
+   "landed": 7502327,
+   "t": 1790609954
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-2021-release": {
    "landed": 9109402,
    "t": 1790597072
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-2022-release": {
-   "landed": 7067244,
-   "t": 1790436988
+   "landed": 7042060,
+   "t": 1790609954
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-2023-release": {
    "landed": 6429356,
    "t": 1790597072
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-fresh-sherry-butt-starkicker-1996": {
-   "landed": 5070977,
-   "t": 1790436988
+   "landed": 5039906,
+   "t": 1790609954
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-fresh-sherry-hogshead-starkicker-1998": {
-   "landed": 6057638,
-   "t": 1790436988
+   "landed": 6029477,
+   "t": 1790609954
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-private-refill-sherry-cask-1994": {
-   "landed": 6631277,
-   "t": 1790436988
+   "landed": 6604808,
+   "t": 1790609954
   },
   "hedonism|https://hedonism.co.uk/products/springbank-28-year-old-the-inventors-whisky-business-1997": {
-   "landed": 4749739,
-   "t": 1790436988
+   "landed": 4717721,
+   "t": 1790609954
   },
   "hedonism|https://hedonism.co.uk/products/springbank-30-year-old-2024-release": {
    "landed": 13010152,
    "t": 1790597072
   },
   "hedonism|https://hedonism.co.uk/products/springbank-30-year-old-old-and-rare-hunter-laing-1993": {
-   "landed": 13033099,
-   "t": 1790436988
+   "landed": 13025511,
+   "t": 1790609954
   },
   "hedonism|https://hedonism.co.uk/products/springbank-31-year-single-cask-old-xtra-old-particular-douglas-laing-1992": {
    "landed": 5897019,
@@ -93,8 +93,8 @@
    "t": 1790201040
   },
   "hedonism|https://hedonism.co.uk/products/springbank-40-year-old-chieftains-single-malt": {
-   "landed": 13950922,
-   "t": 1790436988
+   "landed": 13946043,
+   "t": 1790609954
   },
   "hedonism|https://hedonism.co.uk/products/springbank-50-year-old-millennium": {
    "landed": 68538492,
@@ -109,8 +109,8 @@
    "t": 1790597072
   },
   "hedonism|https://hedonism.co.uk/products/springbank-madeira-wood-christmas-2004-release": {
-   "landed": 4772684,
-   "t": 1790436988
+   "landed": 4740734,
+   "t": 1790609954
   },
   "hedonism|https://hedonism.co.uk/products/springbank-private-sherry-cask-341-1993": {
    "landed": 10027224,
@@ -510,7 +510,7 @@
   }
  },
  "fx": {
-  "t": 1790608008.2808864,
+  "t": 1790609954.8783028,
   "table": {
    "DKK": 6.5699,
    "EUR": 0.87889,
@@ -546,8 +546,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 2,
-   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "fails": 0,
    "notified": false
   },
   "passionforwhisky": {
