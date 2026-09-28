@@ -293,8 +293,8 @@
    "t": 1790046200
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-8Y-Society-Bottling-2012-57.3": {
-   "landed": 1272188,
-   "t": 1790296896
+   "landed": 1263586,
+   "t": 1790556258
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-9Y-Wood-Expressions-1996-58.0": {
    "landed": 1658457,
@@ -413,8 +413,8 @@
    "t": 1790426361
   },
   "whiskyfass|https://whiskyfass.de/springbank-25-jahre-directors-special-single-malts-of-scotland-campbeltown-single-malt-scotch-whisky": {
-   "landed": 5342714,
-   "t": 1790296896
+   "landed": 5306588,
+   "t": 1790556258
   },
   "whiskyfass|https://whiskyfass.de/springbank-31-jahre-1991-old-rare-whisky": {
    "landed": 12105191,
@@ -510,7 +510,7 @@
   }
  },
  "fx": {
-  "t": 1790553907.1480248,
+  "t": 1790556258.4106784,
   "table": {
    "DKK": 6.5557,
    "EUR": 0.87696,
@@ -538,7 +538,7 @@
    "notified": false
   },
   "htfw": {
-   "fails": 21,
+   "fails": 22,
    "last_error": "HTTP 403: https://www.htfw.com/brands/springbank",
    "notified": true
   },
