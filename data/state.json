@@ -49,16 +49,16 @@
    "t": 1790436988
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-2021-release": {
-   "landed": 9155292,
-   "t": 1790424234
+   "landed": 9109402,
+   "t": 1790597072
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-2022-release": {
    "landed": 7067244,
    "t": 1790436988
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-2023-release": {
-   "landed": 6475247,
-   "t": 1790424234
+   "landed": 6429356,
+   "t": 1790597072
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-fresh-sherry-butt-starkicker-1996": {
    "landed": 5070977,
@@ -77,8 +77,8 @@
    "t": 1790436988
   },
   "hedonism|https://hedonism.co.uk/products/springbank-30-year-old-2024-release": {
-   "landed": 13056044,
-   "t": 1790424234
+   "landed": 13010152,
+   "t": 1790597072
   },
   "hedonism|https://hedonism.co.uk/products/springbank-30-year-old-old-and-rare-hunter-laing-1993": {
    "landed": 13033099,
@@ -97,24 +97,24 @@
    "t": 1790436988
   },
   "hedonism|https://hedonism.co.uk/products/springbank-50-year-old-millennium": {
-   "landed": 68584383,
-   "t": 1790424234
+   "landed": 68538492,
+   "t": 1790597072
   },
   "hedonism|https://hedonism.co.uk/products/springbank-50-year-old-millennium-1": {
-   "landed": 68584383,
-   "t": 1790424234
+   "landed": 68538492,
+   "t": 1790597072
   },
   "hedonism|https://hedonism.co.uk/products/springbank-lateltin-lanz-ingold-100th-anniversary-1964": {
-   "landed": 25446665,
-   "t": 1790424234
+   "landed": 25400773,
+   "t": 1790597072
   },
   "hedonism|https://hedonism.co.uk/products/springbank-madeira-wood-christmas-2004-release": {
    "landed": 4772684,
    "t": 1790436988
   },
   "hedonism|https://hedonism.co.uk/products/springbank-private-sherry-cask-341-1993": {
-   "landed": 10073117,
-   "t": 1790424234
+   "landed": 10027224,
+   "t": 1790597072
   },
   "htfw|https://www.htfw.com/springbank-100-proof-campbeltown-single-malt-scotch-5-year-old-whisky": {
    "landed": 250252,
@@ -153,8 +153,8 @@
    "t": 1790424234
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/longrow-peated-campbeltown-single-malt-whisky": {
-   "landed": 219840,
-   "t": 1790424234
+   "landed": 249448,
+   "t": 1790597072
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/springbank-22-years-old-smws-27-110-horse-harnesses-and-mescal-worms-1992-70cl": {
    "landed": 4413219,
@@ -250,7 +250,7 @@
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-12Y-1991-Bourbon-58.5": {
    "landed": 1322817,
-   "t": 1790424234
+   "t": 1790597072
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-12Y-2000-Calvados-52.7": {
    "landed": 1692134,
@@ -286,7 +286,7 @@
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-30Y-2025-46.0": {
    "landed": 5903317,
-   "t": 1790424234
+   "t": 1790597072
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-30Y-Chieftains-Choice-1972-IM-46.0": {
    "landed": 4411899,
@@ -510,7 +510,7 @@
   }
  },
  "fx": {
-  "t": 1790595601.5589888,
+  "t": 1790597072.1231327,
   "table": {
    "DKK": 6.5557,
    "EUR": 0.87696,
@@ -546,7 +546,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
   "passionforwhisky": {
