@@ -173,24 +173,24 @@
    "t": 1790510673
   },
   "rombo|https://rombo.dk/products/longrow-21-year-october-2023": {
-   "landed": 1635372,
-   "t": 1790508929
+   "landed": 1635305,
+   "t": 1790681853
   },
   "rombo|https://rombo.dk/products/longrow-peated-single-malt-whisky": {
-   "landed": 237763,
-   "t": 1790508929
+   "landed": 237753,
+   "t": 1790681853
   },
   "rombo|https://rombo.dk/products/springbank-100-proof-5-years-single-malt-scotch-whisky": {
    "landed": 237763,
    "t": 1790510673
   },
   "rombo|https://rombo.dk/products/springbank-30-years-februar-2026-single-malt-scotch-whisky": {
-   "landed": 5438561,
-   "t": 1790508929
+   "landed": 5438341,
+   "t": 1790681853
   },
   "rombo|https://rombo.dk/products/springbank-vintage-1994-single-malt-scotch-whisky-june-2026-release": {
-   "landed": 5649849,
-   "t": 1790508929
+   "landed": 5649621,
+   "t": 1790681853
   },
   "rvw|https://rarevintagewhisky.nl/Hazelburn-11Y-Society-Bottling-2002-Bourbon-54.4": {
    "landed": 955558,
@@ -325,8 +325,8 @@
    "t": 1790508929
   },
   "thewhiskybarrel|https://thewhiskybarrel.com/products/springbank-13-year-old-1992-the-golden-cask-2005-281": {
-   "landed": 1468518,
-   "t": 1790508929
+   "landed": 1472849,
+   "t": 1790681853
   },
   "thewhiskybarrel|https://thewhiskybarrel.com/products/springbank-1996-samaroli-magnifico-2022-567": {
    "landed": 13836195,
@@ -510,7 +510,7 @@
   }
  },
  "fx": {
-  "t": 1790679866.469676,
+  "t": 1790681853.0097106,
   "table": {
    "DKK": 6.5699,
    "EUR": 0.87889,
@@ -546,8 +546,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
-   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "fails": 0,
    "notified": false
   },
   "passionforwhisky": {
