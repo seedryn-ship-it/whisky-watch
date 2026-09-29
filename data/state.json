@@ -9,8 +9,8 @@
    "t": 1790046200
   },
   "galore|https://www.whiskygalore.co.nz/products/longrow-100-proof-57-1": {
-   "landed": 285611,
-   "t": 1790492643
+   "landed": 286119,
+   "t": 1790665597
   },
   "galore|https://www.whiskygalore.co.nz/products/springbank-signatory-symingtons-choice-1989-35-years-old-47-8": {
    "landed": 8110243,
@@ -510,7 +510,7 @@
   }
  },
  "fx": {
-  "t": 1790664216.9256089,
+  "t": 1790665597.3303177,
   "table": {
    "DKK": 6.5699,
    "EUR": 0.87889,
@@ -546,8 +546,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
-   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "fails": 0,
    "notified": false
   },
   "passionforwhisky": {
