@@ -21,8 +21,8 @@
    "t": 1790508929
   },
   "hedonism|https://hedonism.co.uk/products/hazelburn-21-year-old-private-sherry-cask-43-1999": {
-   "landed": 3235329,
-   "t": 1790510673
+   "landed": 3244871,
+   "t": 1790683514
   },
   "hedonism|https://hedonism.co.uk/products/springbank-10-year-old-local-barley-2017-release-2007": {
    "landed": 3475004,
@@ -165,12 +165,12 @@
    "t": 1790424234
   },
   "rombo|https://rombo.dk/products/hazelburn-10-yo-whisky": {
-   "landed": 269777,
-   "t": 1790510673
+   "landed": 269766,
+   "t": 1790683514
   },
   "rombo|https://rombo.dk/products/kilkerran-12-years-old-single-malt-scotch-whisky": {
-   "landed": 221756,
-   "t": 1790510673
+   "landed": 221747,
+   "t": 1790683514
   },
   "rombo|https://rombo.dk/products/longrow-21-year-october-2023": {
    "landed": 1635305,
@@ -181,8 +181,8 @@
    "t": 1790681853
   },
   "rombo|https://rombo.dk/products/springbank-100-proof-5-years-single-malt-scotch-whisky": {
-   "landed": 237763,
-   "t": 1790510673
+   "landed": 237753,
+   "t": 1790683514
   },
   "rombo|https://rombo.dk/products/springbank-30-years-februar-2026-single-malt-scotch-whisky": {
    "landed": 5438341,
@@ -425,12 +425,12 @@
    "t": 1790606408
   },
   "whiskyparis|https://whiskyparis.com/products/kilkerran-heavily-peated-batch-11-57-9-copie": {
-   "landed": 236546,
-   "t": 1790510673
+   "landed": 236526,
+   "t": 1790683514
   },
   "whiskyparis|https://whiskyparis.com/products/longrow-18-ans-46": {
-   "landed": 1457744,
-   "t": 1790510673
+   "landed": 1457633,
+   "t": 1790683514
   },
   "whiskysite|https://www.whiskysite.nl/en/kilkerran-12-years-old-070-ltr-46.html": {
    "landed": 233521,
@@ -510,7 +510,7 @@
   }
  },
  "fx": {
-  "t": 1790681853.0097106,
+  "t": 1790683514.829114,
   "table": {
    "DKK": 6.5699,
    "EUR": 0.87889,
@@ -546,7 +546,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "요청 실패: https://nickollsandperks.com/producer/springbank/page/1/ (HTTPSConnectionPool(host='nickollsandperks.com', port=443): Max retries exceeded with url: /producer/springbank/page/1/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='nickollsandperks.com', port=443) at 0x7f68929e3770>, 'Connect",
    "notified": false
   },
   "passionforwhisky": {
