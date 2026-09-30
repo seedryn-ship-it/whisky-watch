@@ -49,16 +49,16 @@
    "t": 1790609954
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-2021-release": {
-   "landed": 9109402,
-   "t": 1790597072
+   "landed": 9094303,
+   "t": 1790769958
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-2022-release": {
    "landed": 7042060,
    "t": 1790609954
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-2023-release": {
-   "landed": 6429356,
-   "t": 1790597072
+   "landed": 6418701,
+   "t": 1790769958
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-fresh-sherry-butt-starkicker-1996": {
    "landed": 5039906,
@@ -105,8 +105,8 @@
    "t": 1790597072
   },
   "hedonism|https://hedonism.co.uk/products/springbank-lateltin-lanz-ingold-100th-anniversary-1964": {
-   "landed": 25400773,
-   "t": 1790597072
+   "landed": 25358677,
+   "t": 1790769958
   },
   "hedonism|https://hedonism.co.uk/products/springbank-madeira-wood-christmas-2004-release": {
    "landed": 4740734,
@@ -153,8 +153,8 @@
    "t": 1790424234
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/longrow-peated-campbeltown-single-malt-whisky": {
-   "landed": 249448,
-   "t": 1790597072
+   "landed": 249034,
+   "t": 1790769958
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/springbank-22-years-old-smws-27-110-horse-harnesses-and-mescal-worms-1992-70cl": {
    "landed": 4413219,
@@ -249,8 +249,8 @@
    "t": 1790741068
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-12Y-1991-Bourbon-58.5": {
-   "landed": 1322817,
-   "t": 1790597072
+   "landed": 1315601,
+   "t": 1790769958
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-12Y-2000-Calvados-52.7": {
    "landed": 1692134,
@@ -285,8 +285,8 @@
    "t": 1790251465
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-30Y-2025-46.0": {
-   "landed": 5903317,
-   "t": 1790597072
+   "landed": 5871116,
+   "t": 1790769958
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-30Y-Chieftains-Choice-1972-IM-46.0": {
    "landed": 4411899,
@@ -510,7 +510,7 @@
   }
  },
  "fx": {
-  "t": 1790768252.885672,
+  "t": 1790769958.7547345,
   "table": {
    "DKK": 6.5834,
    "EUR": 0.88067,
@@ -546,8 +546,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 2,
-   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "fails": 0,
    "notified": false
   },
   "passionforwhisky": {
