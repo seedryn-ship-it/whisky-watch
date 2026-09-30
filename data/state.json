@@ -441,8 +441,8 @@
    "t": 1790773693
   },
   "whiskysite|https://www.whiskysite.nl/en/longrow-peated.html": {
-   "landed": 203608,
-   "t": 1790608008
+   "landed": 202817,
+   "t": 1790780913
   },
   "whiskysite|https://www.whiskysite.nl/en/springbank-30-years-old-1993-caskshare-070-ltr-494.html": {
    "landed": 7295166,
@@ -481,8 +481,8 @@
    "t": 1790426361
   },
   "zeewijck|https://www.zeewijck.nl/nl/calvados-drouin-19yo-springbank-angels-504.html": {
-   "landed": 392025,
-   "t": 1790608008
+   "landed": 390503,
+   "t": 1790780913
   },
   "zeewijck|https://www.zeewijck.nl/nl/kilkerran-12yo-46.html": {
    "landed": 250035,
@@ -493,28 +493,28 @@
    "t": 1790651049
   },
   "zeewijck|https://www.zeewijck.nl/nl/longrow-21-years-old-46-copy.html": {
-   "landed": 1693867,
-   "t": 1790608008
+   "landed": 1687294,
+   "t": 1790780913
   },
   "zeewijck|https://www.zeewijck.nl/nl/longrow-peated-46.html": {
-   "landed": 242494,
-   "t": 1790608008
+   "landed": 241552,
+   "t": 1790780913
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-10yo-46.html": {
    "landed": 247169,
    "t": 1790692787
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-5yo-100proof-571.html": {
-   "landed": 233490,
-   "t": 1790608008
+   "landed": 232585,
+   "t": 1790780913
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-campbeltown-loch-blend-46.html": {
-   "landed": 191643,
-   "t": 1790608008
+   "landed": 190899,
+   "t": 1790780913
   }
  },
  "fx": {
-  "t": 1790779292.8813374,
+  "t": 1790780913.937051,
   "table": {
    "DKK": 6.5834,
    "EUR": 0.88067,
