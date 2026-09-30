@@ -436,6 +436,10 @@
    "landed": 233521,
    "t": 1790611554
   },
+  "whiskysite|https://www.whiskysite.nl/en/longrow-23-years-old-2002-cadenhead-original-colle.html": {
+   "landed": 1453012,
+   "t": 1790773693
+  },
   "whiskysite|https://www.whiskysite.nl/en/longrow-peated.html": {
    "landed": 203608,
    "t": 1790608008
@@ -510,7 +514,7 @@
   }
  },
  "fx": {
-  "t": 1790772450.9009576,
+  "t": 1790773693.9689872,
   "table": {
    "DKK": 6.5834,
    "EUR": 0.88067,
