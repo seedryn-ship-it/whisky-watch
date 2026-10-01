@@ -177,24 +177,24 @@
    "t": 1790683514
   },
   "rombo|https://rombo.dk/products/longrow-21-year-october-2023": {
-   "landed": 1635305,
-   "t": 1790681853
+   "landed": 1628911,
+   "t": 1790854709
   },
   "rombo|https://rombo.dk/products/longrow-peated-single-malt-whisky": {
-   "landed": 237753,
-   "t": 1790681853
+   "landed": 236823,
+   "t": 1790854709
   },
   "rombo|https://rombo.dk/products/springbank-100-proof-5-years-single-malt-scotch-whisky": {
    "landed": 237753,
    "t": 1790683514
   },
   "rombo|https://rombo.dk/products/springbank-30-years-februar-2026-single-malt-scotch-whisky": {
-   "landed": 5438341,
-   "t": 1790681853
+   "landed": 5417078,
+   "t": 1790854709
   },
   "rombo|https://rombo.dk/products/springbank-vintage-1994-single-malt-scotch-whisky-june-2026-release": {
-   "landed": 5649621,
-   "t": 1790681853
+   "landed": 5627531,
+   "t": 1790854709
   },
   "rvw|https://rarevintagewhisky.nl/Hazelburn-11Y-Society-Bottling-2002-Bourbon-54.4": {
    "landed": 955558,
@@ -518,7 +518,7 @@
   }
  },
  "fx": {
-  "t": 1790852745.3273826,
+  "t": 1790854709.4174757,
   "table": {
    "DKK": 6.5834,
    "EUR": 0.88067,
