@@ -518,13 +518,13 @@
   }
  },
  "fx": {
-  "t": 1790862029.4223213,
+  "t": 1790863608.3895767,
   "table": {
-   "DKK": 6.5834,
-   "EUR": 0.88067,
-   "GBP": 0.75265,
-   "KRW": 1355.4,
-   "NZD": 1.7715,
+   "DKK": 6.6169,
+   "EUR": 0.88511,
+   "GBP": 0.75565,
+   "KRW": 1361.27,
+   "NZD": 1.7809,
    "USD": 1.0
   }
  },
@@ -554,8 +554,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
-   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "fails": 0,
    "notified": false
   },
   "passionforwhisky": {
