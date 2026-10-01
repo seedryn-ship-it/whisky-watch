@@ -149,20 +149,24 @@
    "t": 1790436988
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/hazelburn-10-year-old-single-malt-scotch-whisky": {
-   "landed": 260446,
-   "t": 1790424234
+   "landed": 262982,
+   "t": 1790834829
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/longrow-peated-campbeltown-single-malt-whisky": {
-   "landed": 249034,
-   "t": 1790769958
+   "landed": 222260,
+   "t": 1790834829
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/springbank-22-years-old-smws-27-110-horse-harnesses-and-mescal-worms-1992-70cl": {
-   "landed": 4413219,
-   "t": 1790424234
+   "landed": 4430280,
+   "t": 1790834829
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/springbank-35-year-old-1898-signatory-symington-s-choice-single-malt-70cl-47-8": {
-   "landed": 7357872,
-   "t": 1790424234
+   "landed": 7383246,
+   "t": 1790834829
+  },
+  "reallygoodwhisky|https://reallygoodwhisky.com/products/springbank-5-year-old-100-proof-single-malt-70cl-57-1": {
+   "landed": 233906,
+   "t": 1790834829
   },
   "rombo|https://rombo.dk/products/hazelburn-10-yo-whisky": {
    "landed": 269766,
@@ -514,7 +518,7 @@
   }
  },
  "fx": {
-  "t": 1790833139.4750938,
+  "t": 1790834829.1370533,
   "table": {
    "DKK": 6.5834,
    "EUR": 0.88067,
