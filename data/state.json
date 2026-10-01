@@ -173,8 +173,8 @@
    "t": 1790683514
   },
   "rombo|https://rombo.dk/products/kilkerran-12-years-old-single-malt-scotch-whisky": {
-   "landed": 221747,
-   "t": 1790683514
+   "landed": 220880,
+   "t": 1790856437
   },
   "rombo|https://rombo.dk/products/longrow-21-year-october-2023": {
    "landed": 1628911,
@@ -185,8 +185,8 @@
    "t": 1790854709
   },
   "rombo|https://rombo.dk/products/springbank-100-proof-5-years-single-malt-scotch-whisky": {
-   "landed": 237753,
-   "t": 1790683514
+   "landed": 236823,
+   "t": 1790856437
   },
   "rombo|https://rombo.dk/products/springbank-30-years-februar-2026-single-malt-scotch-whisky": {
    "landed": 5417078,
@@ -429,8 +429,8 @@
    "t": 1790779292
   },
   "whiskyparis|https://whiskyparis.com/products/kilkerran-heavily-peated-batch-11-57-9-copie": {
-   "landed": 236526,
-   "t": 1790683514
+   "landed": 235608,
+   "t": 1790856437
   },
   "whiskyparis|https://whiskyparis.com/products/longrow-18-ans-46": {
    "landed": 1457633,
@@ -518,7 +518,7 @@
   }
  },
  "fx": {
-  "t": 1790854709.4174757,
+  "t": 1790856437.9203947,
   "table": {
    "DKK": 6.5834,
    "EUR": 0.88067,
