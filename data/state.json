@@ -233,8 +233,8 @@
    "t": 1790741068
   },
   "rvw|https://rarevintagewhisky.nl/Longrow-17Y-Single-Cask-49.4": {
-   "landed": 1943949,
-   "t": 1790692787
+   "landed": 1945502,
+   "t": 1790865683
   },
   "rvw|https://rarevintagewhisky.nl/Longrow-18Y-2014-46.0": {
    "landed": 1274077,
@@ -409,8 +409,8 @@
    "t": 1790085810
   },
   "whiskyfass|https://whiskyfass.de/longrow-peated-single-malt-whisky-07l": {
-   "landed": 214577,
-   "t": 1790692787
+   "landed": 214750,
+   "t": 1790865683
   },
   "whiskyfass|https://whiskyfass.de/springbank-25-jahre-campbeltown-single-malt-scotch-whisky": {
    "landed": 6023804,
@@ -505,8 +505,8 @@
    "t": 1790780913
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-10yo-46.html": {
-   "landed": 247169,
-   "t": 1790692787
+   "landed": 247367,
+   "t": 1790865683
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-5yo-100proof-571.html": {
    "landed": 232585,
@@ -518,7 +518,7 @@
   }
  },
  "fx": {
-  "t": 1790863608.3895767,
+  "t": 1790865683.6874886,
   "table": {
    "DKK": 6.6169,
    "EUR": 0.88511,
@@ -554,7 +554,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
   "passionforwhisky": {
