@@ -373,8 +373,8 @@
    "t": 1790426361
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-164418628.html": {
-   "landed": 213607,
-   "t": 1790694444
+   "landed": 213778,
+   "t": 1790869189
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-15-year-old-102522942.html": {
    "landed": 1208761,
@@ -518,7 +518,7 @@
   }
  },
  "fx": {
-  "t": 1790867106.1118016,
+  "t": 1790869189.683556,
   "table": {
    "DKK": 6.6169,
    "EUR": 0.88511,
