@@ -417,8 +417,8 @@
    "t": 1790772450
   },
   "whiskyfass|https://whiskyfass.de/springbank-25-jahre-directors-special-single-malts-of-scotland-campbeltown-single-malt-scotch-whisky": {
-   "landed": 5277643,
-   "t": 1790729128
+   "landed": 5281860,
+   "t": 1790919518
   },
   "whiskyfass|https://whiskyfass.de/springbank-31-jahre-1991-old-rare-whisky": {
    "landed": 12105191,
@@ -518,7 +518,7 @@
   }
  },
  "fx": {
-  "t": 1790917472.6335244,
+  "t": 1790919518.2012463,
   "table": {
    "DKK": 6.6169,
    "EUR": 0.88511,
@@ -554,8 +554,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
-   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "fails": 0,
    "notified": false
   },
   "passionforwhisky": {
