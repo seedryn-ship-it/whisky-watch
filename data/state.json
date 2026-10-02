@@ -357,8 +357,8 @@
    "t": 1790426361
   },
   "whiskybase|https://shop.whiskybase.com/us/kilkerran-heavily-peated-163414813.html": {
-   "landed": 195166,
-   "t": 1790761199
+   "landed": 195321,
+   "t": 1790935417
   },
   "whiskybase|https://shop.whiskybase.com/us/longrow-peated-161970662.html": {
    "landed": 197866,
@@ -518,7 +518,7 @@
   }
  },
  "fx": {
-  "t": 1790933971.9254951,
+  "t": 1790935417.9241607,
   "table": {
    "DKK": 6.6169,
    "EUR": 0.88511,
