@@ -461,8 +461,8 @@
    "t": 1790949958
   },
   "whiskysite|https://www.whiskysite.nl/en/springbank-5-years-old-100-proof-070-ltr-571.html": {
-   "landed": 217717,
-   "t": 1790784389
+   "landed": 214091,
+   "t": 1790959258
   },
   "wio|https://whiskyinternationalonline.com/products/springbank-10-year-old-whisky-46": {
    "landed": 374930,
@@ -518,7 +518,7 @@
   }
  },
  "fx": {
-  "t": 1790957084.413524,
+  "t": 1790959258.88672,
   "table": {
    "DKK": 6.658,
    "EUR": 0.89087,
@@ -571,7 +571,8 @@
    "notified": false
   },
   "rvw": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "요청 실패: https://rarevintagewhisky.nl/website/index.php?ProductCategory=32013969&Index=1 (('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))",
    "notified": false
   },
   "thewhiskybarrel": {
