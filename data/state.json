@@ -49,16 +49,16 @@
    "t": 1790609954
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-2021-release": {
-   "landed": 9094303,
-   "t": 1790769958
+   "landed": 9138259,
+   "t": 1790945098
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-2022-release": {
    "landed": 7042060,
    "t": 1790609954
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-2023-release": {
-   "landed": 6418701,
-   "t": 1790769958
+   "landed": 6449721,
+   "t": 1790945098
   },
   "hedonism|https://hedonism.co.uk/products/springbank-25-year-old-fresh-sherry-butt-starkicker-1996": {
    "landed": 5039906,
@@ -105,8 +105,8 @@
    "t": 1790597072
   },
   "hedonism|https://hedonism.co.uk/products/springbank-lateltin-lanz-ingold-100th-anniversary-1964": {
-   "landed": 25358677,
-   "t": 1790769958
+   "landed": 25481236,
+   "t": 1790945098
   },
   "hedonism|https://hedonism.co.uk/products/springbank-madeira-wood-christmas-2004-release": {
    "landed": 4740734,
@@ -253,8 +253,8 @@
    "t": 1790913884
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-12Y-1991-Bourbon-58.5": {
-   "landed": 1315601,
-   "t": 1790769958
+   "landed": 1316653,
+   "t": 1790945098
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-12Y-2000-Calvados-52.7": {
    "landed": 1692134,
@@ -289,8 +289,8 @@
    "t": 1790251465
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-30Y-2025-46.0": {
-   "landed": 5871116,
-   "t": 1790769958
+   "landed": 5875806,
+   "t": 1790945098
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-30Y-Chieftains-Choice-1972-IM-46.0": {
    "landed": 4411899,
@@ -518,7 +518,7 @@
   }
  },
  "fx": {
-  "t": 1790942710.285975,
+  "t": 1790945098.2007856,
   "table": {
    "DKK": 6.6169,
    "EUR": 0.88511,
@@ -554,7 +554,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
   "passionforwhisky": {
