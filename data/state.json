@@ -133,12 +133,12 @@
    "t": 1790258621
   },
   "innout|https://inn-out-shop.com/products/springbank-30-2026-whisky": {
-   "landed": 6245178,
-   "t": 1790772450
+   "landed": 6250169,
+   "t": 1790946410
   },
   "innout|https://inn-out-shop.com/products/springbank-local-barley-10y-2025-whisky": {
-   "landed": 1524015,
-   "t": 1790772450
+   "landed": 1525235,
+   "t": 1790946410
   },
   "nickolls|https://nickollsandperks.com/p/kilkerran-12-year-old-103393181211/": {
    "landed": 232134,
@@ -281,8 +281,8 @@
    "t": 1790258621
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-25Y-2006-46.0": {
-   "landed": 6440554,
-   "t": 1790772450
+   "landed": 6445701,
+   "t": 1790946410
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-25Y-2018 46.0": {
    "landed": 5335198,
@@ -413,8 +413,8 @@
    "t": 1790865683
   },
   "whiskyfass|https://whiskyfass.de/springbank-25-jahre-campbeltown-single-malt-scotch-whisky": {
-   "landed": 6023804,
-   "t": 1790772450
+   "landed": 6028617,
+   "t": 1790946410
   },
   "whiskyfass|https://whiskyfass.de/springbank-25-jahre-directors-special-single-malts-of-scotland-campbeltown-single-malt-scotch-whisky": {
    "landed": 5281860,
@@ -473,8 +473,8 @@
    "t": 1789904058
   },
   "wio|https://whiskyinternationalonline.com/products/springbank-25-year-old-whisky-2023-release-bottled-dec-2022-46": {
-   "landed": 5671456,
-   "t": 1790772450
+   "landed": 5698866,
+   "t": 1790946410
   },
   "wio|https://whiskyinternationalonline.com/products/springbank-local-barley-2022-11-year-old-55-1": {
    "landed": 1796467,
@@ -518,7 +518,7 @@
   }
  },
  "fx": {
-  "t": 1790945098.2007856,
+  "t": 1790946410.6850784,
   "table": {
    "DKK": 6.6169,
    "EUR": 0.88511,
@@ -554,8 +554,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
-   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "fails": 0,
    "notified": false
   },
   "passionforwhisky": {
