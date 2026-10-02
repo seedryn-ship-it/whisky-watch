@@ -441,8 +441,8 @@
    "t": 1790611554
   },
   "whiskysite|https://www.whiskysite.nl/en/longrow-23-years-old-2002-cadenhead-original-colle.html": {
-   "landed": 1453012,
-   "t": 1790773693
+   "landed": 1454174,
+   "t": 1790948410
   },
   "whiskysite|https://www.whiskysite.nl/en/longrow-peated.html": {
    "landed": 202817,
@@ -518,7 +518,7 @@
   }
  },
  "fx": {
-  "t": 1790946410.6850784,
+  "t": 1790948410.2379773,
   "table": {
    "DKK": 6.6169,
    "EUR": 0.88511,
@@ -554,7 +554,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
   "passionforwhisky": {
