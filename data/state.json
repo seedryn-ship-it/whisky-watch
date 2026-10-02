@@ -141,8 +141,8 @@
    "t": 1790946410
   },
   "nickolls|https://nickollsandperks.com/p/kilkerran-12-year-old-103393181211/": {
-   "landed": 232134,
-   "t": 1790611554
+   "landed": 229398,
+   "t": 1790949958
   },
   "nickolls|https://nickollsandperks.com/p/kilkerran-heavily-peated-batch-12-105213291211/": {
    "landed": 231452,
@@ -169,8 +169,8 @@
    "t": 1790834829
   },
   "rombo|https://rombo.dk/products/hazelburn-10-yo-whisky": {
-   "landed": 269766,
-   "t": 1790683514
+   "landed": 264304,
+   "t": 1790949958
   },
   "rombo|https://rombo.dk/products/kilkerran-12-years-old-single-malt-scotch-whisky": {
    "landed": 220880,
@@ -433,12 +433,12 @@
    "t": 1790926745
   },
   "whiskyparis|https://whiskyparis.com/products/longrow-18-ans-46": {
-   "landed": 1457633,
-   "t": 1790683514
+   "landed": 1427813,
+   "t": 1790949958
   },
   "whiskysite|https://www.whiskysite.nl/en/kilkerran-12-years-old-070-ltr-46.html": {
-   "landed": 233521,
-   "t": 1790611554
+   "landed": 228742,
+   "t": 1790949958
   },
   "whiskysite|https://www.whiskysite.nl/en/longrow-23-years-old-2002-cadenhead-original-colle.html": {
    "landed": 1454174,
@@ -457,8 +457,8 @@
    "t": 1790435035
   },
   "whiskysite|https://www.whiskysite.nl/en/springbank-35-years-old-1989-signatory-symingtons.html": {
-   "landed": 8541276,
-   "t": 1790087913
+   "landed": 8315369,
+   "t": 1790949958
   },
   "whiskysite|https://www.whiskysite.nl/en/springbank-5-years-old-100-proof-070-ltr-571.html": {
    "landed": 217717,
@@ -518,13 +518,13 @@
   }
  },
  "fx": {
-  "t": 1790948410.2379773,
+  "t": 1790949958.383285,
   "table": {
-   "DKK": 6.6169,
-   "EUR": 0.88511,
-   "GBP": 0.75565,
-   "KRW": 1361.27,
-   "NZD": 1.7809,
+   "DKK": 6.658,
+   "EUR": 0.89087,
+   "GBP": 0.75753,
+   "KRW": 1348.28,
+   "NZD": 1.7819,
    "USD": 1.0
   }
  },
@@ -554,8 +554,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
-   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "fails": 0,
    "notified": false
   },
   "passionforwhisky": {
