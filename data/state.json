@@ -493,8 +493,8 @@
    "t": 1790132600
   },
   "zeewijck|https://www.zeewijck.nl/nl/kilkerran-8yo-bourbon-cask-577.html": {
-   "landed": 254990,
-   "t": 1790823870
+   "landed": 250746,
+   "t": 1790997248
   },
   "zeewijck|https://www.zeewijck.nl/nl/longrow-21-years-old-46-copy.html": {
    "landed": 1659213,
@@ -518,7 +518,7 @@
   }
  },
  "fx": {
-  "t": 1790995611.613662,
+  "t": 1790997248.84681,
   "table": {
    "DKK": 6.658,
    "EUR": 0.89087,
@@ -554,7 +554,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
+   "fails": 2,
    "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
