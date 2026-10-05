@@ -301,8 +301,8 @@
    "t": 1790046200
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-8Y-Society-Bottling-2012-57.3": {
-   "landed": 1263586,
-   "t": 1790556258
+   "landed": 1231386,
+   "t": 1791211354
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-9Y-Wood-Expressions-1996-58.0": {
    "landed": 1624405,
@@ -441,8 +441,8 @@
    "t": 1791147807
   },
   "whiskysite|https://www.whiskysite.nl/en/kilkerran-12-years-old-070-ltr-46.html": {
-   "landed": 228742,
-   "t": 1790949958
+   "landed": 227586,
+   "t": 1791211354
   },
   "whiskysite|https://www.whiskysite.nl/en/longrow-23-years-old-2002-cadenhead-original-colle.html": {
    "landed": 1430985,
@@ -522,13 +522,13 @@
   }
  },
  "fx": {
-  "t": 1791209260.600012,
+  "t": 1791211354.1681702,
   "table": {
-   "DKK": 6.658,
-   "EUR": 0.89087,
-   "GBP": 0.75753,
-   "KRW": 1348.28,
-   "NZD": 1.7819,
+   "DKK": 6.6713,
+   "EUR": 0.89254,
+   "GBP": 0.75616,
+   "KRW": 1343.98,
+   "NZD": 1.7885,
    "USD": 1.0
   }
  },
@@ -558,8 +558,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 4,
-   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "fails": 0,
    "notified": false
   },
   "passionforwhisky": {
