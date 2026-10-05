@@ -454,7 +454,7 @@
   },
   "whiskysite|https://www.whiskysite.nl/en/springbank-30-years-old-1993-caskshare-070-ltr-494.html": {
    "landed": 5936775,
-   "t": 1791021781
+   "t": 1791194844
   },
   "whiskysite|https://www.whiskysite.nl/en/springbank-31-years-old-1992-douglas-laing-xop-070.html": {
    "landed": 7245836,
@@ -522,7 +522,7 @@
   }
  },
  "fx": {
-  "t": 1791193352.0047455,
+  "t": 1791194844.451234,
   "table": {
    "DKK": 6.658,
    "EUR": 0.89087,
@@ -558,7 +558,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
   "passionforwhisky": {
