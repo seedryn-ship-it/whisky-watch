@@ -177,8 +177,8 @@
    "t": 1791147807
   },
   "rombo|https://rombo.dk/products/kilkerran-12-years-old-single-malt-scotch-whisky": {
-   "landed": 217258,
-   "t": 1791039421
+   "landed": 216134,
+   "t": 1791212843
   },
   "rombo|https://rombo.dk/products/longrow-21-year-october-2023": {
    "landed": 1628911,
@@ -189,8 +189,8 @@
    "t": 1791201983
   },
   "rombo|https://rombo.dk/products/springbank-100-proof-5-years-single-malt-scotch-whisky": {
-   "landed": 232940,
-   "t": 1791039421
+   "landed": 231735,
+   "t": 1791212843
   },
   "rombo|https://rombo.dk/products/springbank-30-years-februar-2026-single-malt-scotch-whisky": {
    "landed": 5417078,
@@ -237,8 +237,8 @@
    "t": 1791087411
   },
   "rvw|https://rarevintagewhisky.nl/Longrow-17Y-Single-Cask-49.4": {
-   "landed": 1914478,
-   "t": 1791039421
+   "landed": 1904801,
+   "t": 1791212843
   },
   "rvw|https://rarevintagewhisky.nl/Longrow-18Y-2014-46.0": {
    "landed": 1274077,
@@ -413,8 +413,8 @@
    "t": 1790085810
   },
   "whiskyfass|https://whiskyfass.de/longrow-peated-single-malt-whisky-07l": {
-   "landed": 211324,
-   "t": 1791039421
+   "landed": 210256,
+   "t": 1791212843
   },
   "whiskyfass|https://whiskyfass.de/springbank-25-jahre-campbeltown-single-malt-scotch-whisky": {
    "landed": 5932483,
@@ -509,8 +509,8 @@
    "t": 1791147807
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-10yo-46.html": {
-   "landed": 243422,
-   "t": 1791039421
+   "landed": 242192,
+   "t": 1791212843
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-5yo-100proof-571.html": {
    "landed": 228713,
@@ -522,7 +522,7 @@
   }
  },
  "fx": {
-  "t": 1791211354.1681702,
+  "t": 1791212843.3925247,
   "table": {
    "DKK": 6.6713,
    "EUR": 0.89254,
