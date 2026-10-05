@@ -522,7 +522,7 @@
   }
  },
  "fx": {
-  "t": 1791201983.52167,
+  "t": 1791204433.766571,
   "table": {
    "DKK": 6.658,
    "EUR": 0.89087,
@@ -558,7 +558,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "HTTP 403: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
   "passionforwhisky": {
