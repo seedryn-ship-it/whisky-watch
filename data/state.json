@@ -158,7 +158,7 @@
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/longrow-peated-campbeltown-single-malt-whisky": {
    "landed": 247235,
-   "t": 1791007825
+   "t": 1791183025
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/springbank-22-years-old-smws-27-110-horse-harnesses-and-mescal-worms-1992-70cl": {
    "landed": 4430280,
@@ -522,7 +522,7 @@
   }
  },
  "fx": {
-  "t": 1791180530.5300913,
+  "t": 1791183025.890055,
   "table": {
    "DKK": 6.658,
    "EUR": 0.89087,
@@ -558,7 +558,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
+   "fails": 2,
    "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
