@@ -141,8 +141,8 @@
    "t": 1791147807
   },
   "nickolls|https://nickollsandperks.com/p/kilkerran-12-year-old-103393181211/": {
-   "landed": 229398,
-   "t": 1790949958
+   "landed": 193804,
+   "t": 1791196852
   },
   "nickolls|https://nickollsandperks.com/p/kilkerran-8-year-old-bourbon-cask-matured-105805621211/": {
    "landed": 211032,
@@ -522,7 +522,7 @@
   }
  },
  "fx": {
-  "t": 1791194844.451234,
+  "t": 1791196852.6570902,
   "table": {
    "DKK": 6.658,
    "EUR": 0.89087,
@@ -558,8 +558,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
-   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "fails": 0,
    "notified": false
   },
   "passionforwhisky": {
