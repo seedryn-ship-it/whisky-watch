@@ -392,6 +392,10 @@
    "landed": 9963121,
    "t": 1790296896
   },
+  "whiskybase|https://shop.whiskybase.com/us/springbank-1993-gs-glenscoma-164623117.html": {
+   "landed": 754828,
+   "t": 1791279603
+  },
   "whiskybase|https://shop.whiskybase.com/us/springbank-21-year-old-145875376.html": {
    "landed": 1805331,
    "t": 1789904058
@@ -522,7 +526,7 @@
   }
  },
  "fx": {
-  "t": 1791277541.4259481,
+  "t": 1791279603.2952719,
   "table": {
    "DKK": 6.6713,
    "EUR": 0.89254,
