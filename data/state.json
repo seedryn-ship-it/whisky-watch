@@ -526,13 +526,13 @@
   }
  },
  "fx": {
-  "t": 1791294027.6844587,
+  "t": 1791295641.8502657,
   "table": {
-   "DKK": 6.6713,
-   "EUR": 0.89254,
-   "GBP": 0.75616,
-   "KRW": 1343.98,
-   "NZD": 1.7885,
+   "DKK": 6.633,
+   "EUR": 0.88739,
+   "GBP": 0.75322,
+   "KRW": 1338.78,
+   "NZD": 1.7802,
    "USD": 1.0
   }
  },
@@ -554,7 +554,8 @@
    "notified": false
   },
   "htfw": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "HTTP 403: https://www.htfw.com/brands/springbank",
    "notified": false
   },
   "innout": {
@@ -579,7 +580,8 @@
    "notified": false
   },
   "rvw": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "요청 실패: https://rarevintagewhisky.nl/website/index.php?ProductCategory=32013969&Index=1 (('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))",
    "notified": false
   },
   "thewhiskybarrel": {
