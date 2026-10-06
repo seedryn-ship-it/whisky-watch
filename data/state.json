@@ -356,6 +356,10 @@
    "landed": 6998407,
    "t": 1790508929
   },
+  "whiskybase|https://shop.whiskybase.com/us/edinburgh-festival-2008-spd-springbank-distillers.html": {
+   "landed": 354538,
+   "t": 1791299273
+  },
   "whiskybase|https://shop.whiskybase.com/us/hazelburn-10-year-old-164430393.html": {
    "landed": 220959,
    "t": 1790426361
@@ -526,7 +530,7 @@
   }
  },
  "fx": {
-  "t": 1791297574.3654563,
+  "t": 1791299273.8918343,
   "table": {
    "DKK": 6.633,
    "EUR": 0.88739,
