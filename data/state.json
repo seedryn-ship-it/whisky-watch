@@ -13,8 +13,8 @@
    "t": 1791186131
   },
   "galore|https://www.whiskygalore.co.nz/products/springbank-signatory-symingtons-choice-1989-35-years-old-47-8": {
-   "landed": 7985941,
-   "t": 1791087411
+   "landed": 7931096,
+   "t": 1791261606
   },
   "hedonism|https://hedonism.co.uk/products/hazelburn-10-year-old-single-cask": {
    "landed": 1514410,
@@ -213,8 +213,8 @@
    "t": 1790258621
   },
   "rvw|https://rarevintagewhisky.nl/Hazelburn-8Y-Sauternes-Wood-2002-55.9": {
-   "landed": 1489037,
-   "t": 1791087411
+   "landed": 1481512,
+   "t": 1791261606
   },
   "rvw|https://rarevintagewhisky.nl/Hazelburn-Hand-Filled-Distillery-Exclusive-2022-57.1-": {
    "landed": 461541,
@@ -233,8 +233,8 @@
    "t": 1790219016
   },
   "rvw|https://rarevintagewhisky.nl/Longrow-14Y-Oloroso-Sherry-57.8": {
-   "landed": 1005585,
-   "t": 1791087411
+   "landed": 1000501,
+   "t": 1791261606
   },
   "rvw|https://rarevintagewhisky.nl/Longrow-17Y-Single-Cask-49.4": {
    "landed": 1904801,
@@ -253,8 +253,8 @@
    "t": 1789904058
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-12Y-1989-Rum-54.6": {
-   "landed": 1295657,
-   "t": 1791087411
+   "landed": 1289109,
+   "t": 1791261606
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-12Y-1991-Bourbon-58.5": {
    "landed": 1295657,
@@ -305,8 +305,8 @@
    "t": 1791211354
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-9Y-Wood-Expressions-1996-58.0": {
-   "landed": 1624405,
-   "t": 1791087411
+   "landed": 1616196,
+   "t": 1791261606
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-Local-Barley-11Y-53.1-2017": {
    "landed": 1682419,
@@ -385,8 +385,8 @@
    "t": 1790219016
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-1965.html": {
-   "landed": 25067204,
-   "t": 1791087411
+   "landed": 24940506,
+   "t": 1791261606
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-1969-sv-signatory-vintage.html": {
    "landed": 9963121,
@@ -522,7 +522,7 @@
   }
  },
  "fx": {
-  "t": 1791259546.02971,
+  "t": 1791261606.7988791,
   "table": {
    "DKK": 6.6713,
    "EUR": 0.89254,
