@@ -105,8 +105,8 @@
    "t": 1790597072
   },
   "hedonism|https://hedonism.co.uk/products/springbank-lateltin-lanz-ingold-100th-anniversary-1964": {
-   "landed": 25175445,
-   "t": 1791147807
+   "landed": 25141100,
+   "t": 1791320609
   },
   "hedonism|https://hedonism.co.uk/products/springbank-madeira-wood-christmas-2004-release": {
    "landed": 4740734,
@@ -133,12 +133,12 @@
    "t": 1790258621
   },
   "innout|https://inn-out-shop.com/products/springbank-30-2026-whisky": {
-   "landed": 6150500,
-   "t": 1791147807
+   "landed": 6131114,
+   "t": 1791320609
   },
   "innout|https://inn-out-shop.com/products/springbank-local-barley-10y-2025-whisky": {
-   "landed": 1500913,
-   "t": 1791147807
+   "landed": 1496180,
+   "t": 1791320609
   },
   "nickolls|https://nickollsandperks.com/p/kilkerran-12-year-old-103393181211/": {
    "landed": 193804,
@@ -173,8 +173,8 @@
    "t": 1790834829
   },
   "rombo|https://rombo.dk/products/hazelburn-10-yo-whisky": {
-   "landed": 264304,
-   "t": 1791147807
+   "landed": 263430,
+   "t": 1791320609
   },
   "rombo|https://rombo.dk/products/kilkerran-12-years-old-single-malt-scotch-whisky": {
    "landed": 216134,
@@ -413,8 +413,8 @@
    "t": 1790309018
   },
   "whiskyfass|https://whiskyfass.de/kilkerran-glengyle-12-years-07l": {
-   "landed": 225975,
-   "t": 1791147807
+   "landed": 225262,
+   "t": 1791320609
   },
   "whiskyfass|https://whiskyfass.de/longrow-100-proof-batch-no-2-peated-campbeltown-single-malt-scotch-whisky": {
    "landed": 295316,
@@ -445,16 +445,16 @@
    "t": 1791283182
   },
   "whiskyparis|https://whiskyparis.com/products/longrow-18-ans-46": {
-   "landed": 1427813,
-   "t": 1791147807
+   "landed": 1423312,
+   "t": 1791320609
   },
   "whiskysite|https://www.whiskysite.nl/en/kilkerran-12-years-old-070-ltr-46.html": {
    "landed": 227586,
    "t": 1791211354
   },
   "whiskysite|https://www.whiskysite.nl/en/longrow-23-years-old-2002-cadenhead-original-colle.html": {
-   "landed": 1430985,
-   "t": 1791147807
+   "landed": 1426475,
+   "t": 1791320609
   },
   "whiskysite|https://www.whiskysite.nl/en/longrow-peated.html": {
    "landed": 198352,
@@ -469,8 +469,8 @@
    "t": 1790435035
   },
   "whiskysite|https://www.whiskysite.nl/en/springbank-35-years-old-1989-signatory-symingtons.html": {
-   "landed": 8315369,
-   "t": 1791147807
+   "landed": 8289159,
+   "t": 1791320609
   },
   "whiskysite|https://www.whiskysite.nl/en/springbank-5-years-old-100-proof-070-ltr-571.html": {
    "landed": 214091,
@@ -513,16 +513,16 @@
    "t": 1791308323
   },
   "zeewijck|https://www.zeewijck.nl/nl/longrow-peated-46.html": {
-   "landed": 237533,
-   "t": 1791147807
+   "landed": 236784,
+   "t": 1791320609
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-10yo-46.html": {
    "landed": 242192,
    "t": 1791212843
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-5yo-100proof-571.html": {
-   "landed": 228713,
-   "t": 1791147807
+   "landed": 227993,
+   "t": 1791320609
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-campbeltown-loch-blend-46.html": {
    "landed": 186696,
@@ -530,13 +530,13 @@
   }
  },
  "fx": {
-  "t": 1791319219.9284778,
+  "t": 1791320609.6452172,
   "table": {
-   "DKK": 6.670463,
-   "EUR": 0.892111,
-   "GBP": 0.756485,
-   "KRW": 1342.774629,
-   "NZD": 1.78636,
+   "DKK": 6.633,
+   "EUR": 0.88739,
+   "GBP": 0.75322,
+   "KRW": 1338.78,
+   "NZD": 1.7802,
    "USD": 1.0
   }
  },
