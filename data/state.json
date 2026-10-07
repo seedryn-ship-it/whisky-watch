@@ -177,8 +177,8 @@
    "t": 1791320609
   },
   "rombo|https://rombo.dk/products/kilkerran-12-years-old-single-malt-scotch-whisky": {
-   "landed": 216134,
-   "t": 1791212843
+   "landed": 214764,
+   "t": 1791387979
   },
   "rombo|https://rombo.dk/products/longrow-21-year-october-2023": {
    "landed": 1628911,
@@ -189,8 +189,8 @@
    "t": 1791374836
   },
   "rombo|https://rombo.dk/products/springbank-100-proof-5-years-single-malt-scotch-whisky": {
-   "landed": 231735,
-   "t": 1791212843
+   "landed": 230266,
+   "t": 1791387979
   },
   "rombo|https://rombo.dk/products/springbank-30-years-februar-2026-single-malt-scotch-whisky": {
    "landed": 5417078,
@@ -237,8 +237,8 @@
    "t": 1791261606
   },
   "rvw|https://rarevintagewhisky.nl/Longrow-17Y-Single-Cask-49.4": {
-   "landed": 1904801,
-   "t": 1791212843
+   "landed": 1892745,
+   "t": 1791387979
   },
   "rvw|https://rarevintagewhisky.nl/Longrow-18Y-2014-46.0": {
    "landed": 1274077,
@@ -301,8 +301,8 @@
    "t": 1790046200
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-8Y-Society-Bottling-2012-57.3": {
-   "landed": 1231386,
-   "t": 1791211354
+   "landed": 1223593,
+   "t": 1791387979
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-9Y-Wood-Expressions-1996-58.0": {
    "landed": 1616196,
@@ -421,8 +421,8 @@
    "t": 1790085810
   },
   "whiskyfass|https://whiskyfass.de/longrow-peated-single-malt-whisky-07l": {
-   "landed": 210256,
-   "t": 1791212843
+   "landed": 208926,
+   "t": 1791387979
   },
   "whiskyfass|https://whiskyfass.de/springbank-25-jahre-campbeltown-single-malt-scotch-whisky": {
    "landed": 5900039,
@@ -449,8 +449,8 @@
    "t": 1791320609
   },
   "whiskysite|https://www.whiskysite.nl/en/kilkerran-12-years-old-070-ltr-46.html": {
-   "landed": 227586,
-   "t": 1791211354
+   "landed": 226146,
+   "t": 1791387979
   },
   "whiskysite|https://www.whiskysite.nl/en/longrow-23-years-old-2002-cadenhead-original-colle.html": {
    "landed": 1426475,
@@ -517,8 +517,8 @@
    "t": 1791320609
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-10yo-46.html": {
-   "landed": 242192,
-   "t": 1791212843
+   "landed": 240659,
+   "t": 1791387979
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-5yo-100proof-571.html": {
    "landed": 227993,
@@ -530,7 +530,7 @@
   }
  },
  "fx": {
-  "t": 1791384045.9833658,
+  "t": 1791387979.3920217,
   "table": {
    "DKK": 6.6874,
    "EUR": 0.89469,
@@ -566,8 +566,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
-   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "fails": 2,
+   "last_error": "요청 실패: https://nickollsandperks.com/producer/springbank/page/1/ (HTTPSConnectionPool(host='nickollsandperks.com', port=443): Max retries exceeded with url: /producer/springbank/page/1/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='nickollsandperks.com', port=443) at 0x7f327f8cb350>, 'Connect",
    "notified": false
   },
   "passionforwhisky": {
