@@ -133,8 +133,8 @@
    "t": 1790258621
   },
   "innout|https://inn-out-shop.com/products/springbank-30-2026-whisky": {
-   "landed": 6131114,
-   "t": 1791320609
+   "landed": 5754823,
+   "t": 1791351588
   },
   "innout|https://inn-out-shop.com/products/springbank-local-barley-10y-2025-whisky": {
    "landed": 1496180,
@@ -530,7 +530,7 @@
   }
  },
  "fx": {
-  "t": 1791349553.7821565,
+  "t": 1791351588.6541023,
   "table": {
    "DKK": 6.633,
    "EUR": 0.88739,
@@ -566,7 +566,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
   "passionforwhisky": {
