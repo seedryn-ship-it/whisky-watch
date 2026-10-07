@@ -530,7 +530,7 @@
   }
  },
  "fx": {
-  "t": 1791387979.3920217,
+  "t": 1791389313.783625,
   "table": {
    "DKK": 6.6874,
    "EUR": 0.89469,
@@ -566,8 +566,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 2,
-   "last_error": "요청 실패: https://nickollsandperks.com/producer/springbank/page/1/ (HTTPSConnectionPool(host='nickollsandperks.com', port=443): Max retries exceeded with url: /producer/springbank/page/1/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='nickollsandperks.com', port=443) at 0x7f327f8cb350>, 'Connect",
+   "fails": 0,
    "notified": false
   },
   "passionforwhisky": {
