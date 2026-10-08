@@ -365,8 +365,8 @@
    "t": 1790426361
   },
   "whiskybase|https://shop.whiskybase.com/us/kilkerran-heavily-peated-163414813.html": {
-   "landed": 191236,
-   "t": 1791283182
+   "landed": 190024,
+   "t": 1791456065
   },
   "whiskybase|https://shop.whiskybase.com/us/longrow-peated-161970662.html": {
    "landed": 197866,
@@ -429,8 +429,8 @@
    "t": 1791308323
   },
   "whiskyfass|https://whiskyfass.de/springbank-25-jahre-directors-special-single-malts-of-scotland-campbeltown-single-malt-scotch-whisky": {
-   "landed": 5171362,
-   "t": 1791283182
+   "landed": 5138628,
+   "t": 1791456065
   },
   "whiskyfass|https://whiskyfass.de/springbank-31-jahre-1991-old-rare-whisky": {
    "landed": 12105191,
@@ -441,8 +441,8 @@
    "t": 1791308323
   },
   "whiskyparis|https://whiskyparis.com/products/kilkerran-heavily-peated-batch-11-57-9-copie": {
-   "landed": 211103,
-   "t": 1791283182
+   "landed": 209765,
+   "t": 1791456065
   },
   "whiskyparis|https://whiskyparis.com/products/longrow-18-ans-46": {
    "landed": 1423312,
@@ -530,7 +530,7 @@
   }
  },
  "fx": {
-  "t": 1791454014.1951523,
+  "t": 1791456065.6976519,
   "table": {
    "DKK": 6.6874,
    "EUR": 0.89469,
