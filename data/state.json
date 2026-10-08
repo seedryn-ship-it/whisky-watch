@@ -105,8 +105,8 @@
    "t": 1790597072
   },
   "hedonism|https://hedonism.co.uk/products/springbank-lateltin-lanz-ingold-100th-anniversary-1964": {
-   "landed": 25141100,
-   "t": 1791320609
+   "landed": 25097041,
+   "t": 1791493539
   },
   "hedonism|https://hedonism.co.uk/products/springbank-madeira-wood-christmas-2004-release": {
    "landed": 4740734,
@@ -137,8 +137,8 @@
    "t": 1791351588
   },
   "innout|https://inn-out-shop.com/products/springbank-local-barley-10y-2025-whisky": {
-   "landed": 1496180,
-   "t": 1791320609
+   "landed": 1490358,
+   "t": 1791493539
   },
   "nickolls|https://nickollsandperks.com/p/kilkerran-12-year-old-103393181211/": {
    "landed": 193537,
@@ -173,8 +173,8 @@
    "t": 1791452473
   },
   "rombo|https://rombo.dk/products/hazelburn-10-yo-whisky": {
-   "landed": 263430,
-   "t": 1791320609
+   "landed": 262432,
+   "t": 1791493539
   },
   "rombo|https://rombo.dk/products/kilkerran-12-years-old-single-malt-scotch-whisky": {
    "landed": 214764,
@@ -413,8 +413,8 @@
    "t": 1790309018
   },
   "whiskyfass|https://whiskyfass.de/kilkerran-glengyle-12-years-07l": {
-   "landed": 225262,
-   "t": 1791320609
+   "landed": 224386,
+   "t": 1791493539
   },
   "whiskyfass|https://whiskyfass.de/longrow-100-proof-batch-no-2-peated-campbeltown-single-malt-scotch-whisky": {
    "landed": 295316,
@@ -469,8 +469,8 @@
    "t": 1790435035
   },
   "whiskysite|https://www.whiskysite.nl/en/springbank-35-years-old-1989-signatory-symingtons.html": {
-   "landed": 8289159,
-   "t": 1791320609
+   "landed": 8256909,
+   "t": 1791493539
   },
   "whiskysite|https://www.whiskysite.nl/en/springbank-5-years-old-100-proof-070-ltr-571.html": {
    "landed": 214091,
@@ -513,16 +513,16 @@
    "t": 1791481190
   },
   "zeewijck|https://www.zeewijck.nl/nl/longrow-peated-46.html": {
-   "landed": 236784,
-   "t": 1791320609
+   "landed": 235863,
+   "t": 1791493539
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-10yo-46.html": {
    "landed": 240659,
    "t": 1791387979
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-5yo-100proof-571.html": {
-   "landed": 227993,
-   "t": 1791320609
+   "landed": 227105,
+   "t": 1791493539
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-campbeltown-loch-blend-46.html": {
    "landed": 186403,
@@ -530,7 +530,7 @@
   }
  },
  "fx": {
-  "t": 1791492078.2529285,
+  "t": 1791493539.9367783,
   "table": {
    "DKK": 6.6815,
    "EUR": 0.89397,
