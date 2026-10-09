@@ -133,8 +133,8 @@
    "t": 1790258621
   },
   "innout|https://inn-out-shop.com/products/springbank-30-2026-whisky": {
-   "landed": 5754823,
-   "t": 1791351588
+   "landed": 5732433,
+   "t": 1791524447
   },
   "innout|https://inn-out-shop.com/products/springbank-local-barley-10y-2025-whisky": {
    "landed": 1490358,
@@ -530,7 +530,7 @@
   }
  },
  "fx": {
-  "t": 1791522347.4445307,
+  "t": 1791524447.3408496,
   "table": {
    "DKK": 6.6815,
    "EUR": 0.89397,
