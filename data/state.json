@@ -185,8 +185,8 @@
    "t": 1790854709
   },
   "rombo|https://rombo.dk/products/longrow-peated-single-malt-whisky": {
-   "landed": 232170,
-   "t": 1791374836
+   "landed": 231291,
+   "t": 1791549990
   },
   "rombo|https://rombo.dk/products/springbank-100-proof-5-years-single-malt-scotch-whisky": {
    "landed": 230266,
@@ -530,7 +530,7 @@
   }
  },
  "fx": {
-  "t": 1791547570.9876628,
+  "t": 1791549990.318104,
   "table": {
    "DKK": 6.6815,
    "EUR": 0.89397,
@@ -566,7 +566,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
+   "fails": 2,
    "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
