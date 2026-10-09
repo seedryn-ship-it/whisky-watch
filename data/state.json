@@ -461,8 +461,8 @@
    "t": 1791481190
   },
   "whiskysite|https://www.whiskysite.nl/en/springbank-30-years-old-1993-caskshare-070-ltr-494.html": {
-   "landed": 5918062,
-   "t": 1791369590
+   "landed": 5895038,
+   "t": 1791542478
   },
   "whiskysite|https://www.whiskysite.nl/en/springbank-31-years-old-1992-douglas-laing-xop-070.html": {
    "landed": 7245836,
@@ -530,7 +530,7 @@
   }
  },
  "fx": {
-  "t": 1791540372.6530573,
+  "t": 1791542478.9284678,
   "table": {
    "DKK": 6.6815,
    "EUR": 0.89397,
