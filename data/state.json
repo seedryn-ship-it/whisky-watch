@@ -177,8 +177,8 @@
    "t": 1791493539
   },
   "rombo|https://rombo.dk/products/kilkerran-12-years-old-single-malt-scotch-whisky": {
-   "landed": 214764,
-   "t": 1791387979
+   "landed": 215755,
+   "t": 1791561989
   },
   "rombo|https://rombo.dk/products/longrow-21-year-october-2023": {
    "landed": 1628911,
@@ -189,8 +189,8 @@
    "t": 1791549990
   },
   "rombo|https://rombo.dk/products/springbank-100-proof-5-years-single-malt-scotch-whisky": {
-   "landed": 230266,
-   "t": 1791387979
+   "landed": 231328,
+   "t": 1791561989
   },
   "rombo|https://rombo.dk/products/springbank-30-years-februar-2026-single-malt-scotch-whisky": {
    "landed": 5417078,
@@ -237,8 +237,8 @@
    "t": 1791434481
   },
   "rvw|https://rarevintagewhisky.nl/Longrow-17Y-Single-Cask-49.4": {
-   "landed": 1892745,
-   "t": 1791387979
+   "landed": 1901612,
+   "t": 1791561989
   },
   "rvw|https://rarevintagewhisky.nl/Longrow-18Y-2014-46.0": {
    "landed": 1274077,
@@ -301,8 +301,8 @@
    "t": 1790046200
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-8Y-Society-Bottling-2012-57.3": {
-   "landed": 1223593,
-   "t": 1791387979
+   "landed": 1229325,
+   "t": 1791561989
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-9Y-Wood-Expressions-1996-58.0": {
    "landed": 1605965,
@@ -421,8 +421,8 @@
    "t": 1790085810
   },
   "whiskyfass|https://whiskyfass.de/longrow-peated-single-malt-whisky-07l": {
-   "landed": 208926,
-   "t": 1791387979
+   "landed": 209905,
+   "t": 1791561989
   },
   "whiskyfass|https://whiskyfass.de/springbank-25-jahre-campbeltown-single-malt-scotch-whisky": {
    "landed": 5890776,
@@ -517,8 +517,8 @@
    "t": 1791493539
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-10yo-46.html": {
-   "landed": 240659,
-   "t": 1791387979
+   "landed": 241787,
+   "t": 1791561989
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-5yo-100proof-571.html": {
    "landed": 227105,
@@ -530,7 +530,7 @@
   }
  },
  "fx": {
-  "t": 1791560509.877161,
+  "t": 1791561989.866268,
   "table": {
    "DKK": 6.6706,
    "EUR": 0.89238,
@@ -566,8 +566,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
-   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "fails": 0,
    "notified": false
   },
   "passionforwhisky": {
