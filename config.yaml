@@ -26,8 +26,14 @@ watchlist:
   - springbank vintage
   - springbank private
   - hazelburn cask strength
-  # 대체 증류소 예시 (필요하면 주석 해제)
-  # - clynelish 14
+  # 취향 프로필 기반 추천 증류소 (2026-10-11, '위스키 취향 프로필' 문서 추천 목록)
+  - clynelish
+  - glenfarclas
+  - mortlach
+  - bunnahabhain
+  - glendronach
+  - benromach
+  - old pulteney
 
 # 이 단어가 들어간 상품(미니어처, 잔, 세트 등)은 무시
 # exclude_words: [miniature, sample, glass, "5cl"]   # 지정하면 기본 목록을 통째로 대체합니다
@@ -144,6 +150,14 @@ shops:
       - "https://shop.whiskybase.com/us/brands/hazelburn/"
       - "https://shop.whiskybase.com/us/brands/longrow/"
       - "https://shop.whiskybase.com/us/brands/kilkerran/"
+      # 취향 프로필 추천 증류소 (2026-10-11, 브랜드 페이지 존재 확인됨)
+      - "https://shop.whiskybase.com/us/brands/clynelish/"
+      - "https://shop.whiskybase.com/us/brands/glenfarclas/"
+      - "https://shop.whiskybase.com/us/brands/mortlach/"
+      - "https://shop.whiskybase.com/us/brands/bunnahabhain/"
+      - "https://shop.whiskybase.com/us/brands/glendronach/"
+      - "https://shop.whiskybase.com/us/brands/benromach/"
+      - "https://shop.whiskybase.com/us/brands/old-pulteney/"
     strip_vat: 0.21
     ship_base: 35
     ship_extra: 8
@@ -162,6 +176,14 @@ shops:
     listing_urls:
       - url: "https://whiskyinternationalonline.com/collections/springbank-whisky/products.json?limit=250&page={page}&currency=GBP"
         pages: 3
+      # 취향 프로필 추천 증류소 (2026-10-11, products.json 으로 재고 확인됨)
+      - "https://whiskyinternationalonline.com/collections/clynelish-whisky/products.json?limit=250&currency=GBP"
+      - "https://whiskyinternationalonline.com/collections/glenfarclas-whisky/products.json?limit=250&currency=GBP"
+      - "https://whiskyinternationalonline.com/collections/mortlach-whisky/products.json?limit=250&currency=GBP"
+      - "https://whiskyinternationalonline.com/collections/bunnahabhain-whisky/products.json?limit=250&currency=GBP"
+      - "https://whiskyinternationalonline.com/collections/glendronach-whisky/products.json?limit=250&currency=GBP"
+      - "https://whiskyinternationalonline.com/collections/benromach-whisky/products.json?limit=250&currency=GBP"
+      - "https://whiskyinternationalonline.com/collections/pulteney-whisky/products.json?limit=250&currency=GBP"
     strip_vat: 0            # 결제 시 영국 VAT 가 빠진다고 안내함. JSON 가격이 VAT 포함이면 0.20 으로
     ship_base: 37.95        # Zone 9a(한국) 공식 요금
     ship_extra: 10
@@ -173,6 +195,14 @@ shops:
     listing_urls:
       - url: "https://hedonism.co.uk/collections/springbank-whisky/products.json?limit=250&page={page}&currency=GBP"
         pages: 3
+      # 취향 프로필 추천 증류소 (2026-10-11, products.json 으로 재고 확인됨)
+      - "https://hedonism.co.uk/collections/clynelish-whisky/products.json?limit=250&currency=GBP"
+      - "https://hedonism.co.uk/collections/glenfarclas-whisky/products.json?limit=250&currency=GBP"
+      - "https://hedonism.co.uk/collections/mortlach-whisky/products.json?limit=250&currency=GBP"
+      - "https://hedonism.co.uk/collections/bunnahabhain-whisky/products.json?limit=250&currency=GBP"
+      - "https://hedonism.co.uk/collections/glendronach-whisky/products.json?limit=250&currency=GBP"
+      - "https://hedonism.co.uk/collections/benromach-whisky/products.json?limit=250&currency=GBP"
+      - "https://hedonism.co.uk/collections/old-pulteney-whisky/products.json?limit=250&currency=GBP"
     strip_vat: 0
     ship_base: 35           # 실제 장바구니(1병, 한국 배송, Express Delivery 기준) 확인: 약 62,100원 ≈ £35
     ship_extra: 10
@@ -198,6 +228,13 @@ shops:
       - "https://www.whiskygalore.co.nz/collections/longrow/products.json?limit=250&currency=NZD"
       - "https://www.whiskygalore.co.nz/collections/hazelburn/products.json?limit=250&currency=NZD"
       - "https://www.whiskygalore.co.nz/collections/kilkerran/products.json?limit=250&currency=NZD"
+      # 취향 프로필 추천 증류소 (2026-10-11, products.json 으로 재고 확인됨; 벤로막은 컬렉션이 없어 제외)
+      - "https://www.whiskygalore.co.nz/collections/clynelish/products.json?limit=250&currency=NZD"
+      - "https://www.whiskygalore.co.nz/collections/glenfarclas/products.json?limit=250&currency=NZD"
+      - "https://www.whiskygalore.co.nz/collections/mortlach/products.json?limit=250&currency=NZD"
+      - "https://www.whiskygalore.co.nz/collections/bunnahabhain/products.json?limit=250&currency=NZD"
+      - "https://www.whiskygalore.co.nz/collections/glendronach/products.json?limit=250&currency=NZD"
+      - "https://www.whiskygalore.co.nz/collections/old-pulteney/products.json?limit=250&currency=NZD"
     strip_vat: 0            # 해외 운임은 GST 면제라고 안내. 상품 GST(15%) 제외 여부는 미확인
     ship_base: 120          # 추정치 (샵이 무게·크기에 따라 따로 청구)
     ship_extra: 30
@@ -216,6 +253,14 @@ shops:
         pages: 3
       - "https://nickollsandperks.com/producer/kilkerran/"
       - "https://nickollsandperks.com/producer/longrow/"
+      # 취향 프로필 추천 증류소 (2026-10-11, producer 페이지 존재 확인됨)
+      - "https://nickollsandperks.com/producer/clynelish/"
+      - "https://nickollsandperks.com/producer/glenfarclas/"
+      - "https://nickollsandperks.com/producer/mortlach/"
+      - "https://nickollsandperks.com/producer/bunnahabhain/"
+      - "https://nickollsandperks.com/producer/glendronach/"
+      - "https://nickollsandperks.com/producer/benromach/"
+      - "https://nickollsandperks.com/producer/old-pulteney/"
     strip_vat: 0
     ship_base: 45
     ship_extra: 10
@@ -237,6 +282,11 @@ shops:
         pages: 3
       - "https://cadenhead.shop/distillery/hazelburn-springbank-distillery/"
       - "https://cadenhead.shop/distillery/kilkerran/"
+      # 취향 프로필 추천 증류소 중 Cadenhead's 가 현재 병입해 파는 3곳만 추가 (2026-10-11 확인;
+      # 클라이넬리시·모트락·벤로막·올드 풀트니는 지금 판매 페이지가 없어(404) 제외)
+      - "https://cadenhead.shop/distillery/glenfarclas/"
+      - "https://cadenhead.shop/distillery/bunnahabhain/"
+      - "https://cadenhead.shop/distillery/glendronach/"
     selectors:
       card: "div.product.type-product"
       link: "a.mainLink"
@@ -252,9 +302,18 @@ shops:
   - id: dunkeld
     name: Dunkeld Whisky Box (UK)
     currency: GBP
+    allow_empty: true   # 아래 추가한 증류소 검색어는 결과가 없을 수도 있음(재고가 적은 소규모 샵)
     listing_urls:
       - "https://www.dunkeldwhiskybox.co.uk/search?q=springbank"
       - "https://www.dunkeldwhiskybox.co.uk/search?q=hazelburn"
+      # 취향 프로필 추천 증류소 (2026-10-11, 검색어 추가 - 검색 페이지라 결과가 없어도 안전함)
+      - "https://www.dunkeldwhiskybox.co.uk/search?q=clynelish"
+      - "https://www.dunkeldwhiskybox.co.uk/search?q=glenfarclas"
+      - "https://www.dunkeldwhiskybox.co.uk/search?q=mortlach"
+      - "https://www.dunkeldwhiskybox.co.uk/search?q=bunnahabhain"
+      - "https://www.dunkeldwhiskybox.co.uk/search?q=glendronach"
+      - "https://www.dunkeldwhiskybox.co.uk/search?q=benromach"
+      - "https://www.dunkeldwhiskybox.co.uk/search?q=old+pulteney"
     selectors:
       card: "div.product-item"
       link: "a.product-item-link"
@@ -275,6 +334,14 @@ shops:
       - "https://whiskyfass.de/hazelburn?af=50"
       - "https://whiskyfass.de/longrow?af=50"
       - "https://whiskyfass.de/kilkerran?af=50"
+      # 취향 프로필 추천 증류소 (2026-10-11, 카테고리 페이지 존재 확인됨)
+      - "https://whiskyfass.de/clynelish?af=50"
+      - "https://whiskyfass.de/glenfarclas?af=50"
+      - "https://whiskyfass.de/mortlach?af=50"
+      - "https://whiskyfass.de/bunnahabhain?af=50"
+      - "https://whiskyfass.de/glendronach?af=50"
+      - "https://whiskyfass.de/benromach?af=50"
+      - "https://whiskyfass.de/old-pulteney?af=50"
     selectors:
       card: "form.form-basket"
       link: ".productbox-head a"
@@ -287,6 +354,7 @@ shops:
   # Rare Vintage Whisky (네덜란드, ePages). 목록 페이지가 20~100개씩 끊겨 있어서 페이지 번호가 붙는 주소를 씁니다(스프링뱅크 카테고리는 약 200건).
   # 품절 상품에 자리표시 가격(예: 20유로)이 찍혀 있어서 skip_sold_out_history 로 품절 상품 가격은 기준가에 반영하지 않습니다.
   # 한 회차에 요청이 13번 정도 나갑니다.
+  # !! 다른 증류소(글렌파클라스 등)는 카테고리 ID 를 알아야 하는데 사람이 직접 찾아야 해서 아직 추가하지 않았습니다.
   - id: rvw
     name: Rare Vintage Whisky (NL)
     currency: EUR
@@ -322,6 +390,12 @@ shops:
       - "https://rombo.dk/collections/hazelburn/products.json?limit=250&currency=DKK"
       - "https://rombo.dk/collections/longrow/products.json?limit=250&currency=DKK"
       - "https://rombo.dk/collections/kilkerran/products.json?limit=250&currency=DKK"
+      # 취향 프로필 추천 증류소 (2026-10-11, products.json 으로 재고 확인됨; 모트락·벤로막은 재고 없어 제외)
+      - "https://rombo.dk/collections/clynelish/products.json?limit=250&currency=DKK"
+      - "https://rombo.dk/collections/glenfarclas/products.json?limit=250&currency=DKK"
+      - "https://rombo.dk/collections/bunnahabhain/products.json?limit=250&currency=DKK"
+      - "https://rombo.dk/collections/glendronach/products.json?limit=250&currency=DKK"
+      - "https://rombo.dk/collections/old-pulteney/products.json?limit=250&currency=DKK"
     strip_vat: 0
     ship_base: 300          # 확인됨(2026-09, 아래 참고). 블로그에 따르면 배송에 10일 정도 걸린다고 함
     ship_extra: 60
@@ -341,6 +415,14 @@ shops:
       - "https://reallygoodwhisky.com/collections/hazelburn/products.json?limit=250&currency=GBP"
       - "https://reallygoodwhisky.com/collections/longrow/products.json?limit=250&currency=GBP"
       - "https://reallygoodwhisky.com/collections/kilkerran/products.json?limit=250&currency=GBP"
+      # 취향 프로필 추천 증류소 (2026-10-11, products.json 으로 재고 확인됨)
+      - "https://reallygoodwhisky.com/collections/clynelish/products.json?limit=250&currency=GBP"
+      - "https://reallygoodwhisky.com/collections/glenfarclas/products.json?limit=250&currency=GBP"
+      - "https://reallygoodwhisky.com/collections/mortlach/products.json?limit=250&currency=GBP"
+      - "https://reallygoodwhisky.com/collections/bunnahabhain/products.json?limit=250&currency=GBP"
+      - "https://reallygoodwhisky.com/collections/glendronach/products.json?limit=250&currency=GBP"
+      - "https://reallygoodwhisky.com/collections/benromach/products.json?limit=250&currency=GBP"
+      - "https://reallygoodwhisky.com/collections/old-pulteney/products.json?limit=250&currency=GBP"
     strip_vat: 0
     ship_base: 46           # 실제 장바구니(1병, 한국 배송) 확인: 약 82,400원 ≈ £46
     ship_extra: 15          # 2병째부터 무게 구간(2kg 단위)마다 약 15파운드씩 추가로 확인됨
@@ -356,6 +438,14 @@ shops:
       - "https://thewhiskybarrel.com/collections/springbank/products.json?limit=250&currency=GBP"
       - "https://thewhiskybarrel.com/collections/longrow/products.json?limit=250&currency=GBP"
       - "https://thewhiskybarrel.com/collections/kilkerran/products.json?limit=250&currency=GBP"
+      # 취향 프로필 추천 증류소 (2026-10-11, products.json 으로 재고 확인됨)
+      - "https://thewhiskybarrel.com/collections/clynelish/products.json?limit=250&currency=GBP"
+      - "https://thewhiskybarrel.com/collections/glenfarclas/products.json?limit=250&currency=GBP"
+      - "https://thewhiskybarrel.com/collections/mortlach/products.json?limit=250&currency=GBP"
+      - "https://thewhiskybarrel.com/collections/bunnahabhain/products.json?limit=250&currency=GBP"
+      - "https://thewhiskybarrel.com/collections/glendronach/products.json?limit=250&currency=GBP"
+      - "https://thewhiskybarrel.com/collections/benromach/products.json?limit=250&currency=GBP"
+      - "https://thewhiskybarrel.com/collections/old-pulteney/products.json?limit=250&currency=GBP"
     strip_vat: 0
     ship_base: 25           # 실제 장바구니(1병, 한국 배송) 확인: 약 44,000원 ≈ £25 (Standard Delivery)
     ship_extra: 6
@@ -369,6 +459,12 @@ shops:
       - "https://whiskyparis.com/collections/springbank/products.json?limit=250&currency=EUR"
       - "https://whiskyparis.com/collections/longrow/products.json?limit=250&currency=EUR"
       - "https://whiskyparis.com/collections/kilkerran/products.json?limit=250&currency=EUR"
+      # 취향 프로필 추천 증류소 (2026-10-11, products.json 으로 재고 확인됨; 글렌드로낙·올드 풀트니는 재고 없어 제외)
+      - "https://whiskyparis.com/collections/clynelish/products.json?limit=250&currency=EUR"
+      - "https://whiskyparis.com/collections/glenfarclas/products.json?limit=250&currency=EUR"
+      - "https://whiskyparis.com/collections/mortlach/products.json?limit=250&currency=EUR"
+      - "https://whiskyparis.com/collections/bunnahabhain/products.json?limit=250&currency=EUR"
+      - "https://whiskyparis.com/collections/benromach/products.json?limit=250&currency=EUR"
     strip_vat: 0
     ship_base: 45
     ship_extra: 10
@@ -387,6 +483,14 @@ shops:
       - "https://www.whiskysite.nl/en/search/hazelburn/?limit=100"
       - "https://www.whiskysite.nl/en/search/longrow/?limit=100"
       - "https://www.whiskysite.nl/en/search/kilkerran/?limit=100"
+      # 취향 프로필 추천 증류소 (2026-10-11, 검색 결과 확인됨)
+      - "https://www.whiskysite.nl/en/search/clynelish/?limit=100"
+      - "https://www.whiskysite.nl/en/search/glenfarclas/?limit=100"
+      - "https://www.whiskysite.nl/en/search/mortlach/?limit=100"
+      - "https://www.whiskysite.nl/en/search/bunnahabhain/?limit=100"
+      - "https://www.whiskysite.nl/en/search/glendronach/?limit=100"
+      - "https://www.whiskysite.nl/en/search/benromach/?limit=100"
+      - "https://www.whiskysite.nl/en/search/old%20pulteney/?limit=100"
     strip_vat: 0
     ship_base: 35
     ship_extra: 8
@@ -416,6 +520,14 @@ shops:
       - "https://www.zeewijck.nl/nl/search/hazelburn/?limit=100"
       - "https://www.zeewijck.nl/nl/search/longrow/?limit=100"
       - "https://www.zeewijck.nl/nl/search/kilkerran/?limit=100"
+      # 취향 프로필 추천 증류소 (2026-10-11, 검색 결과 확인됨)
+      - "https://www.zeewijck.nl/nl/search/clynelish/?limit=100"
+      - "https://www.zeewijck.nl/nl/search/glenfarclas/?limit=100"
+      - "https://www.zeewijck.nl/nl/search/mortlach/?limit=100"
+      - "https://www.zeewijck.nl/nl/search/bunnahabhain/?limit=100"
+      - "https://www.zeewijck.nl/nl/search/glendronach/?limit=100"
+      - "https://www.zeewijck.nl/nl/search/benromach/?limit=100"
+      - "https://www.zeewijck.nl/nl/search/old%20pulteney/?limit=100"
     strip_vat: 0
     ship_base: 35
     ship_extra: 8
