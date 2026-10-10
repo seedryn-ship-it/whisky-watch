@@ -365,8 +365,8 @@
    "t": 1790426361
   },
   "whiskybase|https://shop.whiskybase.com/us/kilkerran-heavily-peated-163414813.html": {
-   "landed": 190024,
-   "t": 1791456065
+   "landed": 190915,
+   "t": 1791630199
   },
   "whiskybase|https://shop.whiskybase.com/us/longrow-peated-161970662.html": {
    "landed": 197866,
@@ -429,8 +429,8 @@
    "t": 1791481190
   },
   "whiskyfass|https://whiskyfass.de/springbank-25-jahre-directors-special-single-malts-of-scotland-campbeltown-single-malt-scotch-whisky": {
-   "landed": 5138628,
-   "t": 1791456065
+   "landed": 5162705,
+   "t": 1791630199
   },
   "whiskyfass|https://whiskyfass.de/springbank-31-jahre-1991-old-rare-whisky": {
    "landed": 12105191,
@@ -441,8 +441,8 @@
    "t": 1791481190
   },
   "whiskyparis|https://whiskyparis.com/products/kilkerran-heavily-peated-batch-11-57-9-copie": {
-   "landed": 209765,
-   "t": 1791456065
+   "landed": 210748,
+   "t": 1791630199
   },
   "whiskyparis|https://whiskyparis.com/products/longrow-18-ans-46": {
    "landed": 1423312,
@@ -530,7 +530,7 @@
   }
  },
  "fx": {
-  "t": 1791628716.1563208,
+  "t": 1791630199.2684796,
   "table": {
    "DKK": 6.6706,
    "EUR": 0.89238,
@@ -566,7 +566,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 5,
+   "fails": 6,
    "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
