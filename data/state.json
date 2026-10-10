@@ -13,8 +13,8 @@
    "t": 1791186131
   },
   "galore|https://www.whiskygalore.co.nz/products/springbank-signatory-symingtons-choice-1989-35-years-old-47-8": {
-   "landed": 7905182,
-   "t": 1791434481
+   "landed": 7948400,
+   "t": 1791607356
   },
   "hedonism|https://hedonism.co.uk/products/hazelburn-10-year-old-single-cask": {
    "landed": 1514410,
@@ -213,8 +213,8 @@
    "t": 1790258621
   },
   "rvw|https://rarevintagewhisky.nl/Hazelburn-8Y-Sauternes-Wood-2002-55.9": {
-   "landed": 1472134,
-   "t": 1791434481
+   "landed": 1479032,
+   "t": 1791607356
   },
   "rvw|https://rarevintagewhisky.nl/Hazelburn-Hand-Filled-Distillery-Exclusive-2022-57.1-": {
    "landed": 461541,
@@ -233,8 +233,8 @@
    "t": 1790219016
   },
   "rvw|https://rarevintagewhisky.nl/Longrow-14Y-Oloroso-Sherry-57.8": {
-   "landed": 994169,
-   "t": 1791434481
+   "landed": 998827,
+   "t": 1791607356
   },
   "rvw|https://rarevintagewhisky.nl/Longrow-17Y-Single-Cask-49.4": {
    "landed": 1901612,
@@ -253,8 +253,8 @@
    "t": 1789904058
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-12Y-1989-Rum-54.6": {
-   "landed": 1280949,
-   "t": 1791434481
+   "landed": 1286949,
+   "t": 1791607356
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-12Y-1991-Bourbon-58.5": {
    "landed": 1286548,
@@ -305,8 +305,8 @@
    "t": 1791561989
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-9Y-Wood-Expressions-1996-58.0": {
-   "landed": 1605965,
-   "t": 1791434481
+   "landed": 1613489,
+   "t": 1791607356
   },
   "rvw|https://rarevintagewhisky.nl/Springbank-Local-Barley-11Y-53.1-2017": {
    "landed": 1670592,
@@ -389,8 +389,8 @@
    "t": 1790219016
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-1965.html": {
-   "landed": 24782640,
-   "t": 1791434481
+   "landed": 24898763,
+   "t": 1791607356
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-1969-sv-signatory-vintage.html": {
    "landed": 9963121,
@@ -530,7 +530,7 @@
   }
  },
  "fx": {
-  "t": 1791605101.2667265,
+  "t": 1791607356.8748467,
   "table": {
    "DKK": 6.6706,
    "EUR": 0.89238,
@@ -566,7 +566,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
   "passionforwhisky": {
