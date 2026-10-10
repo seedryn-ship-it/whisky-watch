@@ -28,6 +28,7 @@ _INDEPENDENT_RE = (
 
 _EDITION_TOKENS = [
     ("local-barley", r"\blocal\s+barley\b"),
+    ("green-thistle", r"\bgreen\s+thistle\b"),
     ("cask-strength", r"\bcask\s+strength\b|\bcs\b"),
     # 같은 증류소·숙성 표기라도 가격대가 다른 스페셜 에디션은 표준 제품의 기준가에 섞이지 않게 구분한다
     ("100-proof", r"\b100\s*proof\b"),
@@ -66,6 +67,7 @@ KOREAN_ALIASES = {
     "롱로우": "longrow",
     "킬커란": "kilkerran", "키커런": "kilkerran", "킬커런": "kilkerran", "키르케란": "kilkerran",
     "로컬 발리": "local barley", "로컬발리": "local barley",
+    "그린 시슬": "green thistle", "그린시슬": "green thistle",
     "캐스크 스트랭스": "cask strength", "캐스크 스트렝스": "cask strength", "캐스크스트렝스": "cask strength",
     "캐스크스트랭스": "cask strength",
     "쉐리": "sherry", "셰리": "sherry",

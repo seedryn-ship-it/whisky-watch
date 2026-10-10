@@ -73,7 +73,7 @@ def test_all_in_shop_adds_no_tax_or_vat_strip():
     obs = evaluate(shop, cand, cfg, RATES)
     assert obs.per_bottle_krw == 315 * 1500  # 표시가 그대로 (VAT 제외/세금 가산 없음)
     assert obs.landed.tax_krw == 0
-    msg = format_alert(obs, Baseline(600_000, 8, "k", "history"), -21.0, RATES)
+    msg = format_alert(obs, Baseline(600_000, 8, "k", "history", low_krw=600_000), -21.0, RATES)
     assert "포함가" in msg and "세금: 별도 없음" in msg
 
 

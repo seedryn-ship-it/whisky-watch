@@ -107,7 +107,7 @@ def test_first_run_records_but_does_not_alert_and_sends_start_message(tmp_path):
     assert not any("Miniature" in t or "Glass" in t or "Glenfiddich" in t for t in titles)
 
 
-def test_alert_fires_when_landed_cost_far_below_history_median(tmp_path):
+def test_alert_fires_when_landed_cost_sets_a_new_record_low(tmp_path):
     cfg = make_cfg(tmp_path)
     seed_history(cfg, "Springbank 10 Year Old Local Barley 2026 Release 70cl", [520_000, 500_000, 510_000, 505_000])
     s, n, _, state = run(cfg, LISTING)
@@ -115,14 +115,15 @@ def test_alert_fires_when_landed_cost_far_below_history_median(tmp_path):
     assert s.alerts_sent == 1 and len(alerts) == 1
     msg = alerts[0]
     assert "Test Shop" in msg and "소액면세" in msg and "₩402" in msg
-    assert "표본 4건" in msg and "https://shop.example/p/springbank-10-local-barley" in msg
-    assert "-2" in msg  # 약 -21% 할인
+    assert "역대 최저가" in msg and "최근 4건" in msg and "https://shop.example/p/springbank-10-local-barley" in msg
+    assert "-1" in msg  # 기존 최저가(50만원) 대비 약 -19.5%
     assert "s1|https://shop.example/p/springbank-10-local-barley" in state.alerts
 
 
-def test_no_alert_when_not_cheap_enough(tmp_path):
+def test_no_alert_when_not_a_new_record_low(tmp_path):
     cfg = make_cfg(tmp_path)
-    seed_history(cfg, "Springbank 10 Year Old Local Barley 2026 Release 70cl", [410_000] * 4)  # 402k 는 -2%
+    # 지금 샵 가격(약 40.2만원)보다 이미 더 싼 값이 이력에 있으면 '역대 최저가 경신'이 아니므로 알림 없음
+    seed_history(cfg, "Springbank 10 Year Old Local Barley 2026 Release 70cl", [390_000] * 4)
     s, n, *_ = run(cfg, LISTING)
     assert s.alerts_sent == 0
 
@@ -149,9 +150,14 @@ def test_notifier_failure_does_not_mark_alert_as_sent(tmp_path):
     cfg = make_cfg(tmp_path)
     seed_history(cfg, "Springbank 10 Year Old Local Barley 2026 Release 70cl", [520_000] * 4)
     _, _, _, state = run(cfg, LISTING, notifier=Rec(ok=False))
-    assert not state.alerts
-    s, *_ = run(cfg, LISTING)  # 다음 회차에 재시도되어 발송
-    assert s.alerts_sent == 1
+    assert not state.alerts  # 전송 실패는 '보냄'으로 기록하지 않는다
+    # 가격이 그대로면(더 이상 '새 기록'이 아니므로) 다음 회차에 자동 재시도되지는 않는다
+    s, *_ = run(cfg, LISTING)
+    assert s.alerts_sent == 0
+    # 그보다 더 떨어지면 그때는 당연히 알림이 간다
+    cheaper = LISTING.replace('"119.95"', '"104.95"')
+    s2, *_ = run(cfg, cheaper)
+    assert s2.alerts_sent == 1
 
 
 def test_seed_price_used_when_history_missing(tmp_path):

@@ -199,11 +199,11 @@ def format_alert(obs: Observation, base: Baseline, pct: float, rates: dict[str, 
     tag_txt = f" [{', '.join(tags)}]" if tags else ""
     stock_txt = "재고 있음" if obs.in_stock else "재고 미확인"
     if base.source == "history":
-        base_txt = f"기준(이력 중앙값, 표본 {base.samples}건)"
+        base_txt = f"역대 최저가 기준(최근 {base.samples}건)"
     elif base.source == "cap":
         base_txt = f"내가 정한 목표가({base.key})"
     else:
-        base_txt = "기준(직접 입력한 시드 가격)"
+        base_txt = "역대 최저가 기준(직접 입력한 시드 가격)"
     cur = obs.currency
     item_line = f"상품 {cur} {obs.price_native_ex_vat:,.2f} -> {won(lc.item_krw / obs.qty)}"
     if shop.all_in:
@@ -231,8 +231,8 @@ def format_alert(obs: Observation, base: Baseline, pct: float, rates: dict[str, 
         f"<b>{esc(a.title)}</b>{esc(tag_txt)}\n"
         f"{esc(shop.name)} · {stock_txt} · {vol}{abv}\n\n"
         f"도착가(추정) <b>{won(obs.per_bottle_krw)}</b>\n"
-        + (f"{base_txt} {won(base.median_krw)} 이하 조건 충족 (<b>{pct:+.1f}%</b>)\n\n" if base.source == "cap"
-           else f"{base_txt} {won(base.median_krw)} 대비 <b>{pct:+.1f}%</b>\n\n")
+        + (f"{base_txt} {won(base.low_krw)} 이하 조건 충족 (<b>{pct:+.1f}%</b>)\n\n" if base.source == "cap"
+           else f"{base_txt} {won(base.low_krw)} 이하 (기존 최저가 대비 <b>{pct:+.1f}%</b>)\n\n")
         +
         f"{esc(item_line)}\n{esc(ship_line)}\n{esc(tax_line)}\n\n"
         f"{esc(obs.cand.url)}"
@@ -300,7 +300,8 @@ def run_once(
             cap = match_cap(a, cfg.price_caps)
             if cap:
                 # 목표가가 있는 상품: 이력이 없어도 바로 판단한다(도착가가 목표가 이하이면 알림)
-                base = Baseline(int(cap["max_krw"]), 0, str(cap.get("label") or "목표가"), "cap")
+                cap_krw = int(cap["max_krw"])
+                base = Baseline(cap_krw, 0, str(cap.get("label") or "목표가"), "cap", low_krw=cap_krw)
             else:
                 base = lookup_baseline(
                     index,
@@ -313,9 +314,14 @@ def run_once(
             if base is None:
                 summary.no_baseline += 1
             elif obs.in_stock is not False:
-                pct = (obs.per_bottle_krw / base.median_krw - 1) * 100
-                need = 0.0 if base.source == "cap" else cfg.alert.discount_pct
-                if pct <= -need:
+                pct = (obs.per_bottle_krw / base.low_krw - 1) * 100
+                # 목표가(cap) 상품: 목표가 이하면 매번 알림 후보(재알림 억제는 아래에서 별도 처리).
+                # 나머지 상품: 지금까지 본 적 없는 '진짜 역대 최저가'를 실제로 더 갱신했을 때만 알림
+                # (과거의 '중앙값 대비 N% 할인' 방식은 가격이 그대로여도 계속 울려서 그만둠).
+                # 참고: 가격이 안 변했는데 텔레그램 전송이 실패한 경우는 재시도되지 않는다
+                # (똑같은 가격은 더 이상 '새 기록'이 아니기 때문) — 더 떨어져야 다시 알림이 간다.
+                hit = obs.per_bottle_krw <= base.low_krw if base.source == "cap" else obs.per_bottle_krw < base.low_krw
+                if hit:
                     found.append((pct, obs, base))
 
             if shop.skip_sold_out_history and obs.in_stock is False:

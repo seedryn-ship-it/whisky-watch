@@ -16,6 +16,17 @@ def test_local_barley_analysis():
     assert a.family_key == "springbank|10|local-barley|700ml"
 
 
+def test_green_thistle_gets_its_own_key_distinct_from_plain_nas():
+    a = A("Springbank Green Thistle 70cl 46%")
+    assert a.distillery == "springbank" and a.age is None
+    assert "green-thistle" in a.tokens
+    plain = A("Springbank 70cl 46%")
+    assert a.key != plain.key  # 그린시슬은 일반 NAS 스프링뱅크와 같은 기준가로 섞이지 않는다
+    # 한글 상품명(그린시슬)도 같은 토큰으로 인식된다
+    ko = A("스프링뱅크 그린시슬 700ml 46%")
+    assert "green-thistle" in ko.tokens and ko.distillery == "springbank"
+
+
 def test_bare_age_after_distillery_and_german_units():
     a = A("Kilkerran 12 46% 0,7l")
     assert a.age == 12 and a.volume_ml == 700

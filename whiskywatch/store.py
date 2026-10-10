@@ -100,7 +100,8 @@ class Baseline:
     median_krw: int
     samples: int
     key: str
-    source: str  # "history" | "seed"
+    source: str  # "history" | "seed" | "cap"
+    low_krw: int = 0  # '역대 최저가' 경신 판단에 쓰는 값 (history: 기간 내 최저가, seed: 시드 가격, cap: 목표가)
 
 
 def lookup_baseline(
@@ -114,10 +115,11 @@ def lookup_baseline(
     for k in keys:
         vals = index.get(k, [])
         if len(vals) >= min_samples:
-            return Baseline(int(statistics.median(vals)), len(vals), k, "history")
+            return Baseline(int(statistics.median(vals)), len(vals), k, "history", low_krw=min(vals))
     for s in seeds or []:
         if term_matches and term_matches(title_folded, str(s["match"])):
-            return Baseline(int(s["krw"]), 0, str(s["match"]), "seed")
+            krw = int(s["krw"])
+            return Baseline(krw, 0, str(s["match"]), "seed", low_krw=krw)
     return None
 
 
