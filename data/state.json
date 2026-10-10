@@ -157,20 +157,20 @@
    "t": 1790834829
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/longrow-peated-campbeltown-single-malt-whisky": {
-   "landed": 218170,
-   "t": 1791452473
+   "landed": 218886,
+   "t": 1791626640
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/springbank-22-years-old-smws-27-110-horse-harnesses-and-mescal-worms-1992-70cl": {
-   "landed": 4348736,
-   "t": 1791452473
+   "landed": 4363017,
+   "t": 1791626640
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/springbank-35-year-old-1898-signatory-symington-s-choice-single-malt-70cl-47-8": {
-   "landed": 7247352,
-   "t": 1791452473
+   "landed": 7271153,
+   "t": 1791626640
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/springbank-5-year-old-100-proof-single-malt-70cl-57-1": {
-   "landed": 229600,
-   "t": 1791452473
+   "landed": 230355,
+   "t": 1791626640
   },
   "rombo|https://rombo.dk/products/hazelburn-10-yo-whisky": {
    "landed": 262432,
@@ -530,7 +530,7 @@
   }
  },
  "fx": {
-  "t": 1791625190.3471851,
+  "t": 1791626640.784884,
   "table": {
    "DKK": 6.6706,
    "EUR": 0.89238,
@@ -566,7 +566,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 3,
+   "fails": 4,
    "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
