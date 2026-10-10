@@ -530,7 +530,7 @@
   }
  },
  "fx": {
-  "t": 1791601490.3291466,
+  "t": 1791603664.922207,
   "table": {
    "DKK": 6.6706,
    "EUR": 0.89238,
@@ -558,8 +558,7 @@
    "notified": false
   },
   "htfw": {
-   "fails": 1,
-   "last_error": "HTTP 429: https://www.htfw.com/brands/springbank",
+   "fails": 0,
    "notified": false
   },
   "innout": {
@@ -567,7 +566,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
+   "fails": 2,
    "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
