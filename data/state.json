@@ -522,7 +522,7 @@
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-10yo-46.html": {
    "landed": 241787,
-   "t": 1791561989
+   "t": 1791736824
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-5yo-100proof-571.html": {
    "landed": 227105,
@@ -534,7 +534,7 @@
   }
  },
  "fx": {
-  "t": 1791734629.3933153,
+  "t": 1791736824.9925072,
   "table": {
    "DKK": 6.6706,
    "EUR": 0.89238,
@@ -562,7 +562,7 @@
    "notified": false
   },
   "htfw": {
-   "fails": 14,
+   "fails": 15,
    "last_error": "HTTP 403: https://www.htfw.com/brands/springbank",
    "notified": true
   },
