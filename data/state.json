@@ -160,6 +160,10 @@
    "landed": 218886,
    "t": 1791626640
   },
+  "reallygoodwhisky|https://reallygoodwhisky.com/products/old-pulteney-18-year-old-70cl-46": {
+   "landed": 407727,
+   "t": 1791729582
+  },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/springbank-22-years-old-smws-27-110-horse-harnesses-and-mescal-worms-1992-70cl": {
    "landed": 4363017,
    "t": 1791626640
@@ -530,7 +534,7 @@
   }
  },
  "fx": {
-  "t": 1791727454.1988196,
+  "t": 1791729582.767511,
   "table": {
    "DKK": 6.6706,
    "EUR": 0.89238,
@@ -558,7 +562,7 @@
    "notified": false
   },
   "htfw": {
-   "fails": 10,
+   "fails": 11,
    "last_error": "HTTP 403: https://www.htfw.com/brands/springbank",
    "notified": false
   },
@@ -567,8 +571,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
-   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "fails": 0,
    "notified": false
   },
   "passionforwhisky": {
