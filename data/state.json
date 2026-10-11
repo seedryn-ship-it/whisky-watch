@@ -530,7 +530,7 @@
   }
  },
  "fx": {
-  "t": 1791716630.4923477,
+  "t": 1791718710.868278,
   "table": {
    "DKK": 6.6706,
    "EUR": 0.89238,
@@ -558,7 +558,7 @@
    "notified": false
   },
   "htfw": {
-   "fails": 4,
+   "fails": 5,
    "last_error": "HTTP 403: https://www.htfw.com/brands/springbank",
    "notified": false
   },
@@ -567,7 +567,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
   "passionforwhisky": {
