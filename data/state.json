@@ -8,6 +8,10 @@
    "landed": 264186,
    "t": 1790046200
   },
+  "galore|https://www.whiskygalore.co.nz/products/bunnahabhain-staoisha-north-star-11-years-old-55-7": {
+   "landed": 387271,
+   "t": 1791814410
+  },
   "galore|https://www.whiskygalore.co.nz/products/longrow-100-proof-57-1": {
    "landed": 281233,
    "t": 1791186131
@@ -360,9 +364,41 @@
    "landed": 6998407,
    "t": 1790508929
   },
+  "whiskybase|https://shop.whiskybase.com/us/benromach-15-year-old-110612489.html": {
+   "landed": 239380,
+   "t": 1791814410
+  },
+  "whiskybase|https://shop.whiskybase.com/us/bunnahabhain-10-year-old-gm-gordon-macphail.html": {
+   "landed": 177374,
+   "t": 1791814410
+  },
+  "whiskybase|https://shop.whiskybase.com/us/bunnahabhain-11-year-old-gm-gordon-macphail.html": {
+   "landed": 177374,
+   "t": 1791814410
+  },
+  "whiskybase|https://shop.whiskybase.com/us/bunnahabhain-12-year-old-124155970.html": {
+   "landed": 177374,
+   "t": 1791814410
+  },
   "whiskybase|https://shop.whiskybase.com/us/edinburgh-festival-2008-spd-springbank-distillers.html": {
    "landed": 353159,
    "t": 1791474164
+  },
+  "whiskybase|https://shop.whiskybase.com/us/glendronach-12-year-old-161404043.html": {
+   "landed": 166522,
+   "t": 1791814410
+  },
+  "whiskybase|https://shop.whiskybase.com/us/glenfarclas-12-year-old.html": {
+   "landed": 165450,
+   "t": 1791814410
+  },
+  "whiskybase|https://shop.whiskybase.com/us/glenfarclas-15-year-old.html": {
+   "landed": 225071,
+   "t": 1791814410
+  },
+  "whiskybase|https://shop.whiskybase.com/us/glenfarclas-17-year-old.html": {
+   "landed": 279923,
+   "t": 1791814410
   },
   "whiskybase|https://shop.whiskybase.com/us/hazelburn-10-year-old-164430393.html": {
    "landed": 214968,
@@ -452,6 +488,30 @@
    "landed": 1423312,
    "t": 1791320609
   },
+  "whiskysite|https://www.whiskysite.nl/en/bunnahabhain-10-years-old-2012-the-ultim-154133562.html": {
+   "landed": 268565,
+   "t": 1791814410
+  },
+  "whiskysite|https://www.whiskysite.nl/en/bunnahabhain-an-cidhe-100-ltr-50.html": {
+   "landed": 225280,
+   "t": 1791814410
+  },
+  "whiskysite|https://www.whiskysite.nl/en/bunnahabhain-an-cladach-liter-50.html": {
+   "landed": 225280,
+   "t": 1791814410
+  },
+  "whiskysite|https://www.whiskysite.nl/en/clynelish-14-years-old.html": {
+   "landed": 205080,
+   "t": 1791814410
+  },
+  "whiskysite|https://www.whiskysite.nl/en/glenfarclas-family-casks-2000-summer-release-2021.html": {
+   "landed": 1066507,
+   "t": 1791814410
+  },
+  "whiskysite|https://www.whiskysite.nl/en/glenfarclas-heritage.html": {
+   "landed": 140152,
+   "t": 1791814410
+  },
   "whiskysite|https://www.whiskysite.nl/en/kilkerran-12-years-old-070-ltr-46.html": {
    "landed": 226146,
    "t": 1791387979
@@ -534,13 +594,13 @@
   }
  },
  "fx": {
-  "t": 1791813276.5881987,
+  "t": 1791814410.4058816,
   "table": {
-   "DKK": 6.6706,
-   "EUR": 0.89238,
-   "GBP": 0.75641,
-   "KRW": 1341.49,
-   "NZD": 1.7813,
+   "DKK": 6.6853,
+   "EUR": 0.89437,
+   "GBP": 0.75555,
+   "KRW": 1333.09,
+   "NZD": 1.7859,
    "USD": 1.0
   }
  },
@@ -570,8 +630,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
-   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "fails": 0,
    "notified": false
   },
   "passionforwhisky": {
