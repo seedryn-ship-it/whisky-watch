@@ -534,7 +534,7 @@
   }
  },
  "fx": {
-  "t": 1791799699.0390072,
+  "t": 1791801808.9453492,
   "table": {
    "DKK": 6.6706,
    "EUR": 0.89238,
@@ -562,7 +562,7 @@
    "notified": false
   },
   "htfw": {
-   "fails": 50,
+   "fails": 51,
    "last_error": "HTTP 403: https://www.htfw.com/brands/springbank",
    "notified": true
   },
