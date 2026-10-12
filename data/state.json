@@ -365,8 +365,8 @@
    "t": 1791474164
   },
   "whiskybase|https://shop.whiskybase.com/us/hazelburn-10-year-old-164430393.html": {
-   "landed": 220959,
-   "t": 1790426361
+   "landed": 214968,
+   "t": 1791805445
   },
   "whiskybase|https://shop.whiskybase.com/us/kilkerran-heavily-peated-163414813.html": {
    "landed": 190915,
@@ -534,7 +534,7 @@
   }
  },
  "fx": {
-  "t": 1791803286.898911,
+  "t": 1791805445.21327,
   "table": {
    "DKK": 6.6706,
    "EUR": 0.89238,
@@ -562,9 +562,8 @@
    "notified": false
   },
   "htfw": {
-   "fails": 52,
-   "last_error": "HTTP 403: https://www.htfw.com/brands/springbank",
-   "notified": true
+   "fails": 0,
+   "notified": false
   },
   "innout": {
    "fails": 0,
