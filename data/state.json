@@ -633,8 +633,8 @@
    "t": 1791493539
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-10yo-46.html": {
-   "landed": 241787,
-   "t": 1791736824
+   "landed": 241392,
+   "t": 1791909841
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-5yo-100proof-571.html": {
    "landed": 227105,
@@ -646,7 +646,7 @@
   }
  },
  "fx": {
-  "t": 1791907705.5150015,
+  "t": 1791909841.977566,
   "table": {
    "DKK": 6.6815,
    "EUR": 0.89381,
