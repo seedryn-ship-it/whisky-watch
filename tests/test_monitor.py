@@ -128,6 +128,23 @@ def test_no_alert_when_not_a_new_record_low(tmp_path):
     assert s.alerts_sent == 0
 
 
+def test_no_alert_when_new_low_drop_is_under_min_pct(tmp_path):
+    cfg = make_cfg(tmp_path)  # new_low_min_drop_pct 기본값 2%
+    # 지금 샵 도착가(약 402,335원)보다 이력 최저가(406,400원)가 비싸서 '새 기록'은 맞지만,
+    # 하락폭이 약 1%뿐이라 2% 기준 미달 -> 알림 없음
+    seed_history(cfg, "Springbank 10 Year Old Local Barley 2026 Release 70cl", [406_400] * 4)
+    s, n, *_ = run(cfg, LISTING)
+    assert s.alerts_sent == 0
+
+
+def test_alert_fires_when_new_low_drop_meets_min_pct(tmp_path):
+    cfg = make_cfg(tmp_path)  # new_low_min_drop_pct 기본값 2%
+    # 이력 최저가(420,000원) 대비 지금 도착가(약 402,335원)는 약 4.2% 더 싸서 기준 충족 -> 알림
+    seed_history(cfg, "Springbank 10 Year Old Local Barley 2026 Release 70cl", [420_000] * 4)
+    s, n, *_ = run(cfg, LISTING)
+    assert s.alerts_sent == 1
+
+
 def test_out_of_stock_items_never_alert(tmp_path):
     cfg = make_cfg(tmp_path)
     seed_history(cfg, "Springbank 15 Year Old 46% 70cl", [900_000] * 5)
