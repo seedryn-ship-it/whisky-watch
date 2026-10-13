@@ -12,6 +12,14 @@
    "landed": 387271,
    "t": 1791814410
   },
+  "galore|https://www.whiskygalore.co.nz/products/bunnahabhain-thompson-bros-2013-11-years-old-56-1": {
+   "landed": 339219,
+   "t": 1791888254
+  },
+  "galore|https://www.whiskygalore.co.nz/products/hazelburn-sherry-wood-8-years-old-48-2": {
+   "landed": 311069,
+   "t": 1791888254
+  },
   "galore|https://www.whiskygalore.co.nz/products/longrow-100-proof-57-1": {
    "landed": 281233,
    "t": 1791186131
@@ -20,9 +28,21 @@
    "landed": 7948400,
    "t": 1791607356
   },
+  "hedonism|https://hedonism.co.uk/products/benromach-cara-gold-2010": {
+   "landed": 181143,
+   "t": 1791888254
+  },
+  "hedonism|https://hedonism.co.uk/products/bunnahabhain-17-year-old-connoisseurs-choice-gordon-and-macphail-2007": {
+   "landed": 720770,
+   "t": 1791888254
+  },
+  "hedonism|https://hedonism.co.uk/products/glenfarclas-105-cask-strength": {
+   "landed": 310827,
+   "t": 1791888254
+  },
   "hedonism|https://hedonism.co.uk/products/hazelburn-10-year-old-single-cask": {
-   "landed": 1514410,
-   "t": 1790508929
+   "landed": 1486587,
+   "t": 1791888254
   },
   "hedonism|https://hedonism.co.uk/products/hazelburn-21-year-old-private-sherry-cask-43-1999": {
    "landed": 3244871,
@@ -124,9 +144,17 @@
    "landed": 250252,
    "t": 1790260728
   },
+  "htfw|https://www.htfw.com/springbank-da-mhile-single-sherry-cask-231-1992-20-year-old-whisky": {
+   "landed": 1711603,
+   "t": 1791888254
+  },
   "htfw|https://www.htfw.com/springbank-limited-connoisseur-collection-single-cask-230-1991-31-year-old-whisky": {
    "landed": 8474983,
    "t": 1790136210
+  },
+  "htfw|https://www.htfw.com/springbank-whisky-business-the-inventors-alexander-graham-bell-single-cask-332-1997-28-year-old-whisky": {
+   "landed": 4054106,
+   "t": 1791888254
   },
   "innout|https://inn-out-shop.com/products/springbank-10y-2025-o-dose-0-7l-46-vol-whisky": {
    "landed": 318741,
@@ -324,9 +352,25 @@
    "landed": 1470968,
    "t": 1790296896
   },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/benromach-11-year-old-2010-cara-gold-2022": {
+   "landed": 187404,
+   "t": 1791888254
+  },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/bunnahabhain-30-year-old-1990-artemis-1st-launch-edition": {
+   "landed": 1734352,
+   "t": 1791888254
+  },
   "thewhiskybarrel|https://thewhiskybarrel.com/products/longrow-springbank-21-year-old-2001-cadenhead-s-authentic-collection-2023": {
    "landed": 2868198,
    "t": 1790508929
+  },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/mortlach-10-year-old-2016-signatory-100-proof-edition-84": {
+   "landed": 231600,
+   "t": 1791888254
+  },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/old-pulteney-14-year-old-2006-hart-brothers": {
+   "landed": 248834,
+   "t": 1791888254
   },
   "thewhiskybarrel|https://thewhiskybarrel.com/products/springbank-10-year-old-2007-local-barley-nov-2017": {
    "landed": 2317504,
@@ -540,6 +584,14 @@
    "landed": 214091,
    "t": 1790959258
   },
+  "wio|https://whiskyinternationalonline.com/products/clynelish-10-year-old": {
+   "landed": 196410,
+   "t": 1791888254
+  },
+  "wio|https://whiskyinternationalonline.com/products/hazelburn-8-year-old-open-day-may-2024-52-8": {
+   "landed": 305618,
+   "t": 1791888254
+  },
   "wio|https://whiskyinternationalonline.com/products/springbank-10-year-old-whisky-46": {
    "landed": 374930,
    "t": 1789904058
@@ -553,8 +605,8 @@
    "t": 1791481190
   },
   "wio|https://whiskyinternationalonline.com/products/springbank-local-barley-2022-11-year-old-55-1": {
-   "landed": 1796467,
-   "t": 1790085810
+   "landed": 1747416,
+   "t": 1791888254
   },
   "wio|https://whiskyinternationalonline.com/products/springbank-tasting-kit-june-2025": {
    "landed": 380869,
@@ -594,13 +646,13 @@
   }
  },
  "fx": {
-  "t": 1791886063.2096937,
+  "t": 1791888254.655094,
   "table": {
-   "DKK": 6.6853,
-   "EUR": 0.89437,
-   "GBP": 0.75555,
-   "KRW": 1333.09,
-   "NZD": 1.7859,
+   "DKK": 6.684975,
+   "EUR": 0.895156,
+   "GBP": 0.756615,
+   "KRW": 1333.744079,
+   "NZD": 1.788691,
    "USD": 1.0
   }
  },
@@ -630,7 +682,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
   "passionforwhisky": {
