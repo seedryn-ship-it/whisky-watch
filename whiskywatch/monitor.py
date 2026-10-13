@@ -316,11 +316,17 @@ def run_once(
             elif obs.in_stock is not False:
                 pct = (obs.per_bottle_krw / base.low_krw - 1) * 100
                 # 목표가(cap) 상품: 목표가 이하면 매번 알림 후보(재알림 억제는 아래에서 별도 처리).
-                # 나머지 상품: 지금까지 본 적 없는 '진짜 역대 최저가'를 실제로 더 갱신했을 때만 알림
-                # (과거의 '중앙값 대비 N% 할인' 방식은 가격이 그대로여도 계속 울려서 그만둠).
+                # 나머지 상품: 지금까지 본 적 없는 '진짜 역대 최저가'를, 그것도 최소
+                # new_low_min_drop_pct(%) 이상 더 싸게 갱신했을 때만 알림
+                # (과거의 '중앙값 대비 N% 할인' 방식은 가격이 그대로여도 계속 울려서 그만둠;
+                # 1원이라도 싸지면 알리던 방식도 미세한 변동에 너무 자주 울려서 최소 하락폭을 둠).
                 # 참고: 가격이 안 변했는데 텔레그램 전송이 실패한 경우는 재시도되지 않는다
                 # (똑같은 가격은 더 이상 '새 기록'이 아니기 때문) — 더 떨어져야 다시 알림이 간다.
-                hit = obs.per_bottle_krw <= base.low_krw if base.source == "cap" else obs.per_bottle_krw < base.low_krw
+                if base.source == "cap":
+                    hit = obs.per_bottle_krw <= base.low_krw
+                else:
+                    threshold = base.low_krw * (1 - cfg.alert.new_low_min_drop_pct / 100)
+                    hit = obs.per_bottle_krw <= threshold
                 if hit:
                     found.append((pct, obs, base))
 

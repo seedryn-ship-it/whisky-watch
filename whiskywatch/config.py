@@ -51,6 +51,7 @@ class AlertConfig:
     discount_pct: float = 5.0  # 기준가보다 이만큼(%) 이상 싸면 알림
     min_samples: int = 6  # 기준가 산출에 필요한 최소 표본(일 단위 최저가 기준)
     baseline_days: int = 180
+    new_low_min_drop_pct: float = 2.0  # 역대 최저가보다 이 %만큼 더 싸져야 알림(목표가/price_caps 상품에는 적용 안 함)
     realert_hours: float = 48.0
     realert_drop_pct: float = 2.0  # 마지막 알림가보다 이만큼 더 싸지면 재알림
     fail_alert_after: int = 12  # 같은 샵이 연속 N회 실패하면 1회 점검 알림
