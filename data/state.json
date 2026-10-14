@@ -424,6 +424,10 @@
    "landed": 177374,
    "t": 1791814410
   },
+  "whiskybase|https://shop.whiskybase.com/us/clynelish-14-year-old.html": {
+   "landed": 190060,
+   "t": 1791989874
+  },
   "whiskybase|https://shop.whiskybase.com/us/edinburgh-festival-2008-spd-springbank-distillers.html": {
    "landed": 353159,
    "t": 1791474164
@@ -459,6 +463,10 @@
   "whiskybase|https://shop.whiskybase.com/us/longrow-peated-164419366.html": {
    "landed": 195166,
    "t": 1790696386
+  },
+  "whiskybase|https://shop.whiskybase.com/us/mortlach-2016-sv-signatory-vintage.html": {
+   "landed": 170905,
+   "t": 1791989874
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-120587715.html": {
    "landed": 2340996,
@@ -646,7 +654,7 @@
   }
  },
  "fx": {
-  "t": 1791987877.9537323,
+  "t": 1791989874.6793623,
   "table": {
    "DKK": 6.6774,
    "EUR": 0.89326,
@@ -682,7 +690,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
   "passionforwhisky": {
