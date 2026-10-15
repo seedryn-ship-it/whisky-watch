@@ -396,6 +396,30 @@
    "landed": 11048635,
    "t": 1792073030
   },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/glenfarclas-1959-family-casks-release-s14": {
+   "landed": 11048635,
+   "t": 1792076272
+  },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/glenfarclas-1959-family-casks-release-sp15": {
+   "landed": 11048635,
+   "t": 1792076272
+  },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/glenfarclas-1959-family-casks-release-w15": {
+   "landed": 11048635,
+   "t": 1792076272
+  },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/glenfarclas-1982-family-casks-release-w17": {
+   "landed": 5034533,
+   "t": 1792076272
+  },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/glenfarclas-41-year-old-1977-family-casks-release-w19-7293": {
+   "landed": 5034533,
+   "t": 1792076272
+  },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/glenfarclas-42-year-old-1977-single-cask-2022-release": {
+   "landed": 9225999,
+   "t": 1792076272
+  },
   "thewhiskybarrel|https://thewhiskybarrel.com/products/glenfarclas-44-year-old-1977-family-casks-release-s22-6173": {
    "landed": 5034533,
    "t": 1792073030
@@ -412,33 +436,37 @@
    "landed": 248834,
    "t": 1791888254
   },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/old-pulteney-18-year-old": {
+   "landed": 372476,
+   "t": 1792076272
+  },
   "thewhiskybarrel|https://thewhiskybarrel.com/products/springbank-10-year-old-2007-local-barley-nov-2017": {
-   "landed": 2317504,
-   "t": 1790508929
+   "landed": 1708553,
+   "t": 1792076272
   },
   "thewhiskybarrel|https://thewhiskybarrel.com/products/springbank-11-year-old-2006-local-barley-feb-2017": {
-   "landed": 2317504,
-   "t": 1790508929
+   "landed": 1708553,
+   "t": 1792076272
   },
   "thewhiskybarrel|https://thewhiskybarrel.com/products/springbank-11-year-old-2011-local-barley-dec-2022": {
-   "landed": 2317504,
-   "t": 1790508929
+   "landed": 1708553,
+   "t": 1792076272
   },
   "thewhiskybarrel|https://thewhiskybarrel.com/products/springbank-13-year-old-1992-the-golden-cask-2005-281": {
    "landed": 1472849,
    "t": 1790681853
   },
   "thewhiskybarrel|https://thewhiskybarrel.com/products/springbank-1996-samaroli-magnifico-2022-567": {
-   "landed": 13836195,
-   "t": 1790508929
+   "landed": 8314953,
+   "t": 1792076272
   },
   "thewhiskybarrel|https://thewhiskybarrel.com/products/springbank-21-year-old-1995-magnum-old-rare": {
-   "landed": 6057638,
-   "t": 1790508929
+   "landed": 5034533,
+   "t": 1792076272
   },
   "thewhiskybarrel|https://thewhiskybarrel.com/products/springbank-27-year-old-1995-samaroli-magnifico-2022": {
-   "landed": 13836195,
-   "t": 1790508929
+   "landed": 8314953,
+   "t": 1792076272
   },
   "thewhiskybarrel|https://thewhiskybarrel.com/products/springbank-odd-single-rum-cask-282": {
    "landed": 6998407,
@@ -694,7 +722,7 @@
   }
  },
  "fx": {
-  "t": 1792073030.9920754,
+  "t": 1792076272.757787,
   "table": {
    "DKK": 6.6693,
    "EUR": 0.89222,
