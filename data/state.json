@@ -360,6 +360,46 @@
    "landed": 1734352,
    "t": 1791888254
   },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/clynelish-10-year-old-special-releases-2023": {
+   "landed": 372338,
+   "t": 1792073030
+  },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/glendronach-26-year-old-1992-exclusive-179": {
+   "landed": 2300850,
+   "t": 1792073030
+  },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/glendronach-26-year-old-1992-exclusive-180": {
+   "landed": 2300850,
+   "t": 1792073030
+  },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/glendronach-26-year-old-1992-exclusive-8314": {
+   "landed": 2300850,
+   "t": 1792073030
+  },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/glendronach-26-year-old-1992-exclusive-8315": {
+   "landed": 2300850,
+   "t": 1792073030
+  },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/glendronach-40-year-old-batch-7-cask-710": {
+   "landed": 11048635,
+   "t": 1792073030
+  },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/glendronach-41-year-old-batch-6-cask-1247": {
+   "landed": 11048635,
+   "t": 1792073030
+  },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/glendronach-43-year-old-batch-11-cask-2920": {
+   "landed": 11048635,
+   "t": 1792073030
+  },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/glendronach-43-year-old-batch-12-cask-706": {
+   "landed": 11048635,
+   "t": 1792073030
+  },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/glenfarclas-44-year-old-1977-family-casks-release-s22-6173": {
+   "landed": 5034533,
+   "t": 1792073030
+  },
   "thewhiskybarrel|https://thewhiskybarrel.com/products/longrow-springbank-21-year-old-2001-cadenhead-s-authentic-collection-2023": {
    "landed": 2868198,
    "t": 1790508929
@@ -654,13 +694,13 @@
   }
  },
  "fx": {
-  "t": 1792069868.9875748,
+  "t": 1792073030.9920754,
   "table": {
-   "DKK": 6.6774,
-   "EUR": 0.89326,
-   "GBP": 0.75377,
-   "KRW": 1336.79,
-   "NZD": 1.7812,
+   "DKK": 6.6693,
+   "EUR": 0.89222,
+   "GBP": 0.75491,
+   "KRW": 1345.9,
+   "NZD": 1.7855,
    "USD": 1.0
   }
  },
