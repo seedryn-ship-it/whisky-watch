@@ -556,6 +556,10 @@
    "landed": 9963121,
    "t": 1790296896
   },
+  "whiskybase|https://shop.whiskybase.com/us/springbank-1992-dl-douglas-laing.html": {
+   "landed": 756177,
+   "t": 1792148186
+  },
   "whiskybase|https://shop.whiskybase.com/us/springbank-1993-gs-glenscoma-164623117.html": {
    "landed": 750050,
    "t": 1791452473
@@ -722,7 +726,7 @@
   }
  },
  "fx": {
-  "t": 1792146104.7532048,
+  "t": 1792148186.7463768,
   "table": {
    "DKK": 6.6693,
    "EUR": 0.89222,
@@ -758,8 +762,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
-   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "fails": 0,
    "notified": false
   },
   "passionforwhisky": {
