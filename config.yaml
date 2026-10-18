@@ -36,6 +36,8 @@ watchlist:
   - old pulteney
   # 다프트밀 추가 (2026-10-18)
   - daftmill
+  # 글렌터렛 추가 (2026-10-18)
+  - glenturret
 
 # 이 단어가 들어간 상품(미니어처, 잔, 세트 등)은 무시
 # exclude_words: [miniature, sample, glass, "5cl"]   # 지정하면 기본 목록을 통째로 대체합니다
@@ -163,6 +165,7 @@ shops:
       - "https://shop.whiskybase.com/us/brands/old-pulteney/"
       # 다프트밀 추가 (2026-10-18, 브랜드 페이지 존재 확인됨)
       - "https://shop.whiskybase.com/us/brands/daftmill/"
+      - "https://shop.whiskybase.com/us/brands/glenturret/"
     strip_vat: 0.21
     ship_base: 35
     ship_extra: 8
@@ -189,6 +192,8 @@ shops:
       - "https://whiskyinternationalonline.com/collections/glendronach-whisky/products.json?limit=250&currency=GBP"
       - "https://whiskyinternationalonline.com/collections/benromach-whisky/products.json?limit=250&currency=GBP"
       - "https://whiskyinternationalonline.com/collections/pulteney-whisky/products.json?limit=250&currency=GBP"
+      # 글렌터렛 추가 (2026-10-18, products.json 으로 재고 확인됨)
+      - "https://whiskyinternationalonline.com/collections/glenturret-whisky/products.json?limit=250&currency=GBP"
     strip_vat: 0            # 결제 시 영국 VAT 가 빠진다고 안내함. JSON 가격이 VAT 포함이면 0.20 으로
     ship_base: 37.95        # Zone 9a(한국) 공식 요금
     ship_extra: 10
@@ -210,6 +215,7 @@ shops:
       - "https://hedonism.co.uk/collections/old-pulteney-whisky/products.json?limit=250&currency=GBP"
       # 다프트밀 추가 (2026-10-18, products.json 으로 재고 확인됨)
       - "https://hedonism.co.uk/collections/daftmill-whisky/products.json?limit=250&currency=GBP"
+      - "https://hedonism.co.uk/collections/glenturret-whisky/products.json?limit=250&currency=GBP"
     strip_vat: 0
     ship_base: 35           # 실제 장바구니(1병, 한국 배송, Express Delivery 기준) 확인: 약 62,100원 ≈ £35
     ship_extra: 10
@@ -242,6 +248,8 @@ shops:
       - "https://www.whiskygalore.co.nz/collections/bunnahabhain/products.json?limit=250&currency=NZD"
       - "https://www.whiskygalore.co.nz/collections/glendronach/products.json?limit=250&currency=NZD"
       - "https://www.whiskygalore.co.nz/collections/old-pulteney/products.json?limit=250&currency=NZD"
+      # 글렌터렛 추가 (2026-10-18, products.json 으로 재고 확인됨)
+      - "https://www.whiskygalore.co.nz/collections/glenturret/products.json?limit=250&currency=NZD"
     strip_vat: 0            # 해외 운임은 GST 면제라고 안내. 상품 GST(15%) 제외 여부는 미확인
     ship_base: 120          # 추정치 (샵이 무게·크기에 따라 따로 청구)
     ship_extra: 30
@@ -270,6 +278,7 @@ shops:
       - "https://nickollsandperks.com/producer/old-pulteney/"
       # 다프트밀 추가 (2026-10-18, producer 페이지 존재 확인됨)
       - "https://nickollsandperks.com/producer/daftmill/"
+      - "https://nickollsandperks.com/producer/glenturret/"
     strip_vat: 0
     ship_base: 45
     ship_extra: 10
@@ -296,6 +305,8 @@ shops:
       - "https://cadenhead.shop/distillery/glenfarclas/"
       - "https://cadenhead.shop/distillery/bunnahabhain/"
       - "https://cadenhead.shop/distillery/glendronach/"
+      # 글렌터렛 추가 (2026-10-18, distillery 페이지 존재 확인됨)
+      - "https://cadenhead.shop/distillery/glenturret/"
     selectors:
       card: "div.product.type-product"
       link: "a.mainLink"
@@ -325,6 +336,7 @@ shops:
       - "https://www.dunkeldwhiskybox.co.uk/search?q=old+pulteney"
       # 다프트밀 추가 (2026-10-18, 검색 페이지라 결과가 없어도 안전함)
       - "https://www.dunkeldwhiskybox.co.uk/search?q=daftmill"
+      - "https://www.dunkeldwhiskybox.co.uk/search?q=glenturret"
     selectors:
       card: "div.product-item"
       link: "a.product-item-link"
@@ -355,6 +367,7 @@ shops:
       - "https://whiskyfass.de/old-pulteney?af=50"
       # 다프트밀 추가 (2026-10-18, 카테고리 페이지 존재 확인됨)
       - "https://whiskyfass.de/daftmill?af=50"
+      - "https://whiskyfass.de/glenturret?af=50"
     selectors:
       card: "form.form-basket"
       link: ".productbox-head a"
@@ -438,6 +451,7 @@ shops:
       - "https://reallygoodwhisky.com/collections/old-pulteney/products.json?limit=250&currency=GBP"
       # 다프트밀 추가 (2026-10-18, products.json 으로 재고 확인됨)
       - "https://reallygoodwhisky.com/collections/daftmill/products.json?limit=250&currency=GBP"
+      - "https://reallygoodwhisky.com/collections/glenturret/products.json?limit=250&currency=GBP"
     strip_vat: 0
     ship_base: 46           # 실제 장바구니(1병, 한국 배송) 확인: 약 82,400원 ≈ £46
     ship_extra: 15          # 2병째부터 무게 구간(2kg 단위)마다 약 15파운드씩 추가로 확인됨
@@ -463,6 +477,7 @@ shops:
       - "https://thewhiskybarrel.com/collections/old-pulteney/products.json?limit=250&currency=GBP"
       # 다프트밀 추가 (2026-10-18, products.json 으로 재고 확인됨)
       - "https://thewhiskybarrel.com/collections/daftmill/products.json?limit=250&currency=GBP"
+      - "https://thewhiskybarrel.com/collections/glenturret/products.json?limit=250&currency=GBP"
     strip_vat: 0
     ship_base: 25           # 실제 장바구니(1병, 한국 배송) 확인: 약 44,000원 ≈ £25 (Standard Delivery)
     ship_extra: 6
@@ -510,6 +525,7 @@ shops:
       - "https://www.whiskysite.nl/en/search/old%20pulteney/?limit=100"
       # 다프트밀 추가 (2026-10-18, 검색 결과 확인됨)
       - "https://www.whiskysite.nl/en/search/daftmill/?limit=100"
+      - "https://www.whiskysite.nl/en/search/glenturret/?limit=100"
     strip_vat: 0
     ship_base: 35
     ship_extra: 8
@@ -549,6 +565,7 @@ shops:
       - "https://www.zeewijck.nl/nl/search/old%20pulteney/?limit=100"
       # 다프트밀 추가 (2026-10-18, 검색 결과 확인됨)
       - "https://www.zeewijck.nl/nl/search/daftmill/?limit=100"
+      - "https://www.zeewijck.nl/nl/search/glenturret/?limit=100"
     strip_vat: 0
     ship_base: 35
     ship_extra: 8
