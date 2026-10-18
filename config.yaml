@@ -34,6 +34,8 @@ watchlist:
   - glendronach
   - benromach
   - old pulteney
+  # 다프트밀 추가 (2026-10-18)
+  - daftmill
 
 # 이 단어가 들어간 상품(미니어처, 잔, 세트 등)은 무시
 # exclude_words: [miniature, sample, glass, "5cl"]   # 지정하면 기본 목록을 통째로 대체합니다
@@ -159,6 +161,8 @@ shops:
       - "https://shop.whiskybase.com/us/brands/glendronach/"
       - "https://shop.whiskybase.com/us/brands/benromach/"
       - "https://shop.whiskybase.com/us/brands/old-pulteney/"
+      # 다프트밀 추가 (2026-10-18, 브랜드 페이지 존재 확인됨)
+      - "https://shop.whiskybase.com/us/brands/daftmill/"
     strip_vat: 0.21
     ship_base: 35
     ship_extra: 8
@@ -204,6 +208,8 @@ shops:
       - "https://hedonism.co.uk/collections/glendronach-whisky/products.json?limit=250&currency=GBP"
       - "https://hedonism.co.uk/collections/benromach-whisky/products.json?limit=250&currency=GBP"
       - "https://hedonism.co.uk/collections/old-pulteney-whisky/products.json?limit=250&currency=GBP"
+      # 다프트밀 추가 (2026-10-18, products.json 으로 재고 확인됨)
+      - "https://hedonism.co.uk/collections/daftmill-whisky/products.json?limit=250&currency=GBP"
     strip_vat: 0
     ship_base: 35           # 실제 장바구니(1병, 한국 배송, Express Delivery 기준) 확인: 약 62,100원 ≈ £35
     ship_extra: 10
@@ -262,6 +268,8 @@ shops:
       - "https://nickollsandperks.com/producer/glendronach/"
       - "https://nickollsandperks.com/producer/benromach/"
       - "https://nickollsandperks.com/producer/old-pulteney/"
+      # 다프트밀 추가 (2026-10-18, producer 페이지 존재 확인됨)
+      - "https://nickollsandperks.com/producer/daftmill/"
     strip_vat: 0
     ship_base: 45
     ship_extra: 10
@@ -315,6 +323,8 @@ shops:
       - "https://www.dunkeldwhiskybox.co.uk/search?q=glendronach"
       - "https://www.dunkeldwhiskybox.co.uk/search?q=benromach"
       - "https://www.dunkeldwhiskybox.co.uk/search?q=old+pulteney"
+      # 다프트밀 추가 (2026-10-18, 검색 페이지라 결과가 없어도 안전함)
+      - "https://www.dunkeldwhiskybox.co.uk/search?q=daftmill"
     selectors:
       card: "div.product-item"
       link: "a.product-item-link"
@@ -343,6 +353,8 @@ shops:
       - "https://whiskyfass.de/glendronach?af=50"
       - "https://whiskyfass.de/benromach?af=50"
       - "https://whiskyfass.de/old-pulteney?af=50"
+      # 다프트밀 추가 (2026-10-18, 카테고리 페이지 존재 확인됨)
+      - "https://whiskyfass.de/daftmill?af=50"
     selectors:
       card: "form.form-basket"
       link: ".productbox-head a"
@@ -424,6 +436,8 @@ shops:
       - "https://reallygoodwhisky.com/collections/glendronach/products.json?limit=250&currency=GBP"
       - "https://reallygoodwhisky.com/collections/benromach/products.json?limit=250&currency=GBP"
       - "https://reallygoodwhisky.com/collections/old-pulteney/products.json?limit=250&currency=GBP"
+      # 다프트밀 추가 (2026-10-18, products.json 으로 재고 확인됨)
+      - "https://reallygoodwhisky.com/collections/daftmill/products.json?limit=250&currency=GBP"
     strip_vat: 0
     ship_base: 46           # 실제 장바구니(1병, 한국 배송) 확인: 약 82,400원 ≈ £46
     ship_extra: 15          # 2병째부터 무게 구간(2kg 단위)마다 약 15파운드씩 추가로 확인됨
@@ -447,6 +461,8 @@ shops:
       - "https://thewhiskybarrel.com/collections/glendronach/products.json?limit=250&currency=GBP"
       - "https://thewhiskybarrel.com/collections/benromach/products.json?limit=250&currency=GBP"
       - "https://thewhiskybarrel.com/collections/old-pulteney/products.json?limit=250&currency=GBP"
+      # 다프트밀 추가 (2026-10-18, products.json 으로 재고 확인됨)
+      - "https://thewhiskybarrel.com/collections/daftmill/products.json?limit=250&currency=GBP"
     strip_vat: 0
     ship_base: 25           # 실제 장바구니(1병, 한국 배송) 확인: 약 44,000원 ≈ £25 (Standard Delivery)
     ship_extra: 6
@@ -492,6 +508,8 @@ shops:
       - "https://www.whiskysite.nl/en/search/glendronach/?limit=100"
       - "https://www.whiskysite.nl/en/search/benromach/?limit=100"
       - "https://www.whiskysite.nl/en/search/old%20pulteney/?limit=100"
+      # 다프트밀 추가 (2026-10-18, 검색 결과 확인됨)
+      - "https://www.whiskysite.nl/en/search/daftmill/?limit=100"
     strip_vat: 0
     ship_base: 35
     ship_extra: 8
@@ -529,6 +547,8 @@ shops:
       - "https://www.zeewijck.nl/nl/search/glendronach/?limit=100"
       - "https://www.zeewijck.nl/nl/search/benromach/?limit=100"
       - "https://www.zeewijck.nl/nl/search/old%20pulteney/?limit=100"
+      # 다프트밀 추가 (2026-10-18, 검색 결과 확인됨)
+      - "https://www.zeewijck.nl/nl/search/daftmill/?limit=100"
     strip_vat: 0
     ship_base: 35
     ship_extra: 8
