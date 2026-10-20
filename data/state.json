@@ -730,7 +730,7 @@
   }
  },
  "fx": {
-  "t": 1792525449.5345998,
+  "t": 1792536519.153315,
   "table": {
    "DKK": 6.6648,
    "EUR": 0.89166,
@@ -742,7 +742,7 @@
  },
  "health": {
   "cadenhead": {
-   "fails": 2,
+   "fails": 3,
    "last_error": "요청 실패: https://cadenhead.shop/distillery/springbank/page/1/ (HTTP 503: https://cadenhead.shop/distillery/springbank/page/1/)",
    "notified": false
   },
