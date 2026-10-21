@@ -184,6 +184,10 @@
    "landed": 231452,
    "t": 1790436988
   },
+  "reallygoodwhisky|https://reallygoodwhisky.com/products/clynelish-1974-23-year-old-rare-malts-70cl-59-1": {
+   "landed": 8053743,
+   "t": 1792603592
+  },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/hazelburn-10-year-old-single-malt-scotch-whisky": {
    "landed": 262982,
    "t": 1790834829
@@ -717,8 +721,8 @@
    "t": 1791493539
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-10yo-46.html": {
-   "landed": 240030,
-   "t": 1792430692
+   "landed": 239515,
+   "t": 1792603592
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-5yo-100proof-571.html": {
    "landed": 227105,
@@ -730,13 +734,13 @@
   }
  },
  "fx": {
-  "t": 1792584374.247619,
+  "t": 1792603592.9398057,
   "table": {
-   "DKK": 6.6648,
-   "EUR": 0.89166,
-   "GBP": 0.74925,
-   "KRW": 1327.84,
-   "NZD": 1.7609,
+   "DKK": 6.6536,
+   "EUR": 0.89015,
+   "GBP": 0.74617,
+   "KRW": 1325.57,
+   "NZD": 1.7567,
    "USD": 1.0
   }
  },
@@ -783,7 +787,7 @@
    "notified": false
   },
   "rvw": {
-   "fails": 1,
+   "fails": 2,
    "last_error": "요청 실패: https://rarevintagewhisky.nl/website/index.php?ProductCategory=32013969&Index=1 (HTTP 503: https://rarevintagewhisky.nl/website/index.php?ProductCategory=32013969&Index=1)",
    "notified": false
   },
