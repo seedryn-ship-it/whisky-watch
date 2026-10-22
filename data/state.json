@@ -496,6 +496,10 @@
    "landed": 177374,
    "t": 1791814410
   },
+  "whiskybase|https://shop.whiskybase.com/us/bunnahabhain-12-year-old-164958786.html": {
+   "landed": 253524,
+   "t": 1792675072
+  },
   "whiskybase|https://shop.whiskybase.com/us/clynelish-14-year-old.html": {
    "landed": 190060,
    "t": 1791989874
@@ -734,13 +738,13 @@
   }
  },
  "fx": {
-  "t": 1792655253.8071883,
+  "t": 1792675072.102182,
   "table": {
-   "DKK": 6.6536,
-   "EUR": 0.89015,
-   "GBP": 0.74617,
-   "KRW": 1325.57,
-   "NZD": 1.7567,
+   "DKK": 6.655573,
+   "EUR": 0.890292,
+   "GBP": 0.746668,
+   "KRW": 1326.143133,
+   "NZD": 1.755782,
    "USD": 1.0
   }
  },
