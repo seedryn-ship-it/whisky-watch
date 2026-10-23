@@ -746,7 +746,7 @@
   }
  },
  "fx": {
-  "t": 1792783346.984733,
+  "t": 1792794319.9312992,
   "table": {
    "DKK": 6.6781,
    "EUR": 0.89342,
@@ -782,8 +782,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 2,
-   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "fails": 0,
    "notified": false
   },
   "passionforwhisky": {
