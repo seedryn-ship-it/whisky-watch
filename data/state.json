@@ -185,8 +185,12 @@
    "t": 1790436988
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/clynelish-1974-23-year-old-rare-malts-70cl-59-1": {
-   "landed": 8053743,
-   "t": 1792603592
+   "landed": 6723709,
+   "t": 1792968079
+  },
+  "reallygoodwhisky|https://reallygoodwhisky.com/products/daftmill-2007-winter-release-batch-1-single-malt-whisky-46": {
+   "landed": 1622105,
+   "t": 1792968079
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/hazelburn-10-year-old-single-malt-scotch-whisky": {
    "landed": 262982,
@@ -746,7 +750,7 @@
   }
  },
  "fx": {
-  "t": 1792958888.005859,
+  "t": 1792968079.532405,
   "table": {
    "DKK": 6.6781,
    "EUR": 0.89342,
@@ -782,7 +786,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
   "passionforwhisky": {
