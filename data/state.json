@@ -528,6 +528,10 @@
    "landed": 279923,
    "t": 1791814410
   },
+  "whiskybase|https://shop.whiskybase.com/us/glenturret-15-year-old-159441102.html": {
+   "landed": 436731,
+   "t": 1793126836
+  },
   "whiskybase|https://shop.whiskybase.com/us/hazelburn-10-year-old-164430393.html": {
    "landed": 214968,
    "t": 1791805445
@@ -560,13 +564,17 @@
    "landed": 240500,
    "t": 1793107506
   },
+  "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-144531625.html": {
+   "landed": 228285,
+   "t": 1793126836
+  },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-159913985.html": {
    "landed": 240500,
    "t": 1793107506
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-164418628.html": {
-   "landed": 213778,
-   "t": 1790869189
+   "landed": 205782,
+   "t": 1793126836
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-15-year-old-102522942.html": {
    "landed": 1208761,
@@ -762,13 +770,13 @@
   }
  },
  "fx": {
-  "t": 1793107506.6831353,
+  "t": 1793126836.4806142,
   "table": {
-   "DKK": 6.681,
-   "EUR": 0.89381,
-   "GBP": 0.7492,
-   "KRW": 1325.28,
-   "NZD": 1.7604,
+   "DKK": 6.7033,
+   "EUR": 0.89686,
+   "GBP": 0.7503,
+   "KRW": 1327.75,
+   "NZD": 1.7535,
    "USD": 1.0
   }
  },
