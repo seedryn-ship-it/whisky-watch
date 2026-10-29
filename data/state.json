@@ -504,6 +504,14 @@
    "landed": 253524,
    "t": 1792675072
   },
+  "whiskybase|https://shop.whiskybase.com/us/bunnahabhain-12-year-old-pst-phil-simon-thompson.html": {
+   "landed": 193790,
+   "t": 1793293194
+  },
+  "whiskybase|https://shop.whiskybase.com/us/clynelish-08-year-old-pst-phil-simon-thompson.html": {
+   "landed": 165213,
+   "t": 1793293194
+  },
   "whiskybase|https://shop.whiskybase.com/us/clynelish-14-year-old.html": {
    "landed": 190060,
    "t": 1791989874
@@ -557,20 +565,20 @@
    "t": 1790426361
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-126732375.html": {
-   "landed": 240500,
-   "t": 1793107506
+   "landed": 241419,
+   "t": 1793293194
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-128564520.html": {
-   "landed": 240500,
-   "t": 1793107506
+   "landed": 241419,
+   "t": 1793293194
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-144531625.html": {
    "landed": 228285,
    "t": 1793126836
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-159913985.html": {
-   "landed": 240500,
-   "t": 1793107506
+   "landed": 241419,
+   "t": 1793293194
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-164418628.html": {
    "landed": 205782,
@@ -770,13 +778,13 @@
   }
  },
  "fx": {
-  "t": 1793269009.8960044,
+  "t": 1793293194.6823347,
   "table": {
-   "DKK": 6.7135,
-   "EUR": 0.89823,
-   "GBP": 0.75258,
-   "KRW": 1340.47,
-   "NZD": 1.7815,
+   "DKK": 6.7148,
+   "EUR": 0.89847,
+   "GBP": 0.75093,
+   "KRW": 1337.29,
+   "NZD": 1.7805,
    "USD": 1.0
   }
  },
@@ -806,7 +814,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
   "passionforwhisky": {
