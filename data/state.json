@@ -536,6 +536,10 @@
    "landed": 279923,
    "t": 1791814410
   },
+  "whiskybase|https://shop.whiskybase.com/us/glenfarclas-2003-165129699.html": {
+   "landed": 349775,
+   "t": 1793370218
+  },
   "whiskybase|https://shop.whiskybase.com/us/glenturret-15-year-old-159441102.html": {
    "landed": 436731,
    "t": 1793126836
@@ -571,6 +575,10 @@
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-128564520.html": {
    "landed": 241419,
    "t": 1793293194
+  },
+  "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-142650621.html": {
+   "landed": 241419,
+   "t": 1793370218
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-144531625.html": {
    "landed": 229513,
@@ -663,6 +671,10 @@
   "whiskysite|https://www.whiskysite.nl/en/bunnahabhain-10-years-old-2012-the-ultim-154133562.html": {
    "landed": 268565,
    "t": 1791814410
+  },
+  "whiskysite|https://www.whiskysite.nl/en/bunnahabhain-18-years-old.html": {
+   "landed": 311405,
+   "t": 1793370218
   },
   "whiskysite|https://www.whiskysite.nl/en/bunnahabhain-an-cidhe-100-ltr-50.html": {
    "landed": 225280,
@@ -778,7 +790,7 @@
   }
  },
  "fx": {
-  "t": 1793345087.2086082,
+  "t": 1793370218.173001,
   "table": {
    "DKK": 6.7148,
    "EUR": 0.89847,
