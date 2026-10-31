@@ -585,16 +585,16 @@
    "t": 1793370218
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-144531625.html": {
-   "landed": 229513,
-   "t": 1793309882
+   "landed": 230031,
+   "t": 1793486299
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-159913985.html": {
    "landed": 241965,
    "t": 1793474676
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-164418628.html": {
-   "landed": 206888,
-   "t": 1793309882
+   "landed": 207356,
+   "t": 1793486299
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-15-year-old-102522942.html": {
    "landed": 1208761,
@@ -794,7 +794,7 @@
   }
  },
  "fx": {
-  "t": 1793474676.3372374,
+  "t": 1793486299.0160248,
   "table": {
    "DKK": 6.6895,
    "EUR": 0.89509,
@@ -830,7 +830,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
   "passionforwhisky": {
