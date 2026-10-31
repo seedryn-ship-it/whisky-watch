@@ -560,6 +560,10 @@
    "landed": 195166,
    "t": 1790696386
   },
+  "whiskybase|https://shop.whiskybase.com/us/mortlach-2010-sv-signatory-vintage.html": {
+   "landed": 362501,
+   "t": 1793460338
+  },
   "whiskybase|https://shop.whiskybase.com/us/mortlach-2016-sv-signatory-vintage.html": {
    "landed": 170905,
    "t": 1791989874
@@ -790,7 +794,7 @@
   }
  },
  "fx": {
-  "t": 1793437424.767026,
+  "t": 1793460338.896373,
   "table": {
    "DKK": 6.6895,
    "EUR": 0.89509,
