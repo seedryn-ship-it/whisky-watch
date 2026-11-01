@@ -185,8 +185,8 @@
    "t": 1790436988
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/clynelish-1974-23-year-old-rare-malts-70cl-59-1": {
-   "landed": 6723709,
-   "t": 1792968079
+   "landed": 6382677,
+   "t": 1793546458
   },
   "reallygoodwhisky|https://reallygoodwhisky.com/products/daftmill-2007-winter-release-batch-1-single-malt-whisky-46": {
    "landed": 1622105,
@@ -581,8 +581,8 @@
    "t": 1793474676
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-142650621.html": {
-   "landed": 241419,
-   "t": 1793370218
+   "landed": 241965,
+   "t": 1793546458
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-144531625.html": {
    "landed": 230031,
@@ -794,7 +794,7 @@
   }
  },
  "fx": {
-  "t": 1793521374.4561112,
+  "t": 1793546458.998716,
   "table": {
    "DKK": 6.6895,
    "EUR": 0.89509,
