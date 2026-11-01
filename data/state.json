@@ -781,8 +781,8 @@
    "t": 1791493539
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-10yo-46.html": {
-   "landed": 239395,
-   "t": 1793323556
+   "landed": 239936,
+   "t": 1793497113
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-5yo-100proof-571.html": {
    "landed": 227105,
@@ -794,7 +794,7 @@
   }
  },
  "fx": {
-  "t": 1793486299.0160248,
+  "t": 1793497113.7615666,
   "table": {
    "DKK": 6.6895,
    "EUR": 0.89509,
@@ -830,8 +830,7 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 1,
-   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
+   "fails": 0,
    "notified": false
   },
   "passionforwhisky": {
