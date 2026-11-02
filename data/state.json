@@ -573,12 +573,12 @@
    "t": 1790426361
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-126732375.html": {
-   "landed": 241965,
-   "t": 1793474676
+   "landed": 244306,
+   "t": 1793651147
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-128564520.html": {
-   "landed": 241965,
-   "t": 1793474676
+   "landed": 244306,
+   "t": 1793651147
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-142650621.html": {
    "landed": 241965,
@@ -589,8 +589,8 @@
    "t": 1793486299
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-159913985.html": {
-   "landed": 241965,
-   "t": 1793474676
+   "landed": 244306,
+   "t": 1793651147
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-164418628.html": {
    "landed": 207356,
@@ -794,13 +794,13 @@
   }
  },
  "fx": {
-  "t": 1793614557.1713088,
+  "t": 1793651147.177369,
   "table": {
-   "DKK": 6.6895,
-   "EUR": 0.89509,
-   "GBP": 0.74633,
-   "KRW": 1335.27,
-   "NZD": 1.7743,
+   "DKK": 6.6634,
+   "EUR": 0.89158,
+   "GBP": 0.74519,
+   "KRW": 1342.9,
+   "NZD": 1.7773,
    "USD": 1.0
   }
  },
