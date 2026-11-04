@@ -552,6 +552,14 @@
    "landed": 190915,
    "t": 1791630199
   },
+  "whiskybase|https://shop.whiskybase.com/us/longrow-100-proof-bottled-2010.html": {
+   "landed": 835654,
+   "t": 1793813927
+  },
+  "whiskybase|https://shop.whiskybase.com/us/longrow-2001-rundlets-kilderkins.html": {
+   "landed": 1010844,
+   "t": 1793813927
+  },
   "whiskybase|https://shop.whiskybase.com/us/longrow-peated-161970662.html": {
    "landed": 197866,
    "t": 1790249782
@@ -600,13 +608,17 @@
    "landed": 1208761,
    "t": 1790219016
   },
+  "whiskybase|https://shop.whiskybase.com/us/springbank-16-year-old-130722807.html": {
+   "landed": 1647897,
+   "t": 1793813927
+  },
   "whiskybase|https://shop.whiskybase.com/us/springbank-1965.html": {
    "landed": 24898763,
    "t": 1791607356
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-1969-sv-signatory-vintage.html": {
-   "landed": 9963121,
-   "t": 1790296896
+   "landed": 7843234,
+   "t": 1793813927
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-1992-dl-douglas-laing.html": {
    "landed": 756177,
@@ -615,6 +627,10 @@
   "whiskybase|https://shop.whiskybase.com/us/springbank-1993-gs-glenscoma-164623117.html": {
    "landed": 750050,
    "t": 1791452473
+  },
+  "whiskybase|https://shop.whiskybase.com/us/springbank-1996-dt-duncan-taylor.html": {
+   "landed": 692317,
+   "t": 1793813927
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-2007.html": {
    "landed": 915328,
@@ -794,19 +810,19 @@
   }
  },
  "fx": {
-  "t": 1793759365.481329,
+  "t": 1793813927.788971,
   "table": {
-   "DKK": 6.6853,
-   "EUR": 0.89453,
-   "GBP": 0.74567,
-   "KRW": 1344.59,
-   "NZD": 1.778,
+   "DKK": 6.6334,
+   "EUR": 0.88755,
+   "GBP": 0.74075,
+   "KRW": 1338.58,
+   "NZD": 1.774,
    "USD": 1.0
   }
  },
  "health": {
   "cadenhead": {
-   "fails": 5,
+   "fails": 6,
    "last_error": "HTTP 404: https://cadenhead.shop/distillery/glendronach/",
    "notified": false
   },
@@ -823,8 +839,7 @@
    "notified": false
   },
   "htfw": {
-   "fails": 1,
-   "last_error": "요청 실패: https://www.htfw.com/brands/springbank (HTTPSConnectionPool(host='www.htfw.com', port=443): Read timed out. (read timeout=25))",
+   "fails": 0,
    "notified": false
   },
   "innout": {
