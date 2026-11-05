@@ -810,7 +810,7 @@
   }
  },
  "fx": {
-  "t": 1793848468.3145013,
+  "t": 1793877403.5333998,
   "table": {
    "DKK": 6.6334,
    "EUR": 0.88755,
@@ -822,7 +822,7 @@
  },
  "health": {
   "cadenhead": {
-   "fails": 8,
+   "fails": 9,
    "last_error": "HTTP 404: https://cadenhead.shop/distillery/glendronach/",
    "notified": false
   },
