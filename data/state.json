@@ -368,6 +368,10 @@
    "landed": 1734352,
    "t": 1791888254
   },
+  "thewhiskybarrel|https://thewhiskybarrel.com/products/clynelish-10-year-old-living-souls": {
+   "landed": 255302,
+   "t": 1793922775
+  },
   "thewhiskybarrel|https://thewhiskybarrel.com/products/clynelish-10-year-old-special-releases-2023": {
    "landed": 372338,
    "t": 1792073030
@@ -810,7 +814,7 @@
   }
  },
  "fx": {
-  "t": 1793904716.835755,
+  "t": 1793922775.1904778,
   "table": {
    "DKK": 6.6596,
    "EUR": 0.89095,
@@ -822,7 +826,7 @@
  },
  "health": {
   "cadenhead": {
-   "fails": 10,
+   "fails": 11,
    "last_error": "HTTP 404: https://cadenhead.shop/distillery/glendronach/",
    "notified": false
   },
