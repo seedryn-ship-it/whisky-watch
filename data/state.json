@@ -593,8 +593,8 @@
    "t": 1794009135
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-142650621.html": {
-   "landed": 244805,
-   "t": 1793904716
+   "landed": 246061,
+   "t": 1794083760
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-144531625.html": {
    "landed": 233924,
@@ -814,7 +814,7 @@
   }
  },
  "fx": {
-  "t": 1794069651.2554162,
+  "t": 1794083760.187511,
   "table": {
    "DKK": 6.6952,
    "EUR": 0.89566,
@@ -826,7 +826,7 @@
  },
  "health": {
   "cadenhead": {
-   "fails": 18,
+   "fails": 19,
    "last_error": "HTTP 404: https://cadenhead.shop/distillery/glendronach/",
    "notified": true
   },
