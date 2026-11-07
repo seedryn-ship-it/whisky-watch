@@ -597,16 +597,16 @@
    "t": 1793904716
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-144531625.html": {
-   "landed": 232560,
-   "t": 1793848468
+   "landed": 233924,
+   "t": 1794022912
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-159913985.html": {
    "landed": 246061,
    "t": 1794009135
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-10-year-old-164418628.html": {
-   "landed": 209637,
-   "t": 1793848468
+   "landed": 210866,
+   "t": 1794022912
   },
   "whiskybase|https://shop.whiskybase.com/us/springbank-15-year-old-102522942.html": {
    "landed": 1208761,
@@ -801,8 +801,8 @@
    "t": 1791493539
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-10yo-46.html": {
-   "landed": 242575,
-   "t": 1793848468
+   "landed": 243997,
+   "t": 1794022912
   },
   "zeewijck|https://www.zeewijck.nl/nl/springbank-5yo-100proof-571.html": {
    "landed": 227105,
@@ -814,7 +814,7 @@
   }
  },
  "fx": {
-  "t": 1794009135.9804425,
+  "t": 1794022912.6463928,
   "table": {
    "DKK": 6.6952,
    "EUR": 0.89566,
@@ -826,7 +826,7 @@
  },
  "health": {
   "cadenhead": {
-   "fails": 15,
+   "fails": 16,
    "last_error": "HTTP 404: https://cadenhead.shop/distillery/glendronach/",
    "notified": true
   },
