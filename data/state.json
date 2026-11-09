@@ -814,19 +814,19 @@
   }
  },
  "fx": {
-  "t": 1794218341.0588286,
+  "t": 1794256014.072475,
   "table": {
-   "DKK": 6.6952,
-   "EUR": 0.89566,
-   "GBP": 0.74711,
-   "KRW": 1358.73,
-   "NZD": 1.8039,
+   "DKK": 6.6785,
+   "EUR": 0.89342,
+   "GBP": 0.74538,
+   "KRW": 1346.79,
+   "NZD": 1.7816,
    "USD": 1.0
   }
  },
  "health": {
   "cadenhead": {
-   "fails": 26,
+   "fails": 27,
    "last_error": "HTTP 404: https://cadenhead.shop/distillery/glendronach/",
    "notified": true
   },
@@ -851,7 +851,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
   "passionforwhisky": {
