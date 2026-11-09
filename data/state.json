@@ -814,7 +814,7 @@
   }
  },
  "fx": {
-  "t": 1794177321.4237783,
+  "t": 1794190367.486003,
   "table": {
    "DKK": 6.6952,
    "EUR": 0.89566,
@@ -826,7 +826,7 @@
  },
  "health": {
   "cadenhead": {
-   "fails": 24,
+   "fails": 25,
    "last_error": "HTTP 404: https://cadenhead.shop/distillery/glendronach/",
    "notified": true
   },
@@ -851,7 +851,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
   "passionforwhisky": {
