@@ -53,8 +53,8 @@
    "t": 1790609954
   },
   "hedonism|https://hedonism.co.uk/products/springbank-10-year-old-local-barley-2020-release-2010": {
-   "landed": 4533615,
-   "t": 1790609954
+   "landed": 3832477,
+   "t": 1794306990
   },
   "hedonism|https://hedonism.co.uk/products/springbank-14-year-old-fresh-sherry-christmas-2019-release": {
    "landed": 8445870,
@@ -814,7 +814,7 @@
   }
  },
  "fx": {
-  "t": 1794278996.5097444,
+  "t": 1794306990.789294,
   "table": {
    "DKK": 6.6785,
    "EUR": 0.89342,
@@ -826,7 +826,7 @@
  },
  "health": {
   "cadenhead": {
-   "fails": 28,
+   "fails": 29,
    "last_error": "HTTP 404: https://cadenhead.shop/distillery/glendronach/",
    "notified": true
   },
