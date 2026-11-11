@@ -32,6 +32,10 @@
    "landed": 181143,
    "t": 1791888254
   },
+  "hedonism|https://hedonism.co.uk/products/bunnahabhain-12-year-old-cask-strength-2025-release": {
+   "landed": 313433,
+   "t": 1794396815
+  },
   "hedonism|https://hedonism.co.uk/products/bunnahabhain-17-year-old-connoisseurs-choice-gordon-and-macphail-2007": {
    "landed": 720770,
    "t": 1791888254
@@ -814,7 +818,7 @@
   }
  },
  "fx": {
-  "t": 1794368581.1896868,
+  "t": 1794396815.727159,
   "table": {
    "DKK": 6.6661,
    "EUR": 0.89174,
@@ -826,7 +830,7 @@
  },
  "health": {
   "cadenhead": {
-   "fails": 32,
+   "fails": 33,
    "last_error": "HTTP 404: https://cadenhead.shop/distillery/glendronach/",
    "notified": true
   },
