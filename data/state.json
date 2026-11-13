@@ -652,6 +652,14 @@
    "landed": 1973315,
    "t": 1789904058
   },
+  "whiskyfass|https://whiskyfass.de/glenfarclas-vintage-2015-christmas-edition-sherry-cask-matured-single-malt-scotch-whisky": {
+   "landed": 222331,
+   "t": 1794568723
+  },
+  "whiskyfass|https://whiskyfass.de/glenfarclas-vintage-2016-christmas-anniversary-edition-sherry-cask-matured-single-malt-scotch-whisky": {
+   "landed": 222331,
+   "t": 1794568723
+  },
   "whiskyfass|https://whiskyfass.de/hazelburn-10-jahre-batch-2025-campbeltown-single-malt-scotch-whisky": {
    "landed": 280471,
    "t": 1790309018
@@ -818,7 +826,7 @@
   }
  },
  "fx": {
-  "t": 1794538902.5444658,
+  "t": 1794568723.9465156,
   "table": {
    "DKK": 6.7461,
    "EUR": 0.90245,
@@ -830,7 +838,7 @@
  },
  "health": {
   "cadenhead": {
-   "fails": 39,
+   "fails": 40,
    "last_error": "HTTP 404: https://cadenhead.shop/distillery/glendronach/",
    "notified": true
   },
