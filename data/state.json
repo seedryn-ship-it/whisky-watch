@@ -826,7 +826,7 @@
   }
  },
  "fx": {
-  "t": 1794664290.451052,
+  "t": 1794682442.4778757,
   "table": {
    "DKK": 6.764,
    "EUR": 0.90481,
@@ -838,7 +838,7 @@
  },
  "health": {
   "cadenhead": {
-   "fails": 44,
+   "fails": 45,
    "last_error": "HTTP 404: https://cadenhead.shop/distillery/glendronach/",
    "notified": true
   },
@@ -855,7 +855,8 @@
    "notified": false
   },
   "htfw": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "HTTP 403: https://www.htfw.com/brands/springbank",
    "notified": false
   },
   "innout": {
@@ -863,7 +864,8 @@
    "notified": false
   },
   "nickolls": {
-   "fails": 0,
+   "fails": 1,
+   "last_error": "봇 차단 페이지로 보임: https://nickollsandperks.com/producer/springbank/page/1/",
    "notified": false
   },
   "passionforwhisky": {
